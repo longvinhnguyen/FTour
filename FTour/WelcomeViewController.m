@@ -7,7 +7,7 @@
 //
 
 #import "WelcomeViewController.h"
-
+#import "FSoftViewController.h"
 
 @interface WelcomeViewController ()
 
@@ -60,7 +60,7 @@
     switch (foundBeacon.major.intValue) {
         case 1:
             [self loadFsoft];
-            _distanceLabel.text = @"FSoft";
+           // _distanceLabel.text = @"FSoft";
             //self.barProgress.progress =
             break;
         case 2:
@@ -76,7 +76,8 @@
 
 -(void)loadFsoft
 {
-
+    FSoftViewController *vc = [[FSoftViewController alloc]init];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 -(void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region
 {
