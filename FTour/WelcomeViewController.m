@@ -34,8 +34,9 @@
     self.locationManager.delegate = self;
     
     NSUUID *uuid = [[NSUUID alloc]initWithUUIDString:KFSoftUUID];
-    self.beaconRegion = [[CLBeaconRegion alloc]initWithProximityUUID:uuid major:1 identifier:@"FSoft"];
+    self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:@"Fsoft"];
     [self.locationManager startMonitoringForRegion:self.beaconRegion];
+    
     
 }
 
@@ -53,37 +54,43 @@
 -(void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
 {
     CLBeacon *foundBeacon = [beacons firstObject];
-    if (foundBeacon.major.intValue==1) {
-        self.statusLable.text = @"FSoft";
-    }
-    else if (foundBeacon.major.intValue==2){
-        self.statusLable.text = @"FSu1";
-    }
-    else if(foundBeacon.major.intValue==3){
-        self.statusLable.text = @"Cafe";
-    }
-    else
-    {
-        self.statusLable.text= @"Where are u?";
-    }
-    self.statusLable.text =[NSString stringWithFormat:@"Found your UUID with major = %@",foundBeacon.major];
-    switch (foundBeacon.proximity) {
-        case CLProximityImmediate:
-            _distanceLabel.text = @"Immediate";
+//    if (foundBeacon.major.intValue==1) {
+//        self.statusLable.text = @"FSoft";
+//    }
+//    else if (foundBeacon.major.intValue==2){
+//        self.statusLable.text = @"FSu1";
+//    }
+//    else if(foundBeacon.major.intValue==3){
+//        self.statusLable.text = @"Cafe";
+//    }
+//    else
+//    {
+//        self.statusLable.text= @"Where are u?";
+//    }
+  //  self.statusLable.text =[NSString stringWithFormat:@"Found your UUID with major = %@",foundBeacon.major];
+    switch (foundBeacon.major.intValue) {
+        case 1:
+            [self loadFsoft];
+            _distanceLabel.text = @"FSoft";
             self.view.backgroundColor = [UIColor redColor];
             //self.barProgress.progress =
             break;
-        case CLProximityNear:
-            _distanceLabel.text = @"Near";
+        case 2:
+            _distanceLabel.text = @"FSU1";
             self.view.backgroundColor = [UIColor orangeColor];
             break;
-        case CLProximityFar:
-            _distanceLabel.text = @"Far";
+        case 3:
+            _distanceLabel.text = @"Cafe";
             self.view.backgroundColor = [UIColor blueColor];
             break;
         default:
             break;
     }
+}
+
+-(void)loadFsoft
+{
+
 }
 -(void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region
 {
