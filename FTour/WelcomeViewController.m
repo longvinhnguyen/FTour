@@ -39,7 +39,10 @@
     
     
 }
-
+-(void) peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral
+{
+    
+}
 -(void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region
 {
     NSLog(@"Founded");
@@ -58,16 +61,13 @@
         case 1:
             [self loadFsoft];
             _distanceLabel.text = @"FSoft";
-            self.view.backgroundColor = [UIColor redColor];
             //self.barProgress.progress =
             break;
         case 2:
             _distanceLabel.text = @"FSU1";
-            self.view.backgroundColor = [UIColor orangeColor];
             break;
         case 3:
             _distanceLabel.text = @"Cafe";
-            self.view.backgroundColor = [UIColor blueColor];
             break;
         default:
             break;
