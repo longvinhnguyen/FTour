@@ -33,7 +33,7 @@
     self.locationManager = [[CLLocationManager alloc]init];
     self.locationManager.delegate = self;
     
-    NSUUID *uuid = [[NSUUID alloc]initWithUUIDString:KFSoftUUID];
+    NSUUID *uuid = [[NSUUID alloc]initWithUUIDString:kFSoftUUID];
     self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:@"Fsoft"];
     [self.locationManager startMonitoringForRegion:self.beaconRegion];
     
@@ -54,20 +54,6 @@
 -(void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
 {
     CLBeacon *foundBeacon = [beacons firstObject];
-//    if (foundBeacon.major.intValue==1) {
-//        self.statusLable.text = @"FSoft";
-//    }
-//    else if (foundBeacon.major.intValue==2){
-//        self.statusLable.text = @"FSu1";
-//    }
-//    else if(foundBeacon.major.intValue==3){
-//        self.statusLable.text = @"Cafe";
-//    }
-//    else
-//    {
-//        self.statusLable.text= @"Where are u?";
-//    }
-  //  self.statusLable.text =[NSString stringWithFormat:@"Found your UUID with major = %@",foundBeacon.major];
     switch (foundBeacon.major.intValue) {
         case 1:
             [self loadFsoft];
