@@ -20,6 +20,7 @@
 {
     [super viewDidLoad];
     //self.view.backgroundColor = [UIColor greenColor];
+    [[self navigationController]setNavigationBarHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning

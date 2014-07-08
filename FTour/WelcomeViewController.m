@@ -32,8 +32,8 @@
 //    self.beaconRegion = [[CLBeaconRegion alloc]initWithProximityUUID:uuid major:1 identifier:@"FSoft"];
     self.locationManager = [[CLLocationManager alloc]init];
     self.locationManager.delegate = self;
-    
-    NSUUID *uuid = [[NSUUID alloc]initWithUUIDString:KFSoftUUID];
+    [[self navigationController]setNavigationBarHidden:NO];
+    NSUUID *uuid = [[NSUUID alloc]initWithUUIDString:kFSoftUUID];
     self.beaconRegion = [[CLBeaconRegion alloc]initWithProximityUUID:uuid major:1 identifier:@"FSoft"];
     [self.locationManager startMonitoringForRegion:self.beaconRegion];
     

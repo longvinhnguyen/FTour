@@ -27,11 +27,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    _uuid = [[NSUUID alloc]initWithUUIDString:@"77F353D0-285C-4606-B012-8A078FB96622"];
-//    _beaconRegion = [[CLBeaconRegion alloc]initWithProximityUUID:_uuid major:1 minor:1 identifier:@"FSoft Entrance"];
-//    _beaconPeripheralData = [_beaconRegion peripheralDataWithMeasuredPower:nil];
-//    _peripheralManager = [[CBPeripheralManager alloc]initWithDelegate:self queue:nil options:nil];
-//    [_uuidLbl setText:_beaconRegion.proximityUUID.UUIDString];
+//    self.navigationItem.title = @"iBeacon";
+//    self.navigationItem.hidesBackButton = NO;
+    [[self navigationController]setNavigationBarHidden:NO];
+    _uuid = [[NSUUID alloc]initWithUUIDString:kFSoftUUID];
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,8 +53,9 @@
         _beaconRegion = [[CLBeaconRegion alloc]initWithProximityUUID:_uuid major:3 minor:1 identifier:@"Cafe Terrace"];
     }
     
-    _beaconPeripheralData = [_beaconRegion peripheralDataWithMeasuredPower:nil];
-    _peripheralManager = [[CBPeripheralManager alloc]initWithDelegate:self queue:nil options:nil];
+    _beaconPeripheralData = [_beaconRegion peripheralDataWithMeasuredPower:[NSNumber numberWithInteger:-59]];
+    _peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil options:nil];
+
     [_uuidLbl setText:_beaconRegion.proximityUUID.UUIDString];
 }
 

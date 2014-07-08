@@ -22,7 +22,7 @@
     
     self.navController = [[UINavigationController alloc]initWithRootViewController:self.mainController];
     
-    self.navController.navigationBarHidden = YES;
+  //  self.navController.navigationBarHidden = YES;
     self.window.rootViewController = self.navController;
     
     [self.window makeKeyAndVisible];
