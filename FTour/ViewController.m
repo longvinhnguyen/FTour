@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "iBeaconViewController.h"
+#import "WelcomeViewController.h"
 
 @interface ViewController ()
 
@@ -31,6 +32,12 @@
 {
    // [[[UIAlertView alloc]initWithTitle:@"ok" message:@"now what" delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles: nil] show];
     iBeaconViewController *viewController = [[iBeaconViewController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
+-(IBAction)proximityMe:(id)sender
+{
+    WelcomeViewController *viewController = [[WelcomeViewController alloc]init];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 @end

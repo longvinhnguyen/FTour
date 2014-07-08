@@ -15,4 +15,5 @@
     #import <Foundation/Foundation.h>
     #import <CoreLocation/CoreLocation.h>
 #import<CoreBluetooth/CoreBluetooth.h>
+#define KFSoftUUID @"77F353D0-285C-4606-B012-8A078FB96622"
 #endif

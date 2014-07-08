@@ -8,6 +8,7 @@
 
 #import "WelcomeViewController.h"
 
+
 @interface WelcomeViewController ()
 
 @end
@@ -26,13 +27,74 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+//
+//    NSUUID *uuid = [[NSUUID alloc]initWithUUIDString:KFSoftUUID];
+//    self.beaconRegion = [[CLBeaconRegion alloc]initWithProximityUUID:uuid major:1 identifier:@"FSoft"];
+    self.locationManager = [[CLLocationManager alloc]init];
+    self.locationManager.delegate = self;
+    
+    NSUUID *uuid = [[NSUUID alloc]initWithUUIDString:KFSoftUUID];
+    self.beaconRegion = [[CLBeaconRegion alloc]initWithProximityUUID:uuid major:1 identifier:@"FSoft"];
+    [self.locationManager startMonitoringForRegion:self.beaconRegion];
+    
 }
 
+-(void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region
+{
+    NSLog(@"Founded");
+    [self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
+}
+-(void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region{
+    [self
+     .locationManager stopRangingBeaconsInRegion:self.beaconRegion];
+    self.statusLable.text = @"Out of Range";
+    NSLog(@"lost");
+}
+-(void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
+{
+    CLBeacon *foundBeacon = [beacons firstObject];
+    if (foundBeacon.major.intValue==1) {
+        self.statusLable.text = @"FSoft";
+    }
+    else if (foundBeacon.major.intValue==2){
+        self.statusLable.text = @"FSu1";
+    }
+    else if(foundBeacon.major.intValue==3){
+        self.statusLable.text = @"Cafe";
+    }
+    else
+    {
+        self.statusLable.text= @"Where are u?";
+    }
+    self.statusLable.text =[NSString stringWithFormat:@"Found your UUID with major = %@",foundBeacon.major];
+    switch (foundBeacon.proximity) {
+        case CLProximityImmediate:
+            _distanceLabel.text = @"Immediate";
+            self.view.backgroundColor = [UIColor redColor];
+            //self.barProgress.progress =
+            break;
+        case CLProximityNear:
+            _distanceLabel.text = @"Near";
+            self.view.backgroundColor = [UIColor orangeColor];
+            break;
+        case CLProximityFar:
+            _distanceLabel.text = @"Far";
+            self.view.backgroundColor = [UIColor blueColor];
+            break;
+        default:
+            break;
+    }
+}
+-(void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region
+{
+    NSLog(@"%@", [region class].description);
+    [_locationManager startRangingBeaconsInRegion:_beaconRegion];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end
