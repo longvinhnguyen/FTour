@@ -18,12 +18,7 @@
     self.mainController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     
     self.window.backgroundColor    = [UIColor whiteColor];
-    //self.window.rootViewController = self.mainController;
-    
-    self.navController = [[UINavigationController alloc]initWithRootViewController:self.mainController];
-    
-    self.navController.navigationBarHidden = YES;
-    self.window.rootViewController = self.navController;
+    self.window.rootViewController = self.mainController;
     
     [self.window makeKeyAndVisible];
     

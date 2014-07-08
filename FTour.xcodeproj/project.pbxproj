@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18129C51196B8FD50004AE71 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18129C50196B8FD50004AE71 /* CoreBluetooth.framework */; };
 		18A92B79196B80EE00F78849 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A92B78196B80EE00F78849 /* button.png */; };
 		18A92B7B196B816400F78849 /* button-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A92B7A196B816400F78849 /* button-2.png */; };
 		18A92B7C196B816400F78849 /* button-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A92B7A196B816400F78849 /* button-2.png */; };
@@ -30,6 +31,7 @@
 		18A92B9D196B825A00F78849 /* CafeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A92B9A196B825A00F78849 /* CafeViewController.m */; };
 		18A92B9E196B825A00F78849 /* CafeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A92B9B196B825A00F78849 /* CafeViewController.xib */; };
 		18A92B9F196B825A00F78849 /* CafeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A92B9B196B825A00F78849 /* CafeViewController.xib */; };
+		18F2BFC3196B8978003A87EA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F2BFC2196B8978003A87EA /* CoreLocation.framework */; };
 		84A62AAC196A96F500D73A95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A62AAB196A96F500D73A95 /* Foundation.framework */; };
 		84A62AAE196A96F500D73A95 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A62AAD196A96F500D73A95 /* CoreGraphics.framework */; };
 		84A62AB0196A96F500D73A95 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A62AAF196A96F500D73A95 /* UIKit.framework */; };
@@ -57,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18129C50196B8FD50004AE71 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		18A92B78196B80EE00F78849 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		18A92B7A196B816400F78849 /* button-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-2.png"; sourceTree = "<group>"; };
 		18A92B7D196B81B800F78849 /* iBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iBeaconViewController.h; sourceTree = "<group>"; };
@@ -74,6 +77,7 @@
 		18A92B99196B825A00F78849 /* CafeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CafeViewController.h; sourceTree = "<group>"; };
 		18A92B9A196B825A00F78849 /* CafeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CafeViewController.m; sourceTree = "<group>"; };
 		18A92B9B196B825A00F78849 /* CafeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CafeViewController.xib; sourceTree = "<group>"; };
+		18F2BFC2196B8978003A87EA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		84A62AA8196A96F500D73A95 /* FTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A62AAB196A96F500D73A95 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84A62AAD196A96F500D73A95 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -100,6 +104,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18129C51196B8FD50004AE71 /* CoreBluetooth.framework in Frameworks */,
+				18F2BFC3196B8978003A87EA /* CoreLocation.framework in Frameworks */,
 				84A62AAE196A96F500D73A95 /* CoreGraphics.framework in Frameworks */,
 				84A62AB0196A96F500D73A95 /* UIKit.framework in Frameworks */,
 				84A62AAC196A96F500D73A95 /* Foundation.framework in Frameworks */,
@@ -150,6 +156,8 @@
 		84A62AAA196A96F500D73A95 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18129C50196B8FD50004AE71 /* CoreBluetooth.framework */,
+				18F2BFC2196B8978003A87EA /* CoreLocation.framework */,
 				84A62AAB196A96F500D73A95 /* Foundation.framework */,
 				84A62AAD196A96F500D73A95 /* CoreGraphics.framework */,
 				84A62AAF196A96F500D73A95 /* UIKit.framework */,
@@ -413,7 +421,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -445,7 +453,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -456,10 +464,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Long Nguyen (M6FKXHWXBY)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Long Nguyen (M6FKXHWXBY)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FTour/FTour-Prefix.pch";
 				INFOPLIST_FILE = "FTour/FTour-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7052599A-A55E-4571-9B1A-B39ECF4C8C22";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -469,10 +480,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Long Nguyen (M6FKXHWXBY)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Long Nguyen (M6FKXHWXBY)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FTour/FTour-Prefix.pch";
 				INFOPLIST_FILE = "FTour/FTour-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7052599A-A55E-4571-9B1A-B39ECF4C8C22";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

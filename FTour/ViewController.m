@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "iBeaconViewController.h"
 
 @interface ViewController ()
 
@@ -17,7 +18,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor greenColor];
+    //self.view.backgroundColor = [UIColor greenColor];
 }
 
 - (void)didReceiveMemoryWarning
@@ -26,4 +27,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction)iBeaconMe:(id)sender
+{
+   // [[[UIAlertView alloc]initWithTitle:@"ok" message:@"now what" delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles: nil] show];
+    iBeaconViewController *viewController = [[iBeaconViewController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
 @end
