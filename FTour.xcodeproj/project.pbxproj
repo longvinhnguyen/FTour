@@ -7,6 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18A92B79196B80EE00F78849 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A92B78196B80EE00F78849 /* button.png */; };
+		18A92B7B196B816400F78849 /* button-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A92B7A196B816400F78849 /* button-2.png */; };
+		18A92B7C196B816400F78849 /* button-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A92B7A196B816400F78849 /* button-2.png */; };
+		18A92B80196B81B800F78849 /* iBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A92B7E196B81B800F78849 /* iBeaconViewController.m */; };
+		18A92B81196B81B800F78849 /* iBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A92B7E196B81B800F78849 /* iBeaconViewController.m */; };
+		18A92B82196B81B800F78849 /* iBeaconViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A92B7F196B81B800F78849 /* iBeaconViewController.xib */; };
+		18A92B83196B81B800F78849 /* iBeaconViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A92B7F196B81B800F78849 /* iBeaconViewController.xib */; };
+		18A92B87196B820E00F78849 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A92B85196B820E00F78849 /* WelcomeViewController.m */; };
+		18A92B88196B820E00F78849 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A92B85196B820E00F78849 /* WelcomeViewController.m */; };
+		18A92B89196B820E00F78849 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A92B86196B820E00F78849 /* WelcomeViewController.xib */; };
+		18A92B8A196B820E00F78849 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A92B86196B820E00F78849 /* WelcomeViewController.xib */; };
+		18A92B8E196B822A00F78849 /* FSoftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A92B8C196B822A00F78849 /* FSoftViewController.m */; };
+		18A92B8F196B822A00F78849 /* FSoftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A92B8C196B822A00F78849 /* FSoftViewController.m */; };
+		18A92B90196B822A00F78849 /* FSoftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A92B8D196B822A00F78849 /* FSoftViewController.xib */; };
+		18A92B91196B822A00F78849 /* FSoftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A92B8D196B822A00F78849 /* FSoftViewController.xib */; };
+		18A92B95196B824B00F78849 /* FSU1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A92B93196B824B00F78849 /* FSU1ViewController.m */; };
+		18A92B96196B824B00F78849 /* FSU1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A92B93196B824B00F78849 /* FSU1ViewController.m */; };
+		18A92B97196B824B00F78849 /* FSU1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A92B94196B824B00F78849 /* FSU1ViewController.xib */; };
+		18A92B98196B824B00F78849 /* FSU1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A92B94196B824B00F78849 /* FSU1ViewController.xib */; };
+		18A92B9C196B825A00F78849 /* CafeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A92B9A196B825A00F78849 /* CafeViewController.m */; };
+		18A92B9D196B825A00F78849 /* CafeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A92B9A196B825A00F78849 /* CafeViewController.m */; };
+		18A92B9E196B825A00F78849 /* CafeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A92B9B196B825A00F78849 /* CafeViewController.xib */; };
+		18A92B9F196B825A00F78849 /* CafeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A92B9B196B825A00F78849 /* CafeViewController.xib */; };
 		84A62AAC196A96F500D73A95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A62AAB196A96F500D73A95 /* Foundation.framework */; };
 		84A62AAE196A96F500D73A95 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A62AAD196A96F500D73A95 /* CoreGraphics.framework */; };
 		84A62AB0196A96F500D73A95 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A62AAF196A96F500D73A95 /* UIKit.framework */; };
@@ -34,6 +57,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18A92B78196B80EE00F78849 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		18A92B7A196B816400F78849 /* button-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-2.png"; sourceTree = "<group>"; };
+		18A92B7D196B81B800F78849 /* iBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iBeaconViewController.h; sourceTree = "<group>"; };
+		18A92B7E196B81B800F78849 /* iBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iBeaconViewController.m; sourceTree = "<group>"; };
+		18A92B7F196B81B800F78849 /* iBeaconViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iBeaconViewController.xib; sourceTree = "<group>"; };
+		18A92B84196B820E00F78849 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		18A92B85196B820E00F78849 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		18A92B86196B820E00F78849 /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
+		18A92B8B196B822A00F78849 /* FSoftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSoftViewController.h; sourceTree = "<group>"; };
+		18A92B8C196B822A00F78849 /* FSoftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSoftViewController.m; sourceTree = "<group>"; };
+		18A92B8D196B822A00F78849 /* FSoftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSoftViewController.xib; sourceTree = "<group>"; };
+		18A92B92196B824B00F78849 /* FSU1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSU1ViewController.h; sourceTree = "<group>"; };
+		18A92B93196B824B00F78849 /* FSU1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSU1ViewController.m; sourceTree = "<group>"; };
+		18A92B94196B824B00F78849 /* FSU1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSU1ViewController.xib; sourceTree = "<group>"; };
+		18A92B99196B825A00F78849 /* CafeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CafeViewController.h; sourceTree = "<group>"; };
+		18A92B9A196B825A00F78849 /* CafeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CafeViewController.m; sourceTree = "<group>"; };
+		18A92B9B196B825A00F78849 /* CafeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CafeViewController.xib; sourceTree = "<group>"; };
 		84A62AA8196A96F500D73A95 /* FTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A62AAB196A96F500D73A95 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84A62AAD196A96F500D73A95 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -79,6 +119,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18A92B77196B80AB00F78849 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				18A92B7A196B816400F78849 /* button-2.png */,
+				18A92B78196B80EE00F78849 /* button.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		84A62A9F196A96F400D73A95 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +161,7 @@
 		84A62AB1196A96F500D73A95 /* FTour */ = {
 			isa = PBXGroup;
 			children = (
+				18A92B77196B80AB00F78849 /* Resources */,
 				84A62ABA196A96F500D73A95 /* AppDelegate.h */,
 				84A62ABB196A96F500D73A95 /* AppDelegate.m */,
 				84A62AC0196A96F500D73A95 /* ViewController.h */,
@@ -119,6 +169,21 @@
 				84A62AC3196A96F500D73A95 /* Images.xcassets */,
 				84A62AB2196A96F500D73A95 /* Supporting Files */,
 				84A62AE0196A985000D73A95 /* ViewController.xib */,
+				18A92B7D196B81B800F78849 /* iBeaconViewController.h */,
+				18A92B7E196B81B800F78849 /* iBeaconViewController.m */,
+				18A92B7F196B81B800F78849 /* iBeaconViewController.xib */,
+				18A92B84196B820E00F78849 /* WelcomeViewController.h */,
+				18A92B85196B820E00F78849 /* WelcomeViewController.m */,
+				18A92B86196B820E00F78849 /* WelcomeViewController.xib */,
+				18A92B8B196B822A00F78849 /* FSoftViewController.h */,
+				18A92B8C196B822A00F78849 /* FSoftViewController.m */,
+				18A92B8D196B822A00F78849 /* FSoftViewController.xib */,
+				18A92B92196B824B00F78849 /* FSU1ViewController.h */,
+				18A92B93196B824B00F78849 /* FSU1ViewController.m */,
+				18A92B94196B824B00F78849 /* FSU1ViewController.xib */,
+				18A92B99196B825A00F78849 /* CafeViewController.h */,
+				18A92B9A196B825A00F78849 /* CafeViewController.m */,
+				18A92B9B196B825A00F78849 /* CafeViewController.xib */,
 			);
 			path = FTour;
 			sourceTree = "<group>";
@@ -228,8 +293,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A92B7B196B816400F78849 /* button-2.png in Resources */,
+				18A92B90196B822A00F78849 /* FSoftViewController.xib in Resources */,
+				18A92B89196B820E00F78849 /* WelcomeViewController.xib in Resources */,
 				84A62AC4196A96F500D73A95 /* Images.xcassets in Resources */,
+				18A92B79196B80EE00F78849 /* button.png in Resources */,
 				84A62AE1196A985000D73A95 /* ViewController.xib in Resources */,
+				18A92B97196B824B00F78849 /* FSU1ViewController.xib in Resources */,
+				18A92B9E196B825A00F78849 /* CafeViewController.xib in Resources */,
+				18A92B82196B81B800F78849 /* iBeaconViewController.xib in Resources */,
 				84A62AB6196A96F500D73A95 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,6 +310,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A92B91196B822A00F78849 /* FSoftViewController.xib in Resources */,
+				18A92B7C196B816400F78849 /* button-2.png in Resources */,
+				18A92B8A196B820E00F78849 /* WelcomeViewController.xib in Resources */,
+				18A92B9F196B825A00F78849 /* CafeViewController.xib in Resources */,
+				18A92B98196B824B00F78849 /* FSU1ViewController.xib in Resources */,
+				18A92B83196B81B800F78849 /* iBeaconViewController.xib in Resources */,
 				84A62AD5196A96F500D73A95 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,8 +327,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A92B87196B820E00F78849 /* WelcomeViewController.m in Sources */,
+				18A92B8E196B822A00F78849 /* FSoftViewController.m in Sources */,
+				18A92B95196B824B00F78849 /* FSU1ViewController.m in Sources */,
 				84A62AC2196A96F500D73A95 /* ViewController.m in Sources */,
 				84A62ABC196A96F500D73A95 /* AppDelegate.m in Sources */,
+				18A92B9C196B825A00F78849 /* CafeViewController.m in Sources */,
+				18A92B80196B81B800F78849 /* iBeaconViewController.m in Sources */,
 				84A62AB8196A96F500D73A95 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,7 +342,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A92B96196B824B00F78849 /* FSU1ViewController.m in Sources */,
+				18A92B9D196B825A00F78849 /* CafeViewController.m in Sources */,
+				18A92B81196B81B800F78849 /* iBeaconViewController.m in Sources */,
+				18A92B8F196B822A00F78849 /* FSoftViewController.m in Sources */,
 				84A62AD7196A96F500D73A95 /* FTourTests.m in Sources */,
+				18A92B88196B820E00F78849 /* WelcomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +536,7 @@
 				84A62ADC196A96F500D73A95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84A62ADD196A96F500D73A95 /* Build configuration list for PBXNativeTarget "FTourTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +545,7 @@
 				84A62ADF196A96F500D73A95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
