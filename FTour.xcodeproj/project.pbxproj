@@ -33,6 +33,8 @@
 		18A92B9F196B825A00F78849 /* CafeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A92B9B196B825A00F78849 /* CafeViewController.xib */; };
 		18F2BFC3196B8978003A87EA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F2BFC2196B8978003A87EA /* CoreLocation.framework */; };
 		613D1FE7196BD8B0002E69CF /* LogoFSO(2).png in Resources */ = {isa = PBXBuildFile; fileRef = 613D1FE6196BD8B0002E69CF /* LogoFSO(2).png */; };
+		613D1FEA196BEB79002E69CF /* FSU1_Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 613D1FE8196BEB79002E69CF /* FSU1_Data.json */; };
+		613D1FEB196BEB79002E69CF /* MCafe.json in Resources */ = {isa = PBXBuildFile; fileRef = 613D1FE9196BEB79002E69CF /* MCafe.json */; };
 		84A62AAC196A96F500D73A95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A62AAB196A96F500D73A95 /* Foundation.framework */; };
 		84A62AAE196A96F500D73A95 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A62AAD196A96F500D73A95 /* CoreGraphics.framework */; };
 		84A62AB0196A96F500D73A95 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A62AAF196A96F500D73A95 /* UIKit.framework */; };
@@ -80,6 +82,8 @@
 		18A92B9B196B825A00F78849 /* CafeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CafeViewController.xib; sourceTree = "<group>"; };
 		18F2BFC2196B8978003A87EA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		613D1FE6196BD8B0002E69CF /* LogoFSO(2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LogoFSO(2).png"; sourceTree = "<group>"; };
+		613D1FE8196BEB79002E69CF /* FSU1_Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FSU1_Data.json; sourceTree = "<group>"; };
+		613D1FE9196BEB79002E69CF /* MCafe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MCafe.json; sourceTree = "<group>"; };
 		84A62AA8196A96F500D73A95 /* FTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A62AAB196A96F500D73A95 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84A62AAD196A96F500D73A95 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -202,6 +206,8 @@
 		84A62AB2196A96F500D73A95 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				613D1FE8196BEB79002E69CF /* FSU1_Data.json */,
+				613D1FE9196BEB79002E69CF /* MCafe.json */,
 				84A62AB3196A96F500D73A95 /* FTour-Info.plist */,
 				84A62AB4196A96F500D73A95 /* InfoPlist.strings */,
 				84A62AB7196A96F500D73A95 /* main.m */,
@@ -310,8 +316,10 @@
 				18A92B89196B820E00F78849 /* WelcomeViewController.xib in Resources */,
 				84A62AC4196A96F500D73A95 /* Images.xcassets in Resources */,
 				18A92B79196B80EE00F78849 /* button.png in Resources */,
+				613D1FEA196BEB79002E69CF /* FSU1_Data.json in Resources */,
 				84A62AE1196A985000D73A95 /* ViewController.xib in Resources */,
 				18A92B97196B824B00F78849 /* FSU1ViewController.xib in Resources */,
+				613D1FEB196BEB79002E69CF /* MCafe.json in Resources */,
 				18A92B9E196B825A00F78849 /* CafeViewController.xib in Resources */,
 				18A92B82196B81B800F78849 /* iBeaconViewController.xib in Resources */,
 				84A62AB6196A96F500D73A95 /* InfoPlist.strings in Resources */,

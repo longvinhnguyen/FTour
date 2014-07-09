@@ -34,7 +34,11 @@
     self.locationManager.delegate = self;
     
     NSUUID *uuid = [[NSUUID alloc]initWithUUIDString:kFSoftUUID];
-    self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:@"Fsoft"];
+    self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:@"FSoft"];
+    self.beaconRegionFSoft = [[CLBeaconRegion alloc] initWithProximityUUID:uuid major:1 identifier:@"FSoft"];
+    self.beaconRegionFSu1 = [[CLBeaconRegion alloc]initWithProximityUUID:uuid major:2 identifier:@"FSu1"];
+    self.beaconRegionCafe = [[CLBeaconRegion alloc]initWithProximityUUID:uuid major:3 identifier:@"Cafe"];
+    
     [self.locationManager startMonitoringForRegion:self.beaconRegion];
 }
 -(void) peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral
@@ -44,7 +48,13 @@
 -(void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region
 {
     NSLog(@"Founded");
-    [self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
+    
+    if([region.identifier isEqualToString:@"FSoft"])
+        self.statusLable.text = @"FSoft";
+    if ([region.identifier isEqualToString:@"FSu1"])
+        self.statusLable.text = @"FSu1";
+    if ([region.identifier isEqualToString:@"Cafe"])
+        self.statusLable.text = @"Cafe";
 }
 -(void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region{
     [self
@@ -58,14 +68,15 @@
     switch (foundBeacon.major.intValue) {
         case 1:
             [self loadFsoft];
-           // _distanceLabel.text = @"FSoft";
-            //self.barProgress.progress =
+            [self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
             break;
         case 2:
-            _distanceLabel.text = @"FSU1";
+            [self loadFSu1];
+            [self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
             break;
         case 3:
-            _distanceLabel.text = @"Cafe";
+            [self loadCafe];
+             [self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
             break;
         default:
             break;

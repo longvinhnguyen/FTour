@@ -1,0 +1,64 @@
+{
+	"BU Lead" : [
+		{
+			"name" : "Lê Thanh Nhàn",
+			"email" : "NhanLT4@fsoft.com.vn"
+		}
+	],
+
+	"General Assistant" : [
+		{
+			"name" : "Đào Mai Ngọc Tuyền",
+			"email" : "TuyenDMN@fsoft.com.vn"
+		},
+
+		{
+			"name" : "Nguyễn Thuỳ ",
+			"email" : "TrangNT24@fsoft.com.vn"
+		},
+	],
+
+	"Mobility iOS" : [
+		{
+			"name" : "Hồ Xuân Tuấn Anh",
+			"email" : "AnhHXT@fsoft.com.vn"
+		},
+
+		{
+			"name" : "Nguyễn Thành Nguyên Khánh",
+			"email" : "KhanhNTN@fsoft.com.vn"
+		},
+
+		{
+			"name" : "Nguyễn Vinh Long",
+			"email" : "LongNV9@fsoft.com.vn"
+		},
+
+		{
+			"name" : "Phạm Lê Minh",
+			"email" : "MinhPL@fsoft.com.vn"
+		},
+
+		{
+			"name" : "Kiều Ngọc Hải",
+			"email" : "HaiKN@fsoft.com.vn"
+		},
+	],
+
+	"Mobility Android" : [
+		{
+			"name" : "Lâm Duy Minh Quân",
+			"email" : "QuanLDM@fsoft.com.vn"
+		},
+
+		{
+			"name" : "Trần Hoàng Minh",
+			"email" : "MinhTH2@fsoft.com.vn"
+		},
+
+		{
+			"name" : "Lê Trung Kiên",
+			"email" : "KienLT4@fsoft.com.vn"
+		},
+	],
+}
