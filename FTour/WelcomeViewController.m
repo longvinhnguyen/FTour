@@ -36,8 +36,6 @@
     NSUUID *uuid = [[NSUUID alloc]initWithUUIDString:kFSoftUUID];
     self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:@"Fsoft"];
     [self.locationManager startMonitoringForRegion:self.beaconRegion];
-    
-    
 }
 -(void) peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral
 {
@@ -76,8 +74,9 @@
 
 -(void)loadFsoft
 {
-    FSoftViewController *vc = [[FSoftViewController alloc]init];
-    [self presentViewController:vc animated:YES completion:nil];
+    FSoftViewController *vc = [[FSoftViewController alloc] initWithNibName:@"FSoftViewController" bundle:nil];
+//    [[[[[UIApplication sharedApplication] delegate]window] rootViewController]presentViewController:vc animated:YES completion:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 -(void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region
 {
