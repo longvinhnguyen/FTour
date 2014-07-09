@@ -9,6 +9,7 @@
 #import "CafeViewController.h"
 
 @interface CafeViewController ()
+@property (strong, nonatomic) IBOutlet UITableView *orderTbl;
 
 @end
 
@@ -27,8 +28,16 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self.navigationController setNavigationBarHidden:NO];
+    self.navigationController.title = @"Cafe Terrace";
+    UIBarButtonItem *barBtn = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(toMenuView)];
+    self.navigationItem.rightBarButtonItem = barBtn;
 }
 
+-(void)toMenuView
+{
+    [[[UIAlertView alloc]initWithTitle:@"OK" message:@"Ok buddy move on" delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles: nil]show];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
