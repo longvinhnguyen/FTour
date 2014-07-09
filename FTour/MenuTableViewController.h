@@ -10,4 +10,9 @@
 
 @interface MenuTableViewController : UITableViewController
 
+
+@end
+
+@interface TableHeaderView : UITableViewHeaderFooterView
+
 @end

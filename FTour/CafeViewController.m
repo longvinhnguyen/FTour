@@ -7,6 +7,7 @@
 //
 
 #import "CafeViewController.h"
+#import "MenuTableViewController.h"
 
 @interface CafeViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *orderTbl;
@@ -36,7 +37,8 @@
 
 -(void)toMenuView
 {
-    [[[UIAlertView alloc]initWithTitle:@"OK" message:@"Ok buddy move on" delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles: nil]show];
+    MenuTableViewController *vc = [[MenuTableViewController alloc] initWithNibName:@"MenuTableViewController" bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 - (void)didReceiveMemoryWarning
 {
