@@ -37,13 +37,13 @@
 -(IBAction)iBeaconMe:(id)sender
 {
    // [[[UIAlertView alloc]initWithTitle:@"ok" message:@"now what" delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles: nil] show];
-    iBeaconViewController *viewController = [[iBeaconViewController alloc] init];
+    iBeaconViewController *viewController = [[iBeaconViewController alloc] initWithNibName:@"iBeaconViewController" bundle:nil];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
 -(IBAction)proximityMe:(id)sender
 {
-    WelcomeViewController *viewController = [[WelcomeViewController alloc]init];
+    WelcomeViewController *viewController = [[WelcomeViewController alloc]initWithNibName:@"WelcomeViewController" bundle:nil];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 @end
