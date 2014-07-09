@@ -47,6 +47,13 @@
 {
     NSLog(@"Founded");
     [self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
+//    CLBeacon *foundBeacon = [beacons firstObject];
+    s
+    if(foundBeacon.major.intValue ==1)
+       [self loadFsoft];
+    if (foundBeacon.major.intValue == 2) {
+        [self loadFSu1];
+    }
 }
 -(void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region{
     [self
@@ -60,14 +67,15 @@
     switch (foundBeacon.major.intValue) {
         case 1:
             [self loadFsoft];
-            _distanceLabel.text = @"FSoft";
+            NSLog(@"FSoft");
             //self.barProgress.progress =
+            //[self loadFsoft];
             break;
         case 2:
-            _distanceLabel.text = @"FSU1";
+            [self loadFSu1];
             break;
         case 3:
-            _distanceLabel.text = @"Cafe";
+            [self loadCafe];
             break;
         default:
             break;
@@ -76,7 +84,21 @@
 
 -(void)loadFsoft
 {
-
+    
+    UIAlertView *msg = [[UIAlertView alloc]initWithTitle:@"Welcome to FSoft" message:@"You are at Reception" delegate:nil cancelButtonTitle:@"Got it" otherButtonTitles:nil, nil];
+    [msg show];
+}
+-(void)loadFSu1
+{
+    
+    UIAlertView *msg = [[UIAlertView alloc]initWithTitle:@"Welcome to FSu1" message:@"You are at FSu1" delegate:nil cancelButtonTitle:@"Got it" otherButtonTitles:nil, nil];
+    [msg show];
+}
+-(void)loadCafe
+{
+    
+    UIAlertView *msg = [[UIAlertView alloc]initWithTitle:@"Welcome to Cafe" message:@"You are at Cafe" delegate:nil cancelButtonTitle:@"Got it" otherButtonTitles:nil, nil];
+    [msg show];
 }
 -(void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region
 {
