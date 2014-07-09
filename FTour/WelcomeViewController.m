@@ -67,7 +67,7 @@
     switch (foundBeacon.major.intValue) {
         case 1:
             [self loadFsoft];
-            NSLog(@"FSoft");
+           // _distanceLabel.text = @"FSoft";
             //self.barProgress.progress =
             //[self loadFsoft];
             break;
@@ -84,9 +84,8 @@
 
 -(void)loadFsoft
 {
-    
-    UIAlertView *msg = [[UIAlertView alloc]initWithTitle:@"Welcome to FSoft" message:@"You are at Reception" delegate:nil cancelButtonTitle:@"Got it" otherButtonTitles:nil, nil];
-    [msg show];
+    FSoftViewController *vc = [[FSoftViewController alloc]init];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 -(void)loadFSu1
 {
