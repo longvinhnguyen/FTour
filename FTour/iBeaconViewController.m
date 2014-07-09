@@ -57,6 +57,14 @@
     _peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil options:nil];
 
     [_uuidLbl setText:_beaconRegion.proximityUUID.UUIDString];
+    [_uuidTitle setHidden:NO];
+    [_majorTxt setText:[NSString stringWithFormat:@"%@",_beaconRegion.major]];
+    [_majorTitle setHidden:NO];
+    [_minorTxt setText:[NSString stringWithFormat:@"%@",_beaconRegion.minor]];
+    [_minorTitle setHidden:NO];
+    [_idTitle setHidden:NO];
+    [_idtXT setText:_beaconRegion.identifier];
+    
 }
 
 #pragma mark - CBPeripheraManager Delegate
@@ -66,11 +74,13 @@
     if(peripheral.state == CBPeripheralManagerStatePoweredOn)
     {
         NSLog(@"On");
+        [_status setText:@"Broadcasting..."];
         [peripheral startAdvertising:_beaconPeripheralData];
     }
     if(peripheral.state == CBPeripheralManagerStatePoweredOff)
     {
         NSLog(@"Off");
+        [_status setText:@"Stopped"];
         [peripheral stopAdvertising];
     }
     

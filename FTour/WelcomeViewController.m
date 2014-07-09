@@ -7,7 +7,7 @@
 //
 
 #import "WelcomeViewController.h"
-
+#import "FSoftViewController.h"
 
 @interface WelcomeViewController ()
 
