@@ -32,12 +32,16 @@
    NSURL *url =    [NSURL fileURLWithPath:[[NSBundle mainBundle]
                             pathForResource:@"FSoftIntro" ofType:@"mov"]];
     self.videoController = [[MPMoviePlayerController alloc] init];
-    
+    self.videoController.controlStyle = MPMovieControlStyleFullscreen;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(doneButtonClicked:) name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
     [self.videoController setContentURL:url];
     [self.videoController.view setFrame:self.viewFull.bounds];
     [self.view addSubview:self.videoController.view];
+    [self.videoController prepareToPlay];
     [self.videoController play];
+    [self.videoController setFullscreen:YES animated:YES];
 }
+
 - (void)videoPlayBackDidFinish:(NSNotification *)notification {
     
     [[NSNotificationCenter defaultCenter]removeObserver:self name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
@@ -46,6 +50,8 @@
     [self.videoController stop];
     [self.videoController.view removeFromSuperview];
     self.videoController = nil;
+    //[self.videoController : UIInterfaceOrientationLandscapeRight];
+
     
     // Display a message
     UIAlertView *alert = [[UIAlertView alloc]
@@ -53,9 +59,12 @@
     [alert show];
     
 }
-
-
-
+-(void)doneButtonClicked:(NSNotification*)aNotification
+{
+        [self.videoController stop];
+        [self.videoController.view removeFromSuperview];
+        [self.navigationController popViewControllerAnimated:YES];
+}
 
 
 - (void)didReceiveMemoryWarning

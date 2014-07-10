@@ -50,7 +50,7 @@
         [dataArray addObject:iOS];
         [dataArray addObject:android];
     }
-    
+    [self.navigationController setNavigationBarHidden:NO];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -125,11 +125,32 @@
     
     NSString * name = [dic objectForKey:@"name"];
     NSString * email = [dic objectForKey:@"email"];
-    NSString * cellValue = [NSString stringWithFormat:@"%@",name];
-    cell.textLabel.text =cellValue;
+    cell.textLabel.text = name;
+    cell.detailTextLabel.text = email;
     
     return cell;
     
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    if ([MFMailComposeViewController canSendMail]){
+        MFMailComposeViewController *mc = [[MFMailComposeViewController alloc]init];
+        mc.mailComposeDelegate = self;
+        [mc setSubject:@"FTour guess"];
+        NSString *a = cell.detailTextLabel.text;
+        [mc setToRecipients:[NSArray arrayWithObject:a]];
+        [self presentViewController:mc animated:YES completion:NULL];    }
+    else
+    {
+        UIAlertView *aView = [[UIAlertView alloc]initWithTitle:@"Email Setup" message:@"Please set-up your email account before using this function" delegate:nil cancelButtonTitle:@"Got it" otherButtonTitles:nil, nil];
+        [aView show];
+    }
+    cell.selected = FALSE;
+    
+}
+-(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 - (void)didReceiveMemoryWarning

@@ -8,9 +8,12 @@
 
 #import "MenuTableViewController.h"
 
-@interface MenuTableViewController (){
+@interface MenuTableViewController ()<UISearchBarDelegate,UISearchDisplayDelegate>{
     NSMutableDictionary *allMenuItem;
     NSArray *keys;
+    UISearchBar *searchBar;
+    UISearchDisplayController *searchDisplayController;
+    NSMutableArray *searchData;
 }
 
 @end
@@ -35,7 +38,11 @@
     self.navigationItem.hidesBackButton = YES;
     self.navigationItem.title = @"Menu";
     [self loadMenu];
-  //  NSLog(@"All Item : %lu",(unsigned long)[allMenuItem count]);
+    searchBar  = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 0, 320, 44)];
+    searchDisplayController = [[UISearchDisplayController alloc]initWithSearchBar:searchBar contentsController:self];
+    searchDisplayController.delegate = self;
+    searchDisplayController.searchResultsDataSource = self;
+    self.tableView.tableHeaderView = searchBar;
 }
 
 -(void)loadMenu
@@ -66,7 +73,6 @@
         
     }
     
-   // NSLog(@"%@",orderItems);
     [self.delegate addItemViewController:self didFinishPickingItems:orderItems];
     [self.navigationController popViewControllerAnimated:YES];
     
@@ -186,5 +192,11 @@
 {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryNone;
+}
+
+#pragma mark - UISearchBar
+-(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    
 }
 @end

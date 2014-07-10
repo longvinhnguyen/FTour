@@ -8,8 +8,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
-@interface FSU1ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface FSU1ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate>
 {
     IBOutlet UITableView *mainTable;
     NSMutableArray *dataArray;

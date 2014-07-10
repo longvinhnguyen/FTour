@@ -17,10 +17,8 @@
 @property (nonatomic, strong) CLBeaconRegion *beaconRegionFSu1;
 @property (nonatomic, strong) CLBeaconRegion *beaconRegionCafe;
 @property (nonatomic, strong) CLLocationManager *locationManager;
-@property (weak, nonatomic) IBOutlet UILabel *statusLable;
-@property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
+- (IBAction)btnFSoft:(id)sender;
 - (IBAction)btnCafe:(id)sender;
 - (IBAction)btnFSu1:(id)sender;
-- (IBAction)btnFSoft:(id)sender;
 
 @end
