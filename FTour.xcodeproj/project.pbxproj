@@ -34,6 +34,7 @@
 		18A92B9F196B825A00F78849 /* CafeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A92B9B196B825A00F78849 /* CafeViewController.xib */; };
 		18C54B62196E25060056865D /* FTourLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C54B61196E25060056865D /* FTourLogo.png */; };
 		18C54B64196E26B00056865D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C54B63196E26B00056865D /* MediaPlayer.framework */; };
+		18C54B66196E38A40056865D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C54B65196E38A40056865D /* MessageUI.framework */; };
 		18DAF88D196CF08B0010CCFB /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DAF88B196CF08B0010CCFB /* MenuTableViewController.m */; };
 		18DAF88E196CF08B0010CCFB /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DAF88B196CF08B0010CCFB /* MenuTableViewController.m */; };
 		18DAF88F196CF08B0010CCFB /* MenuTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DAF88C196CF08B0010CCFB /* MenuTableViewController.xib */; };
@@ -90,6 +91,7 @@
 		18A92B9B196B825A00F78849 /* CafeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CafeViewController.xib; sourceTree = "<group>"; };
 		18C54B61196E25060056865D /* FTourLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FTourLogo.png; sourceTree = "<group>"; };
 		18C54B63196E26B00056865D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		18C54B65196E38A40056865D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		18DAF88A196CF08B0010CCFB /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
 		18DAF88B196CF08B0010CCFB /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
 		18DAF88C196CF08B0010CCFB /* MenuTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewController.xib; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C54B66196E38A40056865D /* MessageUI.framework in Frameworks */,
 				18C54B64196E26B00056865D /* MediaPlayer.framework in Frameworks */,
 				18129C51196B8FD50004AE71 /* CoreBluetooth.framework in Frameworks */,
 				18F2BFC3196B8978003A87EA /* CoreLocation.framework in Frameworks */,
@@ -177,6 +180,7 @@
 		84A62AAA196A96F500D73A95 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18C54B65196E38A40056865D /* MessageUI.framework */,
 				18C54B63196E26B00056865D /* MediaPlayer.framework */,
 				18129C50196B8FD50004AE71 /* CoreBluetooth.framework */,
 				18F2BFC2196B8978003A87EA /* CoreLocation.framework */,

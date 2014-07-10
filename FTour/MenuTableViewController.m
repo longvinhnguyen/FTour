@@ -33,6 +33,7 @@
     self.navigationItem.rightBarButtonItem = btn;
     self.navigationItem.leftBarButtonItem = cancelBtn;
     self.navigationItem.hidesBackButton = YES;
+    self.navigationItem.title = @"Menu";
     [self loadMenu];
   //  NSLog(@"All Item : %lu",(unsigned long)[allMenuItem count]);
 }
@@ -65,7 +66,7 @@
         
     }
     
-    NSLog(@"%@",orderItems);
+   // NSLog(@"%@",orderItems);
     [self.delegate addItemViewController:self didFinishPickingItems:orderItems];
     [self.navigationController popViewControllerAnimated:YES];
     
@@ -105,7 +106,6 @@
 
 
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString * CellIdentifier = @"CellIdentifier";
@@ -128,7 +128,6 @@
     
     return cell;
 }
-
 
 /*
 // Override to support conditional editing of the table view.
@@ -176,11 +175,7 @@
 {
     // Navigation logic may go here, for example:
     // Create the next view controller.
-//    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
-//    
-//    // Pass the selected object to the new view controller.
-//    
-//    // Push the view controller.
+
 //    [self.navigationController pushViewController:detailViewController animated:YES];
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
