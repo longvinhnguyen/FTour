@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		18129C51196B8FD50004AE71 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18129C50196B8FD50004AE71 /* CoreBluetooth.framework */; };
+		188D997D196E23F10097FDCA /* FSoftIntro.mov in Resources */ = {isa = PBXBuildFile; fileRef = 188D997C196E23F10097FDCA /* FSoftIntro.mov */; };
 		18A92B79196B80EE00F78849 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A92B78196B80EE00F78849 /* button.png */; };
 		18A92B7B196B816400F78849 /* button-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A92B7A196B816400F78849 /* button-2.png */; };
 		18A92B7C196B816400F78849 /* button-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A92B7A196B816400F78849 /* button-2.png */; };
@@ -31,6 +32,8 @@
 		18A92B9D196B825A00F78849 /* CafeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A92B9A196B825A00F78849 /* CafeViewController.m */; };
 		18A92B9E196B825A00F78849 /* CafeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A92B9B196B825A00F78849 /* CafeViewController.xib */; };
 		18A92B9F196B825A00F78849 /* CafeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A92B9B196B825A00F78849 /* CafeViewController.xib */; };
+		18C54B62196E25060056865D /* FTourLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C54B61196E25060056865D /* FTourLogo.png */; };
+		18C54B64196E26B00056865D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C54B63196E26B00056865D /* MediaPlayer.framework */; };
 		18DAF88D196CF08B0010CCFB /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DAF88B196CF08B0010CCFB /* MenuTableViewController.m */; };
 		18DAF88E196CF08B0010CCFB /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DAF88B196CF08B0010CCFB /* MenuTableViewController.m */; };
 		18DAF88F196CF08B0010CCFB /* MenuTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DAF88C196CF08B0010CCFB /* MenuTableViewController.xib */; };
@@ -67,6 +70,7 @@
 
 /* Begin PBXFileReference section */
 		18129C50196B8FD50004AE71 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		188D997C196E23F10097FDCA /* FSoftIntro.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = FSoftIntro.mov; sourceTree = "<group>"; };
 		18A92B78196B80EE00F78849 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		18A92B7A196B816400F78849 /* button-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-2.png"; sourceTree = "<group>"; };
 		18A92B7D196B81B800F78849 /* iBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iBeaconViewController.h; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 		18A92B99196B825A00F78849 /* CafeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CafeViewController.h; sourceTree = "<group>"; };
 		18A92B9A196B825A00F78849 /* CafeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CafeViewController.m; sourceTree = "<group>"; };
 		18A92B9B196B825A00F78849 /* CafeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CafeViewController.xib; sourceTree = "<group>"; };
+		18C54B61196E25060056865D /* FTourLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FTourLogo.png; sourceTree = "<group>"; };
+		18C54B63196E26B00056865D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		18DAF88A196CF08B0010CCFB /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
 		18DAF88B196CF08B0010CCFB /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
 		18DAF88C196CF08B0010CCFB /* MenuTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewController.xib; sourceTree = "<group>"; };
@@ -117,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C54B64196E26B00056865D /* MediaPlayer.framework in Frameworks */,
 				18129C51196B8FD50004AE71 /* CoreBluetooth.framework in Frameworks */,
 				18F2BFC3196B8978003A87EA /* CoreLocation.framework in Frameworks */,
 				84A62AAE196A96F500D73A95 /* CoreGraphics.framework in Frameworks */,
@@ -170,6 +177,7 @@
 		84A62AAA196A96F500D73A95 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18C54B63196E26B00056865D /* MediaPlayer.framework */,
 				18129C50196B8FD50004AE71 /* CoreBluetooth.framework */,
 				18F2BFC2196B8978003A87EA /* CoreLocation.framework */,
 				84A62AAB196A96F500D73A95 /* Foundation.framework */,
@@ -216,6 +224,8 @@
 		84A62AB2196A96F500D73A95 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18C54B61196E25060056865D /* FTourLogo.png */,
+				188D997C196E23F10097FDCA /* FSoftIntro.mov */,
 				613D1FE8196BEB79002E69CF /* FSU1_Data.json */,
 				613D1FE9196BEB79002E69CF /* MCafe.json */,
 				84A62AB3196A96F500D73A95 /* FTour-Info.plist */,
@@ -321,11 +331,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				18A92B7B196B816400F78849 /* button-2.png in Resources */,
+				18C54B62196E25060056865D /* FTourLogo.png in Resources */,
 				18A92B90196B822A00F78849 /* FSoftViewController.xib in Resources */,
 				613D1FE7196BD8B0002E69CF /* LogoFSO(2).png in Resources */,
 				18A92B89196B820E00F78849 /* WelcomeViewController.xib in Resources */,
 				84A62AC4196A96F500D73A95 /* Images.xcassets in Resources */,
 				18A92B79196B80EE00F78849 /* button.png in Resources */,
+				188D997D196E23F10097FDCA /* FSoftIntro.mov in Resources */,
 				613D1FEA196BEB79002E69CF /* FSU1_Data.json in Resources */,
 				84A62AE1196A985000D73A95 /* ViewController.xib in Resources */,
 				18DAF88F196CF08B0010CCFB /* MenuTableViewController.xib in Resources */,

@@ -7,6 +7,7 @@
 //
 
 #import "FSoftViewController.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface FSoftViewController ()
 
@@ -27,7 +28,35 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+
+   NSURL *url =    [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                            pathForResource:@"FSoftIntro" ofType:@"mov"]];
+    self.videoController = [[MPMoviePlayerController alloc] init];
+    
+    [self.videoController setContentURL:url];
+    [self.videoController.view setFrame:self.viewFull.bounds];
+    [self.view addSubview:self.videoController.view];
+    [self.videoController play];
 }
+- (void)videoPlayBackDidFinish:(NSNotification *)notification {
+    
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
+    
+    // Stop the video player and remove it from view
+    [self.videoController stop];
+    [self.videoController.view removeFromSuperview];
+    self.videoController = nil;
+    
+    // Display a message
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"Video Playback" message:@"Just finished the video playback. The video is now removed." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+    
+}
+
+
+
+
 
 - (void)didReceiveMemoryWarning
 {
