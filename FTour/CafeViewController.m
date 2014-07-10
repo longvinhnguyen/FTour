@@ -9,7 +9,7 @@
 #import "CafeViewController.h"
 #import "MenuTableViewController.h"
 
-@interface CafeViewController ()
+@interface CafeViewController () <MenuTableViewControllerDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *orderTbl;
 
 @end
@@ -38,12 +38,17 @@
 -(void)toMenuView
 {
     MenuTableViewController *vc = [[MenuTableViewController alloc] initWithNibName:@"MenuTableViewController" bundle:nil];
+    vc.delegate = self;
     [self.navigationController pushViewController:vc animated:YES];
 }
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(void)addItemViewController:(MenuTableViewController *)viewController didFinishPickingItems:(NSMutableArray *)items
+{
+    NSLog(@"%@",items);
 }
 
 @end

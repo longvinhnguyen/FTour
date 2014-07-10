@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+@class MenuTableViewController;
+@protocol MenuTableViewControllerDelegate <NSObject>
+
+-(void)addItemViewController:(MenuTableViewController *)viewController didFinishPickingItems:(NSMutableArray *)items;
+
+@end
 
 @interface MenuTableViewController : UITableViewController
 
-
+@property (nonatomic,weak) id<MenuTableViewControllerDelegate> delegate;
 @end
 
-@interface TableHeaderView : UITableViewHeaderFooterView
-
-@end

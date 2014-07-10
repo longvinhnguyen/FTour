@@ -16,6 +16,7 @@
 @end
 
 @implementation MenuTableViewController
+@synthesize delegate;
 
 - (void)viewDidLoad
 {
@@ -65,6 +66,8 @@
     }
     
     NSLog(@"%@",orderItems);
+    [self.delegate addItemViewController:self didFinishPickingItems:orderItems];
+    [self.navigationController popViewControllerAnimated:YES];
     
 }
 -(void)didCancelOrder
