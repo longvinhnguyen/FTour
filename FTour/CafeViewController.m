@@ -25,7 +25,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
- 
+        
     }
     return self;
 }
@@ -36,10 +36,21 @@
     // Do any additional setup after loading the view from its nib.
     [self.navigationController setNavigationBarHidden:NO];
     self.navigationController.title = @"Cafe Terrace";
-    UIBarButtonItem *barBtn = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(toMenuView)];
-    self.navigationItem.rightBarButtonItem = barBtn;
-   
+    
 }
+-(void)viewWillAppear:(BOOL)animated
+{
+    UIBarButtonItem *barBtn = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(toMenuView)];
+    UIBarButtonItem *btn = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:nil];
+    if(orderItems.count != 0){
+        
+        self.navigationItem.rightBarButtonItems = @[btn,barBtn];
+    }else{
+        self.navigationItem.rightBarButtonItems = @[barBtn];
+    }
+}
+
+
 
 -(void)toMenuView
 {
@@ -54,7 +65,7 @@
 }
 -(void)addItemViewController:(MenuTableViewController *)viewController didFinishPickingItems:(NSMutableArray *)items
 {
-
+    
     orderItems = [NSMutableArray arrayWithArray:items];
     total = 0;
     [self.orderTbl reloadData];
@@ -71,7 +82,7 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"CellIdentifier";
-
+    
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
@@ -80,12 +91,12 @@
     }
     NSDictionary *item = [orderItems objectAtIndex:indexPath.row];
     total += [[item objectForKey:@"Price"] intValue];
- 
+    
     cell.textLabel.text = [item objectForKey:@"Name"];
     cell.detailTextLabel.text = [item objectForKey:@"Price"];
     
     return cell;
-
+    
 }
 -(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
@@ -93,7 +104,7 @@
         return nil;
     }
     else{
-
+        
         UITableViewCell *footer = [self.orderTbl dequeueReusableCellWithIdentifier:@"Cell"];
         if (footer == nil) {
             footer = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"Cell"];
@@ -110,7 +121,7 @@
     if(orderItems.count ==0){
         return 0;
     }else{
-    return 40;
+        return 40;
     }
 }
 -(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -128,3 +139,4 @@
 }
 
 @end
+

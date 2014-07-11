@@ -1,202 +1,399 @@
 //
+
 //  MenuTableViewController.m
+
 //  FTour
+
 //
+
 //  Created by Khanhhoa Mai on 7/9/14.
+
 //  Copyright (c) 2014 FSoft. All rights reserved.
+
 //
+
+
 
 #import "MenuTableViewController.h"
 
+
+
 @interface MenuTableViewController ()<UISearchBarDelegate,UISearchDisplayDelegate>{
+    
     NSMutableDictionary *allMenuItem;
+    
     NSArray *keys;
+    
     UISearchBar *searchBar;
+    
     UISearchDisplayController *searchDisplayController;
-    NSMutableArray *searchData;
+    
+    NSMutableDictionary *searchData;
+    
+    BOOL isFiltered;
+    NSMutableArray *selectedItems;
+    
 }
+
+
 
 @end
 
+
+
 @implementation MenuTableViewController
+
 @synthesize delegate;
 
+
+
 - (void)viewDidLoad
+
 {
+    
     [super viewDidLoad];
     
+    
+    
     // Uncomment the following line to preserve selection between presentations.
+    
     // self.clearsSelectionOnViewWillAppear = NO;
     
+    
+    
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
     [self.navigationController setNavigationBarHidden:NO];
+    
     UIBarButtonItem *btn = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(didPressDoneButton)];
+    
     UIBarButtonItem *cancelBtn = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(didCancelOrder)];
+    
     self.navigationItem.rightBarButtonItem = btn;
+    
     self.navigationItem.leftBarButtonItem = cancelBtn;
+    
     self.navigationItem.hidesBackButton = YES;
+    
     self.navigationItem.title = @"Menu";
+    
     [self loadMenu];
+    
     searchBar  = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 0, 320, 44)];
+    
     searchDisplayController = [[UISearchDisplayController alloc]initWithSearchBar:searchBar contentsController:self];
+    
     searchDisplayController.delegate = self;
+    
     searchDisplayController.searchResultsDataSource = self;
+    searchDisplayController.searchResultsDelegate = self;
+    
+    searchBar.delegate  = self;
+    
     self.tableView.tableHeaderView = searchBar;
+    NSLog(@"%@",selectedItems);
+//    for(int section = 0; section < self.tableView.numberOfSections; section++){
+//        for(int row = 0; row < [self.tableView numberOfRowsInSection:section];row++){
+//            UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:row inSection:section]];
+//            for(NSDictionary *item in selectedItems){
+//                if ([cell.textLabel.text isEqualToString:[item objectForKey:@"Name"]]) {
+//                    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+//                }
+//            }
+//        }
+//    }
+    
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+        for(int section = 0; section < self.tableView.numberOfSections; section++){
+            for(int row = 0; row < [self.tableView numberOfRowsInSection:section];row++){
+                UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:row inSection:section]];
+                for(NSDictionary *item in selectedItems){
+                    if ([cell.textLabel.text isEqualToString:[item objectForKey:@"Name"]]) {
+                        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+                    }
+                }
+            }
+        }
 }
 
 -(void)loadMenu
+
 {
+    
     NSString *filePath = [[NSBundle mainBundle]pathForResource:@"MCafe" ofType:@"json"];
+    
     NSData *allMenuItemData = [[NSData alloc]initWithContentsOfFile:filePath];
+    
     NSError *error;
+    
     allMenuItem = [NSJSONSerialization JSONObjectWithData:allMenuItemData options:NSJSONReadingMutableContainers error:&error];
+    
     if(error)
+        
     {
+        
         NSLog(@"%@", [error description]);
+        
     }
+    
     else{
+        
         keys = [allMenuItem allKeys];
+        
         NSLog(@"Loaded menu items successfully");
+        
     }
+    
+    selectedItems = [[NSMutableArray alloc]init];
+    
 }
 
+
+
+
 -(void) didPressDoneButton
+
 {
-    NSArray *selectedItems = [self.tableView indexPathsForSelectedRows];
-    NSMutableArray *orderItems = [[NSMutableArray alloc]init];
-    for(NSIndexPath *indexPath in selectedItems){
-        
-        UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-        NSDictionary *item = [[NSDictionary alloc]initWithObjects:@[cell.textLabel.text,cell.detailTextLabel.text] forKeys:@[@"Name",@"Price"]];
-        [orderItems insertObject:item atIndex:0];
-        
-    }
+
     
-    [self.delegate addItemViewController:self didFinishPickingItems:orderItems];
+    
+    
+   [self.delegate addItemViewController:self didFinishPickingItems:selectedItems];
+    
     [self.navigationController popViewControllerAnimated:YES];
     
+    
+    
 }
+
 -(void)didCancelOrder
+
 {
+    
     [self.navigationController popViewControllerAnimated:YES];
+    
 }
+
 - (void)didReceiveMemoryWarning
+
 {
+    
     [super didReceiveMemoryWarning];
+    
     // Dispose of any resources that can be recreated.
+    
 }
+
+
 
 #pragma mark - Table view data source
 
+
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+
 {
+    
     // Return the number of sections.
-    return [keys count];
+    
+    return isFiltered ? [searchData count] : [keys count];
+    
 }
+
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    // Return the number of rows in the section.
-    id key = [keys objectAtIndex:section];
-    NSArray *arrayAtIndex = [allMenuItem objectForKey:key];
-    return [arrayAtIndex count];
 
+{
+
+    
+    id key = [keys objectAtIndex:section];
+    
+    NSArray *arrayAtIndex = [allMenuItem objectForKey:key];
+    
+
+    
+    return isFiltered? [[searchData objectForKey:key] count] : [arrayAtIndex count];
+    
+    
+    
 }
+
+
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    id key = [keys objectAtIndex:section];
-    return [NSString stringWithFormat:@"%@", key];
-}
 
+{
+    
+    id key = [keys objectAtIndex:section];
+    
+    //   return [NSString stringWithFormat:@"%@", key];
+    
+    NSArray *array = [searchData allKeys];
+    
+    return isFiltered ? [NSString stringWithFormat:@"%@", [array objectAtIndex:section]] : [NSString stringWithFormat:@"%@",key];
+    
+}
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+
 {
+    
     static NSString * CellIdentifier = @"CellIdentifier";
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
     if(cell == nil){
+        
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
+        
     }
     
+    
+    
     id key = [keys objectAtIndex:indexPath.section];
+    
     NSArray *itemArray = [allMenuItem objectForKey:key];
+    
     NSDictionary *itemDetail = [itemArray objectAtIndex:indexPath.row];
-    cell.textLabel.text = [itemDetail objectForKey:@"name"];
-    NSString *price = [NSString stringWithFormat:@"%@",[itemDetail objectForKey:@"price"]];
+    
+ 
+    
+    cell.textLabel.text = isFiltered ? [[[searchData objectForKey:key] objectAtIndex:indexPath.row] objectForKey:@"name"] : [itemDetail objectForKey:@"name"];
+   
+    
+    NSString *price = isFiltered ? [NSString stringWithFormat:@"%@",[[[searchData objectForKey:key]objectAtIndex:indexPath.row]objectForKey:@"price"]]:[NSString stringWithFormat:@"%@",[itemDetail objectForKey:@"price"]];
+    
     cell.detailTextLabel.text = price;
     
-    
-    
-    
-    // Configure the cell...
-    
+
     return cell;
+    
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 
 #pragma mark - Table view delegate
 
-// In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here, for example:
-    // Create the next view controller.
 
-//    [self.navigationController pushViewController:detailViewController animated:YES];
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+
+// In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+
+{
+
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    UITableViewCell *cell;
+    NSMutableDictionary *selectedItemAtIndexpath = [[NSMutableDictionary alloc]init];
+    
+
+    cell = [tableView cellForRowAtIndexPath:indexPath];
+    if(cell.accessoryType == UITableViewCellAccessoryNone){
+        [selectedItemAtIndexpath setValue:cell.textLabel.text forKey:@"Name"];
+        [selectedItemAtIndexpath setValue:cell.detailTextLabel.text forKey:@"Price"];
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        [selectedItems insertObject:selectedItemAtIndexpath atIndex:0];
+    }else{
+         NSMutableArray *toDelete = [NSMutableArray array];
+        for(NSDictionary *item in selectedItems){
+           
+            if ([[item objectForKey:@"Name"] isEqualToString:cell.textLabel.text]) {
+                cell.accessoryType = UITableViewCellAccessoryNone;
+                [toDelete addObject:item];
+            }
+        }
+        [selectedItems removeObjectsInArray:toDelete];
+    }
+    
+    
+    NSLog(@"%@",selectedItems);
+    
+    
     
 }
 
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+
+
+-(void)searchDisplayController:(UISearchDisplayController *)controller willShowSearchResultsTableView:(UITableView *)tableView
 {
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    cell.accessoryType = UITableViewCellAccessoryNone;
+    for(int section = 0,sectionCount = tableView.numberOfSections; section < sectionCount;section++){
+        for(int row = 0;row < [tableView numberOfRowsInSection:section];row++){
+            UITableViewCell *cell = [tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:row inSection:section]];
+            for(NSDictionary *item in selectedItems){
+                if([cell.textLabel.text isEqualToString:[item objectForKey:@"Name"]]){
+                    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+                }
+                else{
+                    cell.accessoryType = UITableViewCellAccessoryNone;
+                }
+            }
+        //    cell.accessoryType = UITableViewCellAccessoryNone;
+        //    cell.accessoryView = nil;
+            
+        }
+    }
 }
 
 #pragma mark - UISearchBar
+
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+
 {
     
+    if(searchText.length ==0){
+        
+        isFiltered = NO;
+        
+    }else{
+        
+        isFiltered = YES;
+        
+        searchData = [[NSMutableDictionary alloc]init];
+        
+        for(id key in keys){
+            
+            NSArray *items = [allMenuItem objectForKey:key];
+            
+            NSMutableArray *searchedItem = [[NSMutableArray alloc]init];
+            
+            for(NSDictionary *item in items){
+                
+                NSRange range = [[item objectForKey:@"name"]rangeOfString:searchText options:NSCaseInsensitiveSearch];
+                
+                if(range.location != NSNotFound){
+                    
+                    [searchedItem addObject:item];
+                    
+                }
+                
+                
+                
+            }
+            
+            if(searchedItem){
+                
+                [searchData setObject:searchedItem forKey:key];
+                
+            }
+        }
+    }
+
+    
 }
+-(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+
+    NSLog(@"entered cancel");
+    [self viewWillAppear:YES];
+}
+
 @end
+
