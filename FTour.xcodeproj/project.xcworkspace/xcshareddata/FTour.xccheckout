@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1819C14A-7484-4A2A-9144-A8460479C5F2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FTour</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1BCB5B50-2120-42ED-B790-97A406966287</key>
+		<string>https://github.com/longvinhnguyen/FTour.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FTour.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1BCB5B50-2120-42ED-B790-97A406966287</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/longvinhnguyen/FTour.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1BCB5B50-2120-42ED-B790-97A406966287</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1BCB5B50-2120-42ED-B790-97A406966287</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FTour</string>
+		</dict>
+	</array>
+</dict>
+</plist>
