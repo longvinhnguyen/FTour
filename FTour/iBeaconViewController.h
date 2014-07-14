@@ -24,5 +24,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *majorTxt;
 @property (strong, nonatomic) IBOutlet UILabel *minorTxt;
 @property (strong, nonatomic) IBOutlet UILabel *idtXT;
+- (IBAction)btnOff:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *btnStatus;
 
 @end

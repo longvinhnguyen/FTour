@@ -76,6 +76,7 @@
         NSLog(@"On");
         [_status setText:@"Broadcasting..."];
         [peripheral startAdvertising:_beaconPeripheralData];
+        _btnStatus.titleLabel.text = @"Off";
     }
     if(peripheral.state == CBPeripheralManagerStatePoweredOff)
     {
@@ -84,5 +85,14 @@
         [peripheral stopAdvertising];
     }
     
+}
+- (IBAction)btnOff:(id)sender {
+    //_peripheralManager stopAdvertising: _beaconRegion];
+    [_peripheralManager removeAllServices];
+    [_peripheralManager stopAdvertising];
+    NSLog(@"Stop");
+    [_status setText:@"Stopped"];
+    _btnStatus.titleLabel.text = @"";
+
 }
 @end

@@ -8,6 +8,9 @@
 //
 
 #import "FSU1ViewController.h"
+#import <MediaPlayer/MediaPlayer.h>
+#import "AVFoundation/AVFoundation.h"
+
 
 @interface FSU1ViewController ()
 @end
@@ -51,6 +54,24 @@
         [dataArray addObject:android];
     }
     [self.navigationController setNavigationBarHidden:NO];
+    NSURL *url =    [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                            pathForResource:@"FSU1" ofType:@"mp4"]];
+    self.videoController = [[MPMoviePlayerController alloc] init];
+    self.videoController.controlStyle = MPMovieControlStyleFullscreen;
+    [self.videoController setContentURL:url];
+    [self.videoController.view setFrame:self.view.bounds];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(videoPlayBackDidFinish:) name:MPMoviePlayerPlaybackDidFinishNotification object:self.videoController];
+    [self.view addSubview:self.videoController.view];
+    [self.videoController prepareToPlay];
+    [self.videoController play];
+    [self.videoController setFullscreen:YES animated:YES];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopCurrentView) name:@"kNotificationDidLostBeacon" object:nil];
+    
+}
+- (void)stopCurrentView
+{
+    // Exit current view
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -158,5 +179,15 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (void)videoPlayBackDidFinish:(NSNotification *)notification {
+    NSLog(@"Finish");
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
+    [self.videoController stop];
+    [self.videoController.view removeFromSuperview];
+    self.videoController = nil;
+}
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 @end

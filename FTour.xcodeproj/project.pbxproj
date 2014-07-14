@@ -43,6 +43,7 @@
 		613D1FE7196BD8B0002E69CF /* LogoFSO(2).png in Resources */ = {isa = PBXBuildFile; fileRef = 613D1FE6196BD8B0002E69CF /* LogoFSO(2).png */; };
 		613D1FEA196BEB79002E69CF /* FSU1_Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 613D1FE8196BEB79002E69CF /* FSU1_Data.json */; };
 		613D1FEB196BEB79002E69CF /* MCafe.json in Resources */ = {isa = PBXBuildFile; fileRef = 613D1FE9196BEB79002E69CF /* MCafe.json */; };
+		61E1DD3B1973C08E0037DFD2 /* FSU1.mov in Resources */ = {isa = PBXBuildFile; fileRef = 61E1DD3A1973C08E0037DFD2 /* FSU1.mov */; };
 		84A62AAC196A96F500D73A95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A62AAB196A96F500D73A95 /* Foundation.framework */; };
 		84A62AAE196A96F500D73A95 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A62AAD196A96F500D73A95 /* CoreGraphics.framework */; };
 		84A62AB0196A96F500D73A95 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A62AAF196A96F500D73A95 /* UIKit.framework */; };
@@ -99,6 +100,7 @@
 		613D1FE6196BD8B0002E69CF /* LogoFSO(2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LogoFSO(2).png"; sourceTree = "<group>"; };
 		613D1FE8196BEB79002E69CF /* FSU1_Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FSU1_Data.json; sourceTree = "<group>"; };
 		613D1FE9196BEB79002E69CF /* MCafe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MCafe.json; sourceTree = "<group>"; };
+		61E1DD3A1973C08E0037DFD2 /* FSU1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = FSU1.mov; sourceTree = "<group>"; };
 		84A62AA8196A96F500D73A95 /* FTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A62AAB196A96F500D73A95 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84A62AAD196A96F500D73A95 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -228,6 +230,7 @@
 		84A62AB2196A96F500D73A95 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				61E1DD3A1973C08E0037DFD2 /* FSU1.mov */,
 				18C54B61196E25060056865D /* FTourLogo.png */,
 				188D997C196E23F10097FDCA /* FSoftIntro.mov */,
 				613D1FE8196BEB79002E69CF /* FSU1_Data.json */,
@@ -349,6 +352,7 @@
 				613D1FEB196BEB79002E69CF /* MCafe.json in Resources */,
 				18A92B9E196B825A00F78849 /* CafeViewController.xib in Resources */,
 				18A92B82196B81B800F78849 /* iBeaconViewController.xib in Resources */,
+				61E1DD3B1973C08E0037DFD2 /* FSU1.mov in Resources */,
 				84A62AB6196A96F500D73A95 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

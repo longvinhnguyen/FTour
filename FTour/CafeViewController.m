@@ -37,6 +37,12 @@
     [self.navigationController setNavigationBarHidden:NO];
     self.navigationController.title = @"Cafe Terrace";
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopCurrentView) name:@"kNotificationDidLostBeacon" object:nil];
+}
+- (void)stopCurrentView
+{
+    // Exit current view
+    [self.navigationController popViewControllerAnimated:YES];
 }
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -136,6 +142,10 @@
         [self.orderTbl reloadData];
         
     }
+}
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

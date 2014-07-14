@@ -13,9 +13,6 @@
 @interface WelcomeViewController : UIViewController <CLLocationManagerDelegate,CBPeripheralManagerDelegate>
 
 @property (nonatomic, strong) CLBeaconRegion *beaconRegion;
-@property (nonatomic, strong) CLBeaconRegion *beaconRegionFSoft;
-@property (nonatomic, strong) CLBeaconRegion *beaconRegionFSu1;
-@property (nonatomic, strong) CLBeaconRegion *beaconRegionCafe;
 @property (nonatomic, strong) CLLocationManager *locationManager;
 - (IBAction)btnFSoft:(id)sender;
 - (IBAction)btnCafe:(id)sender;

@@ -40,8 +40,14 @@
     [self.videoController prepareToPlay];
     [self.videoController play];
     [self.videoController setFullscreen:YES animated:YES];
-}
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopCurrentView) name:@"kNotificationDidLostBeacon" object:nil];
 
+}
+- (void)stopCurrentView
+{
+    // Exit current view
+    [self.navigationController popViewControllerAnimated:YES];
+}
 - (void)videoPlayBackDidFinish:(NSNotification *)notification {
     
     [[NSNotificationCenter defaultCenter]removeObserver:self name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
@@ -65,12 +71,13 @@
         [self.videoController.view removeFromSuperview];
         [self.navigationController popViewControllerAnimated:YES];
 }
-
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 @end

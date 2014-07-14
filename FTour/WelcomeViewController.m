@@ -29,34 +29,36 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//
-//    NSUUID *uuid = [[NSUUID alloc]initWithUUIDString:KFSoftUUID];
-//    self.beaconRegion = [[CLBeaconRegion alloc]initWithProximityUUID:uuid major:1 identifier:@"FSoft"];
     self.locationManager = [[CLLocationManager alloc]init];
     self.locationManager.delegate = self;
     
     NSUUID *uuid = [[NSUUID alloc]initWithUUIDString:kFSoftUUID];
     self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:@"FSoft"];
-    self.beaconRegionFSoft = [[CLBeaconRegion alloc] initWithProximityUUID:uuid major:1 identifier:@"FSoft"];
-    self.beaconRegionFSu1 = [[CLBeaconRegion alloc]initWithProximityUUID:uuid major:2 identifier:@"FSu1"];
-    self.beaconRegionCafe = [[CLBeaconRegion alloc]initWithProximityUUID:uuid major:3 identifier:@"Cafe"];
-    
     [self.locationManager startMonitoringForRegion:self.beaconRegion];
-    [self.locationManager startMonitoringForRegion:self.beaconRegionFSu1];
-    [self.locationManager startMonitoringForRegion:self.beaconRegionCafe];
+}
+-(void)viewDidAppear:(BOOL)animated{
+    self.locationManager = [[CLLocationManager alloc]init];
+    self.locationManager.delegate = self;
+    
+    NSUUID *uuid = [[NSUUID alloc]initWithUUIDString:kFSoftUUID];
+    self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:@"FSoft"];
+    [self.locationManager startMonitoringForRegion:self.beaconRegion];
 }
 -(void) peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral
 {
     
 }
--(void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region
+- (void)locationManager:(CLLocationManager*)manager didEnterRegion:(CLRegion*)region
 {
-    NSLog(@"Founded");
+    NSLog(@"didEnter");
+    [self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
 }
--(void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region{
-    [self
-     .locationManager stopRangingBeaconsInRegion:self.beaconRegion];
-    NSLog(@"lost");
+
+-(void)locationManager:(CLLocationManager*)manager didExitRegion:(CLRegion*)region
+{
+    [self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
+    NSLog(@"Lost");
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"kNotificationDidLostBeacon" object:nil];
 }
 -(void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
 {
@@ -74,13 +76,14 @@
             break;
         case 3:
             [self loadCafe];
-             [self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
+            [self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
             NSLog(@"LoadCafe view");
             break;
         default:
             break;
     }
 }
+
 
 -(void)loadFsoft
 {
