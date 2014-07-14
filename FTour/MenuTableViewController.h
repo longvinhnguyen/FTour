@@ -17,5 +17,6 @@
 @interface MenuTableViewController : UITableViewController
 
 @property (nonatomic,weak) id<MenuTableViewControllerDelegate> delegate;
+@property (nonatomic,strong) NSMutableArray *selectedItems;
 @end
 

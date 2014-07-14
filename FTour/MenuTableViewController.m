@@ -31,7 +31,7 @@
     NSMutableDictionary *searchData;
     
     BOOL isFiltered;
-    NSMutableArray *selectedItems;
+ //   NSMutableArray *selectedItems;
     
 }
 
@@ -44,7 +44,7 @@
 @implementation MenuTableViewController
 
 @synthesize delegate;
-
+@synthesize selectedItems;
 
 
 - (void)viewDidLoad
@@ -94,16 +94,17 @@
     
     self.tableView.tableHeaderView = searchBar;
     NSLog(@"%@",selectedItems);
-//    for(int section = 0; section < self.tableView.numberOfSections; section++){
-//        for(int row = 0; row < [self.tableView numberOfRowsInSection:section];row++){
-//            UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:row inSection:section]];
-//            for(NSDictionary *item in selectedItems){
-//                if ([cell.textLabel.text isEqualToString:[item objectForKey:@"Name"]]) {
-//                    cell.accessoryType = UITableViewCellAccessoryCheckmark;
-//                }
-//            }
-//        }
-//    }
+    for(int section = 0; section < self.tableView.numberOfSections; section++){
+        for(int row = 0; row < [self.tableView numberOfRowsInSection:section];row++){
+            UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:row inSection:section]];
+            for(NSDictionary *item in selectedItems){
+                if ([cell.textLabel.text isEqualToString:[item objectForKey:@"Name"]]) {
+                    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+                }
+            }
+        }
+    }
+
     
     
 }
@@ -150,7 +151,7 @@
         
     }
     
-    selectedItems = [[NSMutableArray alloc]init];
+  //  selectedItems = [[NSMutableArray alloc]init];
     
 }
 
