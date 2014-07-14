@@ -6,7 +6,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FSU1DetailViewController">
             <connections>
-                <outlet property="btnSendEmail" destination="83i-gp-uO9" id="zCT-OS-AmF"/>
                 <outlet property="lbEmail" destination="ugc-rj-bFd" id="5Mm-p9-nWh"/>
                 <outlet property="lbName" destination="s0g-Ts-AhU" id="j4t-y0-bEg"/>
                 <outlet property="lbTel" destination="017-V3-5ud" id="qh8-Ji-KP3"/>
@@ -56,6 +55,9 @@
                     <state key="normal" title="Send Email">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="btnSendEmail:" destination="-1" eventType="touchUpInside" id="Q2l-f9-Upg"/>
+                    </connections>
                 </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="abc@gmail.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugc-rj-bFd">
                     <rect key="frame" x="70" y="302" width="230" height="21"/>
