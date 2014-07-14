@@ -27,6 +27,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    if (self.detailDict != nil)
+    {
+        [self.lbEmail setText:[NSString stringWithFormat:@"%@",[self.detailDict objectForKey:@"email"]]];
+        [self.lbName setText:[NSString stringWithFormat:@"%@",[self.detailDict objectForKey:@"name"]]];
+        [self.lbTel setText:[NSString stringWithFormat:@"%@",[self.detailDict objectForKey:@"tel"]]];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,4 +41,6 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnCall:(id)sender {
+}
 @end

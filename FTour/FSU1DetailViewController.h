@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface FSU1DetailViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *lbName;
+@property (weak, nonatomic) IBOutlet UILabel *lbEmail;
+@property (weak, nonatomic) IBOutlet UILabel *lbTel;
 
+- (IBAction)btnCall:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *btnSendEmail;
+@property (strong, nonatomic) NSDictionary * detailDict;
 @end
