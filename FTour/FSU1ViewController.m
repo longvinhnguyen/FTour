@@ -48,11 +48,11 @@
         [dataArray addObject:iOS];
         [dataArray addObject:android];
     }
-    [self.navigationController setNavigationBarHidden:NO];
+    [self.navigationController setNavigationBarHidden:YES];
     NSURL *url =    [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                            pathForResource:@"FSU1" ofType:@"mov"]];
+                                            pathForResource:@"FSU1720R" ofType:@"mov"]];
     self.videoController = [[MPMoviePlayerController alloc] init];
-    self.videoController.controlStyle = MPMovieControlStyleNone;
+    self.videoController.controlStyle = MPMovieControlStyleFullscreen;
     [self.videoController setContentURL:url];
     [self.videoController.view setFrame:self.view.bounds];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(videoPlayBackDidFinish:) name:MPMoviePlayerPlaybackDidFinishNotification object:self.videoController];

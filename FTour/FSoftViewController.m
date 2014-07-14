@@ -30,7 +30,7 @@
     // Do any additional setup after loading the view from its nib.
 
    NSURL *url =    [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                            pathForResource:@"FSoftIntro" ofType:@"mov"]];
+                            pathForResource:@"FSoft720R" ofType:@"mov"]];
     self.videoController = [[MPMoviePlayerController alloc] init];
     self.videoController.controlStyle = MPMovieControlStyleFullscreen;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(doneButtonClicked:) name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
