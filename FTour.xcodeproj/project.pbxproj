@@ -44,6 +44,8 @@
 		613D1FEA196BEB79002E69CF /* FSU1_Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 613D1FE8196BEB79002E69CF /* FSU1_Data.json */; };
 		613D1FEB196BEB79002E69CF /* MCafe.json in Resources */ = {isa = PBXBuildFile; fileRef = 613D1FE9196BEB79002E69CF /* MCafe.json */; };
 		61E1DD3B1973C08E0037DFD2 /* FSU1.mov in Resources */ = {isa = PBXBuildFile; fileRef = 61E1DD3A1973C08E0037DFD2 /* FSU1.mov */; };
+		61E1DD3F1973CCEF0037DFD2 /* FSU1DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E1DD3D1973CCEF0037DFD2 /* FSU1DetailViewController.m */; };
+		61E1DD401973CCEF0037DFD2 /* FSU1DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61E1DD3E1973CCEF0037DFD2 /* FSU1DetailViewController.xib */; };
 		84A62AAC196A96F500D73A95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A62AAB196A96F500D73A95 /* Foundation.framework */; };
 		84A62AAE196A96F500D73A95 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A62AAD196A96F500D73A95 /* CoreGraphics.framework */; };
 		84A62AB0196A96F500D73A95 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A62AAF196A96F500D73A95 /* UIKit.framework */; };
@@ -101,6 +103,9 @@
 		613D1FE8196BEB79002E69CF /* FSU1_Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FSU1_Data.json; sourceTree = "<group>"; };
 		613D1FE9196BEB79002E69CF /* MCafe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MCafe.json; sourceTree = "<group>"; };
 		61E1DD3A1973C08E0037DFD2 /* FSU1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = FSU1.mov; sourceTree = "<group>"; };
+		61E1DD3C1973CCEE0037DFD2 /* FSU1DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSU1DetailViewController.h; sourceTree = "<group>"; };
+		61E1DD3D1973CCEF0037DFD2 /* FSU1DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSU1DetailViewController.m; sourceTree = "<group>"; };
+		61E1DD3E1973CCEF0037DFD2 /* FSU1DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSU1DetailViewController.xib; sourceTree = "<group>"; };
 		84A62AA8196A96F500D73A95 /* FTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A62AAB196A96F500D73A95 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84A62AAD196A96F500D73A95 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -216,6 +221,9 @@
 				18A92B8D196B822A00F78849 /* FSoftViewController.xib */,
 				18A92B92196B824B00F78849 /* FSU1ViewController.h */,
 				18A92B93196B824B00F78849 /* FSU1ViewController.m */,
+				61E1DD3C1973CCEE0037DFD2 /* FSU1DetailViewController.h */,
+				61E1DD3D1973CCEF0037DFD2 /* FSU1DetailViewController.m */,
+				61E1DD3E1973CCEF0037DFD2 /* FSU1DetailViewController.xib */,
 				18A92B94196B824B00F78849 /* FSU1ViewController.xib */,
 				18A92B99196B825A00F78849 /* CafeViewController.h */,
 				18A92B9A196B825A00F78849 /* CafeViewController.m */,
@@ -347,6 +355,7 @@
 				188D997D196E23F10097FDCA /* FSoftIntro.mov in Resources */,
 				613D1FEA196BEB79002E69CF /* FSU1_Data.json in Resources */,
 				84A62AE1196A985000D73A95 /* ViewController.xib in Resources */,
+				61E1DD401973CCEF0037DFD2 /* FSU1DetailViewController.xib in Resources */,
 				18DAF88F196CF08B0010CCFB /* MenuTableViewController.xib in Resources */,
 				18A92B97196B824B00F78849 /* FSU1ViewController.xib in Resources */,
 				613D1FEB196BEB79002E69CF /* MCafe.json in Resources */,
@@ -387,6 +396,7 @@
 				18A92B9C196B825A00F78849 /* CafeViewController.m in Sources */,
 				18A92B80196B81B800F78849 /* iBeaconViewController.m in Sources */,
 				18DAF88D196CF08B0010CCFB /* MenuTableViewController.m in Sources */,
+				61E1DD3F1973CCEF0037DFD2 /* FSU1DetailViewController.m in Sources */,
 				84A62AB8196A96F500D73A95 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
