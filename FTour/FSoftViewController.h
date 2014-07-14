@@ -17,7 +17,4 @@
 @property (weak, nonatomic) IBOutlet UIView *viewFull;
 @property (nonatomic, strong) CLBeaconRegion *beaconRegion;
 @property (nonatomic, strong) CLLocationManager *locationManager;
-- (void)postNotificationWithString:(NSString *)orientation;
-- (void)useNotificationWithString:(NSNotification*)notification;
-
 @end
