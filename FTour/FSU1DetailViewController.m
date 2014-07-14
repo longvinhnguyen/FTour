@@ -27,12 +27,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    if (self.detailDict != nil)
-    {
         [self.lbEmail setText:[NSString stringWithFormat:@"%@",[self.detailDict objectForKey:@"email"]]];
         [self.lbName setText:[NSString stringWithFormat:@"%@",[self.detailDict objectForKey:@"name"]]];
         [self.lbTel setText:[NSString stringWithFormat:@"%@",[self.detailDict objectForKey:@"tel"]]];
-    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,5 +39,6 @@
 }
 
 - (IBAction)btnCall:(id)sender {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel:%@",[self.detailDict objectForKey:@"tel"]]]];
 }
 @end

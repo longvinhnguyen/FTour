@@ -153,8 +153,6 @@
     NSDictionary * dic = [arr objectAtIndex:indexPath.row];
     FSU1DetailViewController *fsu1dt = [[FSU1DetailViewController alloc]initWithNibName:@"FSU1DetailViewController" bundle:nil];
     [fsu1dt setDetailDict:dic];
-//    fsu1dt.lbName.text = [dic objectForKey:@"name"];
-    fsu1dt.lbTel.text = [dic objectForKey:@"tel"];
     [[self navigationController]pushViewController:fsu1dt animated:YES];
 }
 //-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
