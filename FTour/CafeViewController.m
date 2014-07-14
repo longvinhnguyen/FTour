@@ -16,6 +16,7 @@
 }
 @property (strong, nonatomic) IBOutlet UITableView *orderTbl;
 
+
 @end
 
 @implementation CafeViewController
@@ -38,6 +39,12 @@
     self.navigationController.title = @"Cafe Terrace";
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopCurrentView) name:@"kNotificationDidLostBeacon" object:nil];
+    if(!orderItems){
+        [self.orderTbl setHidden:YES];
+    }else{
+        [self.orderTbl setHidden:NO];
+    }
+
 }
 - (void)stopCurrentView
 {
@@ -51,6 +58,7 @@
     if(orderItems.count != 0){
         
         self.navigationItem.rightBarButtonItems = @[btn,barBtn];
+        [self.orderTbl setHidden:NO];
     }else{
         self.navigationItem.rightBarButtonItems = @[barBtn];
     }
