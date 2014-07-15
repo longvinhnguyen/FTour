@@ -111,16 +111,4 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)btnFSoft:(id)sender;
-{
-    [self loadFsoft];
-}
-
-- (IBAction)btnCafe:(id)sender {
-    [self loadCafe];
-}
-
-- (IBAction)btnFSu1:(id)sender {
-    [self loadFSu1];
-}
 @end
