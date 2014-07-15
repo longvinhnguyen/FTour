@@ -31,6 +31,14 @@
         [self.lbEmail setText:[NSString stringWithFormat:@"%@",[self.detailDict objectForKey:@"email"]]];
         [self.lbName setText:[NSString stringWithFormat:@"%@",[self.detailDict objectForKey:@"name"]]];
         [self.lbTel setText:[NSString stringWithFormat:@"%@",[self.detailDict objectForKey:@"tel"]]];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopCurrentView) name:@"kNotificationDidLostBeacon" object:nil];
+}
+- (void)stopCurrentView
+{
+    NSLog(@"Stop broadcast");
+//    // Exit current view
+//    [self.navigationController popViewControllerAnimated:YES];
+    if ([self.navigationController.viewControllers count] >= 2) { [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:1] animated:YES]; }
 }
 
 - (void)didReceiveMemoryWarning
