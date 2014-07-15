@@ -10,7 +10,7 @@
 #import "FSU1ViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import "AVFoundation/AVFoundation.h"
-
+#import "FSU1DetailViewController.h"
 
 @interface FSU1ViewController ()
 @end
@@ -39,29 +39,25 @@
         NSLog(@"%@", [error localizedDescription]);
     }
     else{
-//        NSArray *BuLead = allFSU1[@"BU Lead"];
         NSArray * buLead = [allFSU1 objectForKey:@"BU Lead"];
         NSArray *GeAs = allFSU1[@"General Assistant"];
         NSArray *iOS = allFSU1[@"Mobility iOS"];
         NSArray *android = allFSU1[@"Mobility Android"];
-//        for (NSDictionary *contact in buLead) {
-//            NSLog(@"%@", contact[@"name"]);
-//        }
-
         [dataArray addObject:buLead];
         [dataArray addObject:GeAs];
         [dataArray addObject:iOS];
         [dataArray addObject:android];
     }
-    [self.navigationController setNavigationBarHidden:NO];
+    [self.navigationController setNavigationBarHidden:YES];
     NSURL *url =    [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                            pathForResource:@"FSU1" ofType:@"mp4"]];
+                                            pathForResource:@"FSU1720R" ofType:@"mov"]];
     self.videoController = [[MPMoviePlayerController alloc] init];
     self.videoController.controlStyle = MPMovieControlStyleFullscreen;
     [self.videoController setContentURL:url];
     [self.videoController.view setFrame:self.view.bounds];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(videoPlayBackDidFinish:) name:MPMoviePlayerPlaybackDidFinishNotification object:self.videoController];
     [self.view addSubview:self.videoController.view];
+    self.videoController.controlStyle = MPMovieControlStyleNone;
     [self.videoController prepareToPlay];
     [self.videoController play];
     [self.videoController setFullscreen:YES animated:YES];
@@ -146,7 +142,7 @@
     
     NSString * name = [dic objectForKey:@"name"];
     NSString * email = [dic objectForKey:@"email"];
-    NSString * tel = [dic objectForKey:@"tel"];
+    //NSString * tel = [dic objectForKey:@"tel"];
     cell.textLabel.text = name;
     cell.detailTextLabel.text = email;
     
@@ -154,21 +150,11 @@
     
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    if ([MFMailComposeViewController canSendMail]){
-        MFMailComposeViewController *mc = [[MFMailComposeViewController alloc]init];
-        mc.mailComposeDelegate = self;
-        [mc setSubject:@"FTour guess"];
-        NSString *a = cell.detailTextLabel.text;
-        [mc setToRecipients:[NSArray arrayWithObject:a]];
-        [self presentViewController:mc animated:YES completion:NULL];    }
-    else
-    {
-        UIAlertView *aView = [[UIAlertView alloc]initWithTitle:@"Email Setup" message:@"Please set-up your email account before using this function" delegate:nil cancelButtonTitle:@"Got it" otherButtonTitles:nil, nil];
-        [aView show];
-    }
-    cell.selected = FALSE;
-    
+    NSArray * arr = [dataArray objectAtIndex:indexPath.section];
+    NSDictionary * dic = [arr objectAtIndex:indexPath.row];
+    FSU1DetailViewController *fsu1dt = [[FSU1DetailViewController alloc]initWithNibName:@"FSU1DetailViewController" bundle:nil];
+    [fsu1dt setDetailDict:dic];
+    [[self navigationController]pushViewController:fsu1dt animated:YES];
 }
 //-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 //     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];

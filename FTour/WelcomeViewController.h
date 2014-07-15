@@ -14,8 +14,5 @@
 
 @property (nonatomic, strong) CLBeaconRegion *beaconRegion;
 @property (nonatomic, strong) CLLocationManager *locationManager;
-- (IBAction)btnFSoft:(id)sender;
-- (IBAction)btnCafe:(id)sender;
-- (IBAction)btnFSu1:(id)sender;
 
 @end
