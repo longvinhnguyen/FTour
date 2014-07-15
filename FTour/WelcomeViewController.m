@@ -57,6 +57,10 @@
     self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:@"FSoft"];
     [self.locationManager startMonitoringForRegion:self.beaconRegion];
 }
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:YES];
+}
 -(void) peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral
 {
     
