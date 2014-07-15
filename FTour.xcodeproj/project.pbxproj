@@ -46,6 +46,11 @@
 		61E1DD421973CE020037DFD2 /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61E1DD411973CE020037DFD2 /* avatar.jpg */; };
 		61E1DD441974240D0037DFD2 /* FSoft720R.mov in Resources */ = {isa = PBXBuildFile; fileRef = 61E1DD431974240D0037DFD2 /* FSoft720R.mov */; };
 		61E1DD46197425C90037DFD2 /* FSU1720R.mov in Resources */ = {isa = PBXBuildFile; fileRef = 61E1DD45197425C90037DFD2 /* FSU1720R.mov */; };
+		61E1DD4C1975064A0037DFD2 /* FTourLogo5.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E1DD471975064A0037DFD2 /* FTourLogo5.png */; };
+		61E1DD4D1975064A0037DFD2 /* FTourLogo4.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E1DD481975064A0037DFD2 /* FTourLogo4.png */; };
+		61E1DD4E1975064A0037DFD2 /* FTourLogo3.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E1DD491975064A0037DFD2 /* FTourLogo3.png */; };
+		61E1DD4F1975064A0037DFD2 /* FTourLogo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E1DD4A1975064A0037DFD2 /* FTourLogo2.png */; };
+		61E1DD501975064A0037DFD2 /* FTourLogo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E1DD4B1975064A0037DFD2 /* FTourLogo1.png */; };
 		84A62AAC196A96F500D73A95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A62AAB196A96F500D73A95 /* Foundation.framework */; };
 		84A62AAE196A96F500D73A95 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A62AAD196A96F500D73A95 /* CoreGraphics.framework */; };
 		84A62AB0196A96F500D73A95 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A62AAF196A96F500D73A95 /* UIKit.framework */; };
@@ -106,6 +111,11 @@
 		61E1DD411973CE020037DFD2 /* avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar.jpg; sourceTree = "<group>"; };
 		61E1DD431974240D0037DFD2 /* FSoft720R.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = FSoft720R.mov; sourceTree = "<group>"; };
 		61E1DD45197425C90037DFD2 /* FSU1720R.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = FSU1720R.mov; sourceTree = "<group>"; };
+		61E1DD471975064A0037DFD2 /* FTourLogo5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FTourLogo5.png; sourceTree = "<group>"; };
+		61E1DD481975064A0037DFD2 /* FTourLogo4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FTourLogo4.png; sourceTree = "<group>"; };
+		61E1DD491975064A0037DFD2 /* FTourLogo3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FTourLogo3.png; sourceTree = "<group>"; };
+		61E1DD4A1975064A0037DFD2 /* FTourLogo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FTourLogo2.png; sourceTree = "<group>"; };
+		61E1DD4B1975064A0037DFD2 /* FTourLogo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FTourLogo1.png; sourceTree = "<group>"; };
 		84A62AA8196A96F500D73A95 /* FTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A62AAB196A96F500D73A95 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84A62AAD196A96F500D73A95 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -238,6 +248,11 @@
 		84A62AB2196A96F500D73A95 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				61E1DD471975064A0037DFD2 /* FTourLogo5.png */,
+				61E1DD481975064A0037DFD2 /* FTourLogo4.png */,
+				61E1DD491975064A0037DFD2 /* FTourLogo3.png */,
+				61E1DD4A1975064A0037DFD2 /* FTourLogo2.png */,
+				61E1DD4B1975064A0037DFD2 /* FTourLogo1.png */,
 				61E1DD45197425C90037DFD2 /* FSU1720R.mov */,
 				61E1DD431974240D0037DFD2 /* FSoft720R.mov */,
 				61E1DD411973CE020037DFD2 /* avatar.jpg */,
@@ -346,20 +361,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				18A92B7B196B816400F78849 /* button-2.png in Resources */,
+				61E1DD4E1975064A0037DFD2 /* FTourLogo3.png in Resources */,
 				18C54B62196E25060056865D /* FTourLogo.png in Resources */,
+				61E1DD4D1975064A0037DFD2 /* FTourLogo4.png in Resources */,
 				61E1DD441974240D0037DFD2 /* FSoft720R.mov in Resources */,
 				18A92B90196B822A00F78849 /* FSoftViewController.xib in Resources */,
+				61E1DD4F1975064A0037DFD2 /* FTourLogo2.png in Resources */,
 				61E1DD46197425C90037DFD2 /* FSU1720R.mov in Resources */,
 				613D1FE7196BD8B0002E69CF /* LogoFSO(2).png in Resources */,
 				18A92B89196B820E00F78849 /* WelcomeViewController.xib in Resources */,
 				84A62AC4196A96F500D73A95 /* Images.xcassets in Resources */,
 				18A92B79196B80EE00F78849 /* button.png in Resources */,
 				84A62AE1196A985000D73A95 /* ViewController.xib in Resources */,
+				61E1DD501975064A0037DFD2 /* FTourLogo1.png in Resources */,
 				61E1DD421973CE020037DFD2 /* avatar.jpg in Resources */,
 				61E1DD401973CCEF0037DFD2 /* FSU1DetailViewController.xib in Resources */,
 				18DAF88F196CF08B0010CCFB /* MenuTableViewController.xib in Resources */,
 				18A92B97196B824B00F78849 /* FSU1ViewController.xib in Resources */,
 				613D1FEB196BEB79002E69CF /* MCafe.json in Resources */,
+				61E1DD4C1975064A0037DFD2 /* FTourLogo5.png in Resources */,
 				18A92B9E196B825A00F78849 /* CafeViewController.xib in Resources */,
 				18A92B82196B81B800F78849 /* iBeaconViewController.xib in Resources */,
 				84A62AB6196A96F500D73A95 /* InfoPlist.strings in Resources */,
