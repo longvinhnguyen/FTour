@@ -37,11 +37,12 @@
     [self.videoController setContentURL:url];
     [self.videoController.view setFrame:self.viewFull.bounds];
     [self.view addSubview:self.videoController.view];
+    self.videoController.controlStyle = MPMovieControlStyleNone;
+
     [self.videoController prepareToPlay];
     [self.videoController play];
     [self.videoController setFullscreen:YES animated:YES];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopCurrentView) name:@"kNotificationDidLostBeacon" object:nil];
-
 }
 - (void)stopCurrentView
 {
@@ -56,13 +57,6 @@
     [self.videoController stop];
     [self.videoController.view removeFromSuperview];
     self.videoController = nil;
-    //[self.videoController : UIInterfaceOrientationLandscapeRight];
-
-    
-    // Display a message
-    UIAlertView *alert = [[UIAlertView alloc]
-                          initWithTitle:@"Video Playback" message:@"Just finished the video playback. The video is now removed." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alert show];
     
 }
 -(void)doneButtonClicked:(NSNotification*)aNotification

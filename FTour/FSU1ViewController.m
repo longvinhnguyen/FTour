@@ -57,6 +57,7 @@
     [self.videoController.view setFrame:self.view.bounds];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(videoPlayBackDidFinish:) name:MPMoviePlayerPlaybackDidFinishNotification object:self.videoController];
     [self.view addSubview:self.videoController.view];
+    self.videoController.controlStyle = MPMovieControlStyleNone;
     [self.videoController prepareToPlay];
     [self.videoController play];
     [self.videoController setFullscreen:YES animated:YES];
