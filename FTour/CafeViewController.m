@@ -39,11 +39,11 @@
     self.navigationController.title = @"Cafe Terrace";
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopCurrentView) name:@"kNotificationDidLostBeacon" object:nil];
-    if(!orderItems){
-        [self.orderTbl setHidden:YES];
-    }else{
-        [self.orderTbl setHidden:NO];
-    }
+//    if(!orderItems){
+//        [self.orderTbl setHidden:YES];
+//    }else{
+//        [self.orderTbl setHidden:NO];
+//    }
 
 }
 - (void)stopCurrentView

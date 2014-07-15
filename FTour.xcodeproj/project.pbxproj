@@ -369,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18A92B7B196B816400F78849 /* button-2.png in Resources */,
+				61E1DD4E1975064A0037DFD2 /* FTourLogo3.png in Resources */,
 				189B1AA419750EAF00F2E708 /* background.jpg in Resources */,
 				18C54B62196E25060056865D /* FTourLogo.png in Resources */,
 				61E1DD4D1975064A0037DFD2 /* FTourLogo4.png in Resources */,
