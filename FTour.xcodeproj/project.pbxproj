@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		18129C51196B8FD50004AE71 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18129C50196B8FD50004AE71 /* CoreBluetooth.framework */; };
+		189B1AA119750D0200F2E708 /* omnom_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 189B1AA019750D0100F2E708 /* omnom_02.png */; };
+		189B1AA219750D0200F2E708 /* omnom_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 189B1AA019750D0100F2E708 /* omnom_02.png */; };
+		189B1AA419750EAF00F2E708 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 189B1AA319750EAF00F2E708 /* background.jpg */; };
+		189B1AA519750EAF00F2E708 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 189B1AA319750EAF00F2E708 /* background.jpg */; };
 		18A92B79196B80EE00F78849 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A92B78196B80EE00F78849 /* button.png */; };
 		18A92B7B196B816400F78849 /* button-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A92B7A196B816400F78849 /* button-2.png */; };
 		18A92B7C196B816400F78849 /* button-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A92B7A196B816400F78849 /* button-2.png */; };
@@ -74,6 +78,8 @@
 
 /* Begin PBXFileReference section */
 		18129C50196B8FD50004AE71 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		189B1AA019750D0100F2E708 /* omnom_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = omnom_02.png; sourceTree = "<group>"; };
+		189B1AA319750EAF00F2E708 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		18A92B78196B80EE00F78849 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		18A92B7A196B816400F78849 /* button-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-2.png"; sourceTree = "<group>"; };
 		18A92B7D196B81B800F78849 /* iBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iBeaconViewController.h; sourceTree = "<group>"; };
@@ -158,6 +164,8 @@
 		18A92B77196B80AB00F78849 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				189B1AA319750EAF00F2E708 /* background.jpg */,
+				189B1AA019750D0100F2E708 /* omnom_02.png */,
 				18A92B7A196B816400F78849 /* button-2.png */,
 				18A92B78196B80EE00F78849 /* button.png */,
 			);
@@ -346,10 +354,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				18A92B7B196B816400F78849 /* button-2.png in Resources */,
+				189B1AA419750EAF00F2E708 /* background.jpg in Resources */,
 				18C54B62196E25060056865D /* FTourLogo.png in Resources */,
 				61E1DD441974240D0037DFD2 /* FSoft720R.mov in Resources */,
 				18A92B90196B822A00F78849 /* FSoftViewController.xib in Resources */,
 				61E1DD46197425C90037DFD2 /* FSU1720R.mov in Resources */,
+				189B1AA119750D0200F2E708 /* omnom_02.png in Resources */,
 				613D1FE7196BD8B0002E69CF /* LogoFSO(2).png in Resources */,
 				18A92B89196B820E00F78849 /* WelcomeViewController.xib in Resources */,
 				84A62AC4196A96F500D73A95 /* Images.xcassets in Resources */,
@@ -371,10 +381,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				18DAF890196CF08B0010CCFB /* MenuTableViewController.xib in Resources */,
+				189B1AA519750EAF00F2E708 /* background.jpg in Resources */,
 				18A92B91196B822A00F78849 /* FSoftViewController.xib in Resources */,
 				18A92B7C196B816400F78849 /* button-2.png in Resources */,
 				18A92B8A196B820E00F78849 /* WelcomeViewController.xib in Resources */,
 				18A92B9F196B825A00F78849 /* CafeViewController.xib in Resources */,
+				189B1AA219750D0200F2E708 /* omnom_02.png in Resources */,
 				18A92B98196B824B00F78849 /* FSU1ViewController.xib in Resources */,
 				18A92B83196B81B800F78849 /* iBeaconViewController.xib in Resources */,
 				84A62AD5196A96F500D73A95 /* InfoPlist.strings in Resources */,

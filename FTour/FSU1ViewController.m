@@ -155,6 +155,8 @@
     FSU1DetailViewController *fsu1dt = [[FSU1DetailViewController alloc]initWithNibName:@"FSU1DetailViewController" bundle:nil];
     [fsu1dt setDetailDict:dic];
     [[self navigationController]pushViewController:fsu1dt animated:YES];
+    [mainTable deselectRowAtIndexPath:indexPath animated:YES];
+    
 }
 //-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 //     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];

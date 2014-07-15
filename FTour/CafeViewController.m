@@ -60,7 +60,10 @@
         self.navigationItem.rightBarButtonItems = @[btn,barBtn];
         [self.orderTbl setHidden:NO];
     }else{
+        self.view.backgroundColor = [[UIColor alloc]initWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
+        [self.orderTbl setHidden:YES];
         self.navigationItem.rightBarButtonItems = @[barBtn];
+        
     }
 }
 
@@ -151,6 +154,7 @@
         [orderItems removeObjectAtIndex:indexPath.row];
         total = 0;
         [self.orderTbl reloadData];
+        [self viewWillAppear:YES];
         
     }
 }
