@@ -33,6 +33,14 @@
         [self.lbTel setText:[NSString stringWithFormat:@"%@",[self.detailDict objectForKey:@"tel"]]];
     [self.navigationController setNavigationBarHidden:NO];
 }
+- (void)stopCurrentView
+{
+    NSLog(@"Stop broadcast");
+    if ([self.navigationController.viewControllers count] >= 2)
+    {
+        [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:1] animated:YES];
+    }
+}
 
 - (void)didReceiveMemoryWarning
 {
