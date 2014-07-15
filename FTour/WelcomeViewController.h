@@ -14,5 +14,8 @@
 
 @property (nonatomic, strong) CLBeaconRegion *beaconRegion;
 @property (nonatomic, strong) CLLocationManager *locationManager;
+@property (strong,nonatomic)NSArray *myImages;
+@property (strong, nonatomic)NSTimer *updateBCK;
+@property (weak, nonatomic) IBOutlet UIImageView *imgFtour;
 
 @end
