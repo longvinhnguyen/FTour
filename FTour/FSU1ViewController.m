@@ -189,6 +189,7 @@
     [self.videoController stop];
     [self.videoController.view removeFromSuperview];
     self.videoController = nil;
+    [self.navigationController setNavigationBarHidden:NO];
 }
 - (void)dealloc
 {

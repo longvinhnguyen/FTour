@@ -64,19 +64,6 @@
     }
 }
 
-
-
--(void)toMenuView
-{
-    MenuTableViewController *vc = [[MenuTableViewController alloc] initWithNibName:@"MenuTableViewController" bundle:nil];
-    vc.delegate = self;
-    [self.navigationController pushViewController:vc animated:YES];
-}
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 -(void)addItemViewController:(MenuTableViewController *)viewController didFinishPickingItems:(NSMutableArray *)items
 {
     
@@ -84,6 +71,22 @@
     total = 0;
     [self.orderTbl reloadData];
 }
+
+-(void)toMenuView
+{
+    MenuTableViewController *vc = [[MenuTableViewController alloc] initWithNibName:@"MenuTableViewController" bundle:nil];
+    vc.delegate = self;
+    vc.selectedItems = [NSMutableArray arrayWithArray:orderItems];
+    NSLog(@"order items %@",orderItems);
+    NSLog(@"selected items %@",vc.selectedItems);
+    [self.navigationController pushViewController:vc animated:YES];
+}
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
