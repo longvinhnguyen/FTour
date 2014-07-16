@@ -45,6 +45,7 @@
 		18F2BFC3196B8978003A87EA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F2BFC2196B8978003A87EA /* CoreLocation.framework */; };
 		613D1FE7196BD8B0002E69CF /* LogoFSO(2).png in Resources */ = {isa = PBXBuildFile; fileRef = 613D1FE6196BD8B0002E69CF /* LogoFSO(2).png */; };
 		613D1FEB196BEB79002E69CF /* MCafe.json in Resources */ = {isa = PBXBuildFile; fileRef = 613D1FE9196BEB79002E69CF /* MCafe.json */; };
+		61B35A291976525E004DC1BB /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B35A281976525E004DC1BB /* icon.png */; };
 		61E1DD3F1973CCEF0037DFD2 /* FSU1DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E1DD3D1973CCEF0037DFD2 /* FSU1DetailViewController.m */; };
 		61E1DD401973CCEF0037DFD2 /* FSU1DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61E1DD3E1973CCEF0037DFD2 /* FSU1DetailViewController.xib */; };
 		61E1DD421973CE020037DFD2 /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61E1DD411973CE020037DFD2 /* avatar.jpg */; };
@@ -111,6 +112,7 @@
 		18F2BFC2196B8978003A87EA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		613D1FE6196BD8B0002E69CF /* LogoFSO(2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LogoFSO(2).png"; sourceTree = "<group>"; };
 		613D1FE9196BEB79002E69CF /* MCafe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MCafe.json; sourceTree = "<group>"; };
+		61B35A281976525E004DC1BB /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		61E1DD3C1973CCEE0037DFD2 /* FSU1DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSU1DetailViewController.h; sourceTree = "<group>"; };
 		61E1DD3D1973CCEF0037DFD2 /* FSU1DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSU1DetailViewController.m; sourceTree = "<group>"; };
 		61E1DD3E1973CCEF0037DFD2 /* FSU1DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSU1DetailViewController.xib; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 		84A62A9F196A96F400D73A95 = {
 			isa = PBXGroup;
 			children = (
+				61B35A281976525E004DC1BB /* icon.png */,
 				613D1FE6196BD8B0002E69CF /* LogoFSO(2).png */,
 				84A62AB1196A96F500D73A95 /* FTour */,
 				84A62AD0196A96F500D73A95 /* FTourTests */,
@@ -381,6 +384,7 @@
 				613D1FE7196BD8B0002E69CF /* LogoFSO(2).png in Resources */,
 				18A92B89196B820E00F78849 /* WelcomeViewController.xib in Resources */,
 				84A62AC4196A96F500D73A95 /* Images.xcassets in Resources */,
+				61B35A291976525E004DC1BB /* icon.png in Resources */,
 				18A92B79196B80EE00F78849 /* button.png in Resources */,
 				84A62AE1196A985000D73A95 /* ViewController.xib in Resources */,
 				61E1DD501975064A0037DFD2 /* FTourLogo1.png in Resources */,
