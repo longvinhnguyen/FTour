@@ -40,14 +40,9 @@
     for (int i = 0; i < imageNames.count; i++) {
         [images addObject:[UIImage imageNamed:[imageNames objectAtIndex:i]]];
     }
-    
-    // Normal Animation
-    //UIImageView *animationImageView = [[UIImageView alloc] initWithFrame:CGRectMake(60, 95, 86, 193)];
     _imgFtour.animationImages = images;
-    _imgFtour.animationDuration = 1.4;
+    _imgFtour.animationDuration = 2.4;
     [_imgFtour startAnimating];
-    //[self.view addSubview:animationImageView];
-    //[animationImageView startAnimating];
 }
 -(void)viewDidAppear:(BOOL)animated{
     self.locationManager = [[CLLocationManager alloc]init];
