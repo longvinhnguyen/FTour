@@ -39,10 +39,10 @@ UICollisionBehavior* _collision;
     NSUUID *uuid = [[NSUUID alloc]initWithUUIDString:kFSoftUUID];
     self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:@"FSoft"];
     [self.locationManager startMonitoringForRegion:self.beaconRegion];
-    NSArray *imageNames=[NSArray arrayWithObjects:@"circle2.png",@"FTourlogoV22.png",nil];
+    NSArray *imageNames=[NSArray arrayWithObjects:@"circle copy3.png",@"circle copy4.png",nil];
     NSMutableArray *images = [[NSMutableArray alloc] init];
     for (int i = 0; i < imageNames.count; i++) {
-        [images addObject:[UIImage imageNamed:[imageNames objectAtIndex:i]]];
+        [images addObject:[UIImage imageNamed:[imageNames objectAtIndex:i]]];        
     }
     _imgFtour.animationImages = images;
     _imgFtour.animationDuration = 1.4;
@@ -55,10 +55,11 @@ UICollisionBehavior* _collision;
     _collision = [[UICollisionBehavior alloc]
                   initWithItems:@[_imgFtour]];
     _collision.translatesReferenceBoundsIntoBoundary = YES;
+//    UIView* barrier = [[UIView alloc] initWithFrame:CGRectMake(0,560,320,568)];
+//    barrier.backgroundColor = [UIColor redColor];
+//    [self.view addSubview:barrier];
+//    _collision = [[UICollisionBehavior alloc] initWithItems:@[_imgFtour, barrier]];
     [_animator addBehavior:_collision];
-    UIView* barrier = [[UIView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x,self.view.bounds.origin.y,self.view.bounds.origin.x,self.view.bounds.size.height + self.view.bounds.origin.y)];
-    barrier.backgroundColor = [UIColor redColor];
-    [self.view addSubview:barrier];
     
 }
 -(void)viewDidAppear:(BOOL)animated{

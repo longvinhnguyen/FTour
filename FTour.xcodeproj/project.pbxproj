@@ -49,8 +49,10 @@
 		61B35A2C1977A38C004DC1BB /* FTourlogoV2.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B35A2A1977A38C004DC1BB /* FTourlogoV2.png */; };
 		61B35A2D1977A38C004DC1BB /* FTourlogov22.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B35A2B1977A38C004DC1BB /* FTourlogov22.png */; };
 		61B35A311977B039004DC1BB /* human.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B35A2E1977B039004DC1BB /* human.png */; };
-		61B35A321977B039004DC1BB /* circle2.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B35A2F1977B039004DC1BB /* circle2.png */; };
 		61B35A331977B039004DC1BB /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B35A301977B039004DC1BB /* circle.png */; };
+		61B35A391977B509004DC1BB /* circle copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B35A381977B509004DC1BB /* circle copy.png */; };
+		61B35A3C1977BAE3004DC1BB /* circle copy4.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B35A3A1977BAE3004DC1BB /* circle copy4.png */; };
+		61B35A3D1977BAE3004DC1BB /* circle copy3.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B35A3B1977BAE3004DC1BB /* circle copy3.png */; };
 		61E1DD3F1973CCEF0037DFD2 /* FSU1DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E1DD3D1973CCEF0037DFD2 /* FSU1DetailViewController.m */; };
 		61E1DD401973CCEF0037DFD2 /* FSU1DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61E1DD3E1973CCEF0037DFD2 /* FSU1DetailViewController.xib */; };
 		61E1DD421973CE020037DFD2 /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61E1DD411973CE020037DFD2 /* avatar.jpg */; };
@@ -121,8 +123,10 @@
 		61B35A2A1977A38C004DC1BB /* FTourlogoV2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FTourlogoV2.png; sourceTree = "<group>"; };
 		61B35A2B1977A38C004DC1BB /* FTourlogov22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FTourlogov22.png; sourceTree = "<group>"; };
 		61B35A2E1977B039004DC1BB /* human.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = human.png; sourceTree = "<group>"; };
-		61B35A2F1977B039004DC1BB /* circle2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle2.png; sourceTree = "<group>"; };
 		61B35A301977B039004DC1BB /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
+		61B35A381977B509004DC1BB /* circle copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle copy.png"; sourceTree = "<group>"; };
+		61B35A3A1977BAE3004DC1BB /* circle copy4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle copy4.png"; sourceTree = "<group>"; };
+		61B35A3B1977BAE3004DC1BB /* circle copy3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle copy3.png"; sourceTree = "<group>"; };
 		61E1DD3C1973CCEE0037DFD2 /* FSU1DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSU1DetailViewController.h; sourceTree = "<group>"; };
 		61E1DD3D1973CCEF0037DFD2 /* FSU1DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSU1DetailViewController.m; sourceTree = "<group>"; };
 		61E1DD3E1973CCEF0037DFD2 /* FSU1DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSU1DetailViewController.xib; sourceTree = "<group>"; };
@@ -269,8 +273,10 @@
 		84A62AB2196A96F500D73A95 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				61B35A3A1977BAE3004DC1BB /* circle copy4.png */,
+				61B35A3B1977BAE3004DC1BB /* circle copy3.png */,
+				61B35A381977B509004DC1BB /* circle copy.png */,
 				61B35A2E1977B039004DC1BB /* human.png */,
-				61B35A2F1977B039004DC1BB /* circle2.png */,
 				61B35A301977B039004DC1BB /* circle.png */,
 				61B35A2A1977A38C004DC1BB /* FTourlogoV2.png */,
 				61B35A2B1977A38C004DC1BB /* FTourlogov22.png */,
@@ -390,6 +396,7 @@
 				61B35A2C1977A38C004DC1BB /* FTourlogoV2.png in Resources */,
 				18A92B7B196B816400F78849 /* button-2.png in Resources */,
 				61B35A311977B039004DC1BB /* human.png in Resources */,
+				61B35A3C1977BAE3004DC1BB /* circle copy4.png in Resources */,
 				61E1DD4E1975064A0037DFD2 /* FTourLogo3.png in Resources */,
 				189B1AA419750EAF00F2E708 /* background.jpg in Resources */,
 				18C54B62196E25060056865D /* FTourLogo.png in Resources */,
@@ -400,6 +407,7 @@
 				61E1DD46197425C90037DFD2 /* FSU1720R.mov in Resources */,
 				189B1AA119750D0200F2E708 /* omnom_02.png in Resources */,
 				613D1FE7196BD8B0002E69CF /* LogoFSO(2).png in Resources */,
+				61B35A391977B509004DC1BB /* circle copy.png in Resources */,
 				18A92B89196B820E00F78849 /* WelcomeViewController.xib in Resources */,
 				84A62AC4196A96F500D73A95 /* Images.xcassets in Resources */,
 				61B35A291976525E004DC1BB /* icon.png in Resources */,
@@ -408,11 +416,11 @@
 				61E1DD501975064A0037DFD2 /* FTourLogo1.png in Resources */,
 				61E1DD421973CE020037DFD2 /* avatar.jpg in Resources */,
 				61E1DD401973CCEF0037DFD2 /* FSU1DetailViewController.xib in Resources */,
+				61B35A3D1977BAE3004DC1BB /* circle copy3.png in Resources */,
 				18DAF88F196CF08B0010CCFB /* MenuTableViewController.xib in Resources */,
 				18A92B97196B824B00F78849 /* FSU1ViewController.xib in Resources */,
 				61B35A2D1977A38C004DC1BB /* FTourlogov22.png in Resources */,
 				613D1FEB196BEB79002E69CF /* MCafe.json in Resources */,
-				61B35A321977B039004DC1BB /* circle2.png in Resources */,
 				61E1DD4C1975064A0037DFD2 /* FTourLogo5.png in Resources */,
 				18A92B9E196B825A00F78849 /* CafeViewController.xib in Resources */,
 				18A92B82196B81B800F78849 /* iBeaconViewController.xib in Resources */,
