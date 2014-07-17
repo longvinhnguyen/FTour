@@ -15,8 +15,8 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FTourLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="NUk-Jl-Nsb">
-                    <rect key="frame" x="65" y="125" width="191" height="317"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FTourlogoV2.png" translatesAutoresizingMaskIntoConstraints="NO" id="NUk-Jl-Nsb">
+                    <rect key="frame" x="50" y="165" width="220" height="383"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
@@ -26,6 +26,6 @@
         </view>
     </objects>
     <resources>
-        <image name="FTourLogo.png" width="223" height="375"/>
+        <image name="FTourlogoV2.png" width="448" height="796"/>
     </resources>
 </document>

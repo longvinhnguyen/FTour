@@ -35,13 +35,13 @@
     NSUUID *uuid = [[NSUUID alloc]initWithUUIDString:kFSoftUUID];
     self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:@"FSoft"];
     [self.locationManager startMonitoringForRegion:self.beaconRegion];
-    NSArray *imageNames=[NSArray arrayWithObjects:@"FTourLogo5.png",@"FTourLogo4.png",@"FTourLogo3.png",@"FTourLogo2.png",@"FTourLogo1.png",@"FTourLogo.png",@"FTourLogo1.png",@"FTourLogo2.png",@"FTourLogo3.png",@"FTourLogo4.png",nil];
+    NSArray *imageNames=[NSArray arrayWithObjects:@"FTourlogoV2.png.png",@"FTourlogoV22.png",nil];
     NSMutableArray *images = [[NSMutableArray alloc] init];
     for (int i = 0; i < imageNames.count; i++) {
         [images addObject:[UIImage imageNamed:[imageNames objectAtIndex:i]]];
     }
     _imgFtour.animationImages = images;
-    _imgFtour.animationDuration = 2.4;
+    _imgFtour.animationDuration = 1.4;
     [_imgFtour startAnimating];
 }
 -(void)viewDidAppear:(BOOL)animated{

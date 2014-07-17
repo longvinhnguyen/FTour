@@ -46,6 +46,8 @@
 		613D1FE7196BD8B0002E69CF /* LogoFSO(2).png in Resources */ = {isa = PBXBuildFile; fileRef = 613D1FE6196BD8B0002E69CF /* LogoFSO(2).png */; };
 		613D1FEB196BEB79002E69CF /* MCafe.json in Resources */ = {isa = PBXBuildFile; fileRef = 613D1FE9196BEB79002E69CF /* MCafe.json */; };
 		61B35A291976525E004DC1BB /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B35A281976525E004DC1BB /* icon.png */; };
+		61B35A2C1977A38C004DC1BB /* FTourlogoV2.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B35A2A1977A38C004DC1BB /* FTourlogoV2.png */; };
+		61B35A2D1977A38C004DC1BB /* FTourlogov22.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B35A2B1977A38C004DC1BB /* FTourlogov22.png */; };
 		61E1DD3F1973CCEF0037DFD2 /* FSU1DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E1DD3D1973CCEF0037DFD2 /* FSU1DetailViewController.m */; };
 		61E1DD401973CCEF0037DFD2 /* FSU1DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61E1DD3E1973CCEF0037DFD2 /* FSU1DetailViewController.xib */; };
 		61E1DD421973CE020037DFD2 /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61E1DD411973CE020037DFD2 /* avatar.jpg */; };
@@ -113,6 +115,8 @@
 		613D1FE6196BD8B0002E69CF /* LogoFSO(2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LogoFSO(2).png"; sourceTree = "<group>"; };
 		613D1FE9196BEB79002E69CF /* MCafe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MCafe.json; sourceTree = "<group>"; };
 		61B35A281976525E004DC1BB /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		61B35A2A1977A38C004DC1BB /* FTourlogoV2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FTourlogoV2.png; sourceTree = "<group>"; };
+		61B35A2B1977A38C004DC1BB /* FTourlogov22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FTourlogov22.png; sourceTree = "<group>"; };
 		61E1DD3C1973CCEE0037DFD2 /* FSU1DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSU1DetailViewController.h; sourceTree = "<group>"; };
 		61E1DD3D1973CCEF0037DFD2 /* FSU1DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSU1DetailViewController.m; sourceTree = "<group>"; };
 		61E1DD3E1973CCEF0037DFD2 /* FSU1DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSU1DetailViewController.xib; sourceTree = "<group>"; };
@@ -259,6 +263,8 @@
 		84A62AB2196A96F500D73A95 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				61B35A2A1977A38C004DC1BB /* FTourlogoV2.png */,
+				61B35A2B1977A38C004DC1BB /* FTourlogov22.png */,
 				61E1DD471975064A0037DFD2 /* FTourLogo5.png */,
 				61E1DD481975064A0037DFD2 /* FTourLogo4.png */,
 				61E1DD491975064A0037DFD2 /* FTourLogo3.png */,
@@ -371,6 +377,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61B35A2C1977A38C004DC1BB /* FTourlogoV2.png in Resources */,
 				18A92B7B196B816400F78849 /* button-2.png in Resources */,
 				61E1DD4E1975064A0037DFD2 /* FTourLogo3.png in Resources */,
 				189B1AA419750EAF00F2E708 /* background.jpg in Resources */,
@@ -392,6 +399,7 @@
 				61E1DD401973CCEF0037DFD2 /* FSU1DetailViewController.xib in Resources */,
 				18DAF88F196CF08B0010CCFB /* MenuTableViewController.xib in Resources */,
 				18A92B97196B824B00F78849 /* FSU1ViewController.xib in Resources */,
+				61B35A2D1977A38C004DC1BB /* FTourlogov22.png in Resources */,
 				613D1FEB196BEB79002E69CF /* MCafe.json in Resources */,
 				61E1DD4C1975064A0037DFD2 /* FTourLogo5.png in Resources */,
 				18A92B9E196B825A00F78849 /* CafeViewController.xib in Resources */,
