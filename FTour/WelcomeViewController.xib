@@ -15,8 +15,12 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FTourlogoV2.png" translatesAutoresizingMaskIntoConstraints="NO" id="NUk-Jl-Nsb">
-                    <rect key="frame" x="50" y="165" width="220" height="383"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle.png" translatesAutoresizingMaskIntoConstraints="NO" id="NUk-Jl-Nsb">
+                    <rect key="frame" x="40" y="6" width="240" height="237"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="human.png" translatesAutoresizingMaskIntoConstraints="NO" id="hc3-Hm-bFR">
+                    <rect key="frame" x="81" y="320" width="158" height="210"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
@@ -26,6 +30,7 @@
         </view>
     </objects>
     <resources>
-        <image name="FTourlogoV2.png" width="448" height="796"/>
+        <image name="circle.png" width="448" height="436"/>
+        <image name="human.png" width="379" height="534"/>
     </resources>
 </document>

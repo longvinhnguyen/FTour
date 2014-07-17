@@ -16,6 +16,10 @@
 @end
 
 @implementation WelcomeViewController
+UIDynamicAnimator* _animator;
+UIGravityBehavior* _gravity;
+UICollisionBehavior* _collision;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,7 +39,7 @@
     NSUUID *uuid = [[NSUUID alloc]initWithUUIDString:kFSoftUUID];
     self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:@"FSoft"];
     [self.locationManager startMonitoringForRegion:self.beaconRegion];
-    NSArray *imageNames=[NSArray arrayWithObjects:@"FTourlogoV2.png.png",@"FTourlogoV22.png",nil];
+    NSArray *imageNames=[NSArray arrayWithObjects:@"circle2.png",@"FTourlogoV22.png",nil];
     NSMutableArray *images = [[NSMutableArray alloc] init];
     for (int i = 0; i < imageNames.count; i++) {
         [images addObject:[UIImage imageNamed:[imageNames objectAtIndex:i]]];
@@ -43,6 +47,19 @@
     _imgFtour.animationImages = images;
     _imgFtour.animationDuration = 1.4;
     [_imgFtour startAnimating];
+    
+
+    _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
+    _gravity = [[UIGravityBehavior alloc] initWithItems:@[_imgFtour]];
+    [_animator addBehavior:_gravity];
+    _collision = [[UICollisionBehavior alloc]
+                  initWithItems:@[_imgFtour]];
+    _collision.translatesReferenceBoundsIntoBoundary = YES;
+    [_animator addBehavior:_collision];
+    UIView* barrier = [[UIView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x,self.view.bounds.origin.y,self.view.bounds.origin.x,self.view.bounds.size.height + self.view.bounds.origin.y)];
+    barrier.backgroundColor = [UIColor redColor];
+    [self.view addSubview:barrier];
+    
 }
 -(void)viewDidAppear:(BOOL)animated{
     self.locationManager = [[CLLocationManager alloc]init];
