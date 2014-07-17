@@ -69,6 +69,28 @@ UICollisionBehavior* _collision;
     NSUUID *uuid = [[NSUUID alloc]initWithUUIDString:kFSoftUUID];
     self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:@"FSoft"];
     [self.locationManager startMonitoringForRegion:self.beaconRegion];
+    NSArray *imageNames=[NSArray arrayWithObjects:@"circle copy3.png",@"circle copy4.png",nil];
+
+    NSMutableArray *images = [[NSMutableArray alloc] init];
+    for (int i = 0; i < imageNames.count; i++) {
+        [images addObject:[UIImage imageNamed:[imageNames objectAtIndex:i]]];
+    }
+    _imgFtour.animationImages = images;
+    _imgFtour.animationDuration = 1.4;
+    [_imgFtour startAnimating];
+    
+    
+    _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
+    _gravity = [[UIGravityBehavior alloc] initWithItems:@[_imgFtour]];
+    [_animator addBehavior:_gravity];
+    _collision = [[UICollisionBehavior alloc]
+                  initWithItems:@[_imgFtour]];
+    _collision.translatesReferenceBoundsIntoBoundary = YES;
+    //    UIView* barrier = [[UIView alloc] initWithFrame:CGRectMake(0,560,320,568)];
+    //    barrier.backgroundColor = [UIColor redColor];
+    //    [self.view addSubview:barrier];
+    //    _collision = [[UICollisionBehavior alloc] initWithItems:@[_imgFtour, barrier]];
+    [_animator addBehavior:_collision];
 }
 -(void)viewWillAppear:(BOOL)animated
 {
