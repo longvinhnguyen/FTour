@@ -41,7 +41,8 @@ UICollisionBehavior* _collision;
     [self.locationManager startMonitoringForRegion:self.beaconRegion];
     NSArray *imageNames=[NSArray arrayWithObjects:@"circle copy3.png",@"circle copy4.png",nil];
     NSMutableArray *images = [[NSMutableArray alloc] init];
-    for (int i = 0; i < imageNames.count; i++) {
+    for (int i = 0; i < imageNames.count; i++)
+    {
         [images addObject:[UIImage imageNamed:[imageNames objectAtIndex:i]]];        
     }
     _imgFtour.animationImages = images;
@@ -55,10 +56,6 @@ UICollisionBehavior* _collision;
     _collision = [[UICollisionBehavior alloc]
                   initWithItems:@[_imgFtour]];
     _collision.translatesReferenceBoundsIntoBoundary = YES;
-//    UIView* barrier = [[UIView alloc] initWithFrame:CGRectMake(0,560,320,568)];
-//    barrier.backgroundColor = [UIColor redColor];
-//    [self.view addSubview:barrier];
-//    _collision = [[UICollisionBehavior alloc] initWithItems:@[_imgFtour, barrier]];
     [_animator addBehavior:_collision];
     
 }
@@ -86,10 +83,6 @@ UICollisionBehavior* _collision;
     _collision = [[UICollisionBehavior alloc]
                   initWithItems:@[_imgFtour]];
     _collision.translatesReferenceBoundsIntoBoundary = YES;
-    //    UIView* barrier = [[UIView alloc] initWithFrame:CGRectMake(0,560,320,568)];
-    //    barrier.backgroundColor = [UIColor redColor];
-    //    [self.view addSubview:barrier];
-    //    _collision = [[UICollisionBehavior alloc] initWithItems:@[_imgFtour, barrier]];
     [_animator addBehavior:_collision];
 }
 -(void)viewWillAppear:(BOOL)animated

@@ -16,11 +16,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle copy3.png" translatesAutoresizingMaskIntoConstraints="NO" id="NUk-Jl-Nsb">
-                    <rect key="frame" x="48" y="4" width="225" height="367"/>
+                    <rect key="frame" x="53" y="0.0" width="215" height="350"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="human.png" translatesAutoresizingMaskIntoConstraints="NO" id="hc3-Hm-bFR">
-                    <rect key="frame" x="80" y="296" width="161" height="210"/>
+                    <rect key="frame" x="85" y="300" width="151" height="204"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
