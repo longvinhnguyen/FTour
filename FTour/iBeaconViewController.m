@@ -93,5 +93,6 @@
     NSLog(@"Stop");
     [_status setText:@"Stopped"];
     _btnStatus.titleLabel.text = @"";
+    [_segment setSelectedSegmentIndex:-1];
 }
 @end
