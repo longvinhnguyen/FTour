@@ -84,6 +84,14 @@ UICollisionBehavior* _collision;
                   initWithItems:@[_imgFtour]];
     _collision.translatesReferenceBoundsIntoBoundary = YES;
     [_animator addBehavior:_collision];
+    UISwipeGestureRecognizer *swipeBackGesture = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(didSwipeBack)];
+    [swipeBackGesture setDirection:UISwipeGestureRecognizerDirectionRight];
+    [self.view addGestureRecognizer:swipeBackGesture];
+}
+
+-(void) didSwipeBack
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 -(void)viewWillAppear:(BOOL)animated
 {
