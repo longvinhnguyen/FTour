@@ -35,15 +35,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self.navigationController setNavigationBarHidden:NO];
-    self.navigationController.title = @"Cafe Terrace";
     
+
+    [self.navigationController setNavigationBarHidden:NO];
+
+    [self setTitle:@"Cafe"];
+
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopCurrentView) name:@"kNotificationDidLostBeacon" object:nil];
-//    if(!orderItems){
-//        [self.orderTbl setHidden:YES];
-//    }else{
-//        [self.orderTbl setHidden:NO];
-//    }
 
 }
 - (void)stopCurrentView
@@ -53,16 +51,20 @@
 }
 -(void)viewWillAppear:(BOOL)animated
 {
-    UIBarButtonItem *barBtn = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(toMenuView)];
+  //  self.navigationController.title = @"Cafe Terrace";
+
+ 
     UIBarButtonItem *btn = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:nil];
+
+    UIBarButtonItem *menuBarButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"menu.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(toMenuView)];
     if(orderItems.count != 0){
         
-        self.navigationItem.rightBarButtonItems = @[btn,barBtn];
+        self.navigationItem.rightBarButtonItems = @[btn,menuBarButton];
         [self.orderTbl setHidden:NO];
     }else{
         self.view.backgroundColor = [[UIColor alloc]initWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
         [self.orderTbl setHidden:YES];
-        self.navigationItem.rightBarButtonItems = @[barBtn];
+        self.navigationItem.rightBarButtonItems = @[menuBarButton];
         
     }
 }

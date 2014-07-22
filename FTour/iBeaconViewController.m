@@ -31,6 +31,7 @@
 //    self.navigationItem.hidesBackButton = NO;
     [[self navigationController]setNavigationBarHidden:NO];
     _uuid = [[NSUUID alloc]initWithUUIDString:kFSoftUUID];
+    
 }
 
 - (void)didReceiveMemoryWarning

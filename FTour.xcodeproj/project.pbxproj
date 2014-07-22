@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		18129C51196B8FD50004AE71 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18129C50196B8FD50004AE71 /* CoreBluetooth.framework */; };
+		185491D1197E113D00508D61 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 185491CF197E113D00508D61 /* menu.png */; };
+		185491D2197E113D00508D61 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 185491CF197E113D00508D61 /* menu.png */; };
+		185491D3197E113D00508D61 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 185491D0197E113D00508D61 /* menu@2x.png */; };
+		185491D4197E113D00508D61 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 185491D0197E113D00508D61 /* menu@2x.png */; };
+		185491D6197E483400508D61 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 185491D5197E483400508D61 /* check.png */; };
+		185491D7197E483400508D61 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 185491D5197E483400508D61 /* check.png */; };
 		189B1AA119750D0200F2E708 /* omnom_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 189B1AA019750D0100F2E708 /* omnom_02.png */; };
 		189B1AA219750D0200F2E708 /* omnom_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 189B1AA019750D0100F2E708 /* omnom_02.png */; };
 		189B1AA419750EAF00F2E708 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 189B1AA319750EAF00F2E708 /* background.jpg */; };
@@ -91,6 +97,9 @@
 
 /* Begin PBXFileReference section */
 		18129C50196B8FD50004AE71 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		185491CF197E113D00508D61 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		185491D0197E113D00508D61 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
+		185491D5197E483400508D61 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
 		189B1AA019750D0100F2E708 /* omnom_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = omnom_02.png; sourceTree = "<group>"; };
 		189B1AA319750EAF00F2E708 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		18A92B78196B80EE00F78849 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
@@ -190,6 +199,9 @@
 		18A92B77196B80AB00F78849 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				185491D5197E483400508D61 /* check.png */,
+				185491CF197E113D00508D61 /* menu.png */,
+				185491D0197E113D00508D61 /* menu@2x.png */,
 				189B1AA319750EAF00F2E708 /* background.jpg */,
 				189B1AA019750D0100F2E708 /* omnom_02.png */,
 				18A92B7A196B816400F78849 /* button-2.png */,
@@ -394,6 +406,7 @@
 			files = (
 				61B35A331977B039004DC1BB /* circle.png in Resources */,
 				61B35A2C1977A38C004DC1BB /* FTourlogoV2.png in Resources */,
+				185491D1197E113D00508D61 /* menu.png in Resources */,
 				18A92B7B196B816400F78849 /* button-2.png in Resources */,
 				61B35A311977B039004DC1BB /* human.png in Resources */,
 				61B35A3C1977BAE3004DC1BB /* circle copy4.png in Resources */,
@@ -409,10 +422,12 @@
 				613D1FE7196BD8B0002E69CF /* LogoFSO(2).png in Resources */,
 				61B35A391977B509004DC1BB /* circle copy.png in Resources */,
 				18A92B89196B820E00F78849 /* WelcomeViewController.xib in Resources */,
+				185491D6197E483400508D61 /* check.png in Resources */,
 				84A62AC4196A96F500D73A95 /* Images.xcassets in Resources */,
 				61B35A291976525E004DC1BB /* icon.png in Resources */,
 				18A92B79196B80EE00F78849 /* button.png in Resources */,
 				84A62AE1196A985000D73A95 /* ViewController.xib in Resources */,
+				185491D3197E113D00508D61 /* menu@2x.png in Resources */,
 				61E1DD501975064A0037DFD2 /* FTourLogo1.png in Resources */,
 				61E1DD421973CE020037DFD2 /* avatar.jpg in Resources */,
 				61E1DD401973CCEF0037DFD2 /* FSU1DetailViewController.xib in Resources */,
@@ -433,6 +448,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				18DAF890196CF08B0010CCFB /* MenuTableViewController.xib in Resources */,
+				185491D7197E483400508D61 /* check.png in Resources */,
+				185491D4197E113D00508D61 /* menu@2x.png in Resources */,
 				189B1AA519750EAF00F2E708 /* background.jpg in Resources */,
 				18A92B91196B822A00F78849 /* FSoftViewController.xib in Resources */,
 				18A92B7C196B816400F78849 /* button-2.png in Resources */,
@@ -440,6 +457,7 @@
 				18A92B9F196B825A00F78849 /* CafeViewController.xib in Resources */,
 				189B1AA219750D0200F2E708 /* omnom_02.png in Resources */,
 				18A92B98196B824B00F78849 /* FSU1ViewController.xib in Resources */,
+				185491D2197E113D00508D61 /* menu.png in Resources */,
 				18A92B83196B81B800F78849 /* iBeaconViewController.xib in Resources */,
 				84A62AD5196A96F500D73A95 /* InfoPlist.strings in Resources */,
 			);
