@@ -30,7 +30,9 @@
     // Do any additional setup after loading the view from its nib.
         [self.lbEmail setText:[NSString stringWithFormat:@"%@",[self.detailDict objectForKey:@"email"]]];
         [self.lbName setText:[NSString stringWithFormat:@"%@",[self.detailDict objectForKey:@"name"]]];
-        [self.lbTel setText:[NSString stringWithFormat:@"%@",[self.detailDict objectForKey:@"tel"]]];
+    if ([self.detailDict objectForKey:@"tel"] !=nil) {
+            [self.lbTel setText:[NSString stringWithFormat:@"%@",[self.detailDict objectForKey:@"tel"]]];
+    }
     [self.navigationController setNavigationBarHidden:NO];
 }
 - (void)stopCurrentView
