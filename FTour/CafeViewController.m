@@ -61,7 +61,7 @@
         self.navigationItem.rightBarButtonItems = @[btn,menuBarButton];
         [self.orderTbl setHidden:NO];
     }else{
-        self.view.backgroundColor = [[UIColor alloc]initWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
+        self.view.backgroundColor = [[UIColor alloc]initWithPatternImage:[UIImage imageNamed:@"cafe_bg.png"]];
         [self.orderTbl setHidden:YES];
         self.navigationItem.rightBarButtonItems = @[menuBarButton];
         
