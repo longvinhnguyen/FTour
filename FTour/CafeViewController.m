@@ -56,14 +56,15 @@
  
     UIBarButtonItem *btn = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"check.png"] style:UIBarButtonItemStyleBordered target:self action:nil];
     UIBarButtonItem *menuBarButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"menu.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(toMenuView)];
+    UIBarButtonItem *menuBarBtn = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(toMenuView)];
     if(orderItems.count != 0){
         
-        self.navigationItem.rightBarButtonItems = @[btn,menuBarButton];
+        self.navigationItem.rightBarButtonItems = @[btn,menuBarBtn];
         [self.orderTbl setHidden:NO];
     }else{
-        self.view.backgroundColor = [[UIColor alloc]initWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
+        self.view.backgroundColor = [[UIColor alloc]initWithPatternImage:[UIImage imageNamed:@"cafe_bg.png"]];
         [self.orderTbl setHidden:YES];
-        self.navigationItem.rightBarButtonItems = @[menuBarButton];
+        self.navigationItem.rightBarButtonItems = @[menuBarBtn];
         
     }
 }
