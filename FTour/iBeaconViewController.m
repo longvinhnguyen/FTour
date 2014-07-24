@@ -111,7 +111,7 @@
             [images addObject:[UIImage imageNamed:[imageNames objectAtIndex:i]]];
         }
         _imgBroadcast.animationImages = images;
-        _imgBroadcast.animationDuration = 1;
+        _imgBroadcast.animationDuration = 0.75;
         [_imgBroadcast startAnimating];
         [_btnStatus setHidden:NO];
     }
