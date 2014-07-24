@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface iBeaconViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UILabel *status;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *segment;
 @property (strong, nonatomic) IBOutlet UILabel *uuidLbl;
 @property (nonatomic, strong) CLBeaconRegion *beaconRegion;
@@ -26,5 +25,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *idtXT;
 - (IBAction)btnOff:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *btnStatus;
+@property (weak, nonatomic) IBOutlet UIImageView *imgBroadcast;
 
 @end

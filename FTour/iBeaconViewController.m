@@ -31,6 +31,7 @@
 //    self.navigationItem.hidesBackButton = NO;
     [[self navigationController]setNavigationBarHidden:NO];
     _uuid = [[NSUUID alloc]initWithUUIDString:kFSoftUUID];
+    [_btnStatus setHidden:YES];
     
 }
 
@@ -65,6 +66,9 @@
     [_minorTitle setHidden:NO];
     [_idTitle setHidden:NO];
     [_idtXT setText:_beaconRegion.identifier];
+    [self broadcastAnimation:YES];
+   // [_btnStatus.titleLabel setText:@"Stop"];
+
     
 }
 
@@ -75,9 +79,9 @@
     if(peripheral.state == CBPeripheralManagerStatePoweredOn)
     {
         NSLog(@"On");
-        [_status setText:@"Broadcasting..."];
         [peripheral startAdvertising:_beaconPeripheralData];
         _btnStatus.titleLabel.text = @"Off";
+        [self broadcastAnimation:YES];
     }
 //    if(peripheral.state == CBPeripheralManagerStatePoweredOff)
 //    {
@@ -92,8 +96,30 @@
     [_peripheralManager removeAllServices];
     [_peripheralManager stopAdvertising];
     NSLog(@"Stop");
-    [_status setText:@"Stopped"];
     _btnStatus.titleLabel.text = @"";
     [_segment setSelectedSegmentIndex:-1];
+    [self broadcastAnimation:NO];
+
+}
+-(void)broadcastAnimation:(BOOL)status
+{
+    if (status) {
+        NSArray *imageNames=[NSArray arrayWithObjects:@"broadcast1.png",@"broadcast2.png",nil];
+        
+        NSMutableArray *images = [[NSMutableArray alloc] init];
+        for (int i = 0; i < imageNames.count; i++) {
+            [images addObject:[UIImage imageNamed:[imageNames objectAtIndex:i]]];
+        }
+        _imgBroadcast.animationImages = images;
+        _imgBroadcast.animationDuration = 1;
+        [_imgBroadcast startAnimating];
+        [_btnStatus setHidden:NO];
+    }
+    else
+    {
+        [_imgBroadcast stopAnimating];
+        [_btnStatus setHidden:YES];
+        
+    }
 }
 @end
