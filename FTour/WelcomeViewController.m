@@ -14,7 +14,7 @@
 @interface WelcomeViewController ()
 
 @end
-
+UIAlertView *ua;
 @implementation WelcomeViewController
 UIDynamicAnimator* _animator;
 UIGravityBehavior* _gravity;
@@ -50,8 +50,6 @@ CBCentralManager *cbCentralManager;
     _imgFtour.animationImages = images;
     _imgFtour.animationDuration = 1.4;
     [_imgFtour startAnimating];
-    
-
     _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
     _gravity = [[UIGravityBehavior alloc] initWithItems:@[_imgFtour]];
     [_animator addBehavior:_gravity];
@@ -59,7 +57,12 @@ CBCentralManager *cbCentralManager;
                   initWithItems:@[_imgFtour]];
     _collision.translatesReferenceBoundsIntoBoundary = YES;
     [_animator addBehavior:_collision];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showAlertBluetoothOff) name:@"reLaunchApp" object:nil];
+    ua = [[UIAlertView alloc]initWithTitle:@"Bluetooth are unavailable" message:@"Please turn on your bluetooth" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:@"Setting", nil];
+}
+- (void)showAlertBluetoothOff
+{
+    [ua show];
 }
 -(void)viewDidAppear:(BOOL)animated{
     self.locationManager = [[CLLocationManager alloc]init];
@@ -166,12 +169,14 @@ CBCentralManager *cbCentralManager;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-//- (void)centralManagerDidUpdateState:(CBCentralManager *)central{
-//    switch (CB.state) {
-//        case CBCentralManagerStatePoweredOn:{
-//            //alert view
-//            break;
-//        }
-//    }
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+     if (buttonIndex == 1)
+        {
+//            [NSURL URLWithString:@"prefs:root=General&path=Bluetooth"]];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=General&path=Bluetooth"]];
+            NSLog(@"Showed");
+        }
+}
 
 @end
