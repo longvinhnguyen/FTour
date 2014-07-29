@@ -19,6 +19,7 @@
 UIDynamicAnimator* _animator;
 UIGravityBehavior* _gravity;
 UICollisionBehavior* _collision;
+CBCentralManager *cbCentralManager;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -33,6 +34,7 @@ UICollisionBehavior* _collision;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    CBCentralManager *cbCentralManager = [[CBCentralManager alloc]initWithDelegate:self queue:nil];
     self.locationManager = [[CLLocationManager alloc]init];
     self.locationManager.delegate = self;
     
@@ -164,5 +166,12 @@ UICollisionBehavior* _collision;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+//- (void)centralManagerDidUpdateState:(CBCentralManager *)central{
+//    switch (CB.state) {
+//        case CBCentralManagerStatePoweredOn:{
+//            //alert view
+//            break;
+//        }
+//    }
 
 @end
