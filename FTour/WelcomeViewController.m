@@ -12,15 +12,16 @@
 #import "CafeViewController.h"
 
 @interface WelcomeViewController ()
+{
+    UIDynamicAnimator * _animator;
+    UIGravityBehavior * _gravity;
+    UICollisionBehavior * _collision;
+    CBCentralManager *cbCentralManager;
+    UIAlertView *ua;
 
+}
 @end
-UIAlertView *ua;
 @implementation WelcomeViewController
-UIDynamicAnimator* _animator;
-UIGravityBehavior* _gravity;
-UICollisionBehavior* _collision;
-CBCentralManager *cbCentralManager;
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,7 +35,7 @@ CBCentralManager *cbCentralManager;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    CBCentralManager *cbCentralManager = [[CBCentralManager alloc]initWithDelegate:self queue:nil];
+//    CBCentralManager *cbCentralManager = [[CBCentralManager alloc]initWithDelegate:self queue:nil];
     self.locationManager = [[CLLocationManager alloc]init];
     self.locationManager.delegate = self;
     

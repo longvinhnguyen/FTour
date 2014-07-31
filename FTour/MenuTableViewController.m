@@ -333,7 +333,7 @@
 
 -(void)searchDisplayController:(UISearchDisplayController *)controller willShowSearchResultsTableView:(UITableView *)tableView
 {
-    for(int section = 0,sectionCount = tableView.numberOfSections; section < sectionCount;section++){
+    for(int section = 0,sectionCount = (int)tableView.numberOfSections; section < sectionCount;section++){
         for(int row = 0;row < [tableView numberOfRowsInSection:section];row++){
             UITableViewCell *cell = [tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:row inSection:section]];
             for(NSDictionary *item in selectedItems){
@@ -344,9 +344,6 @@
                     cell.accessoryType = UITableViewCellAccessoryNone;
                 }
             }
-        //    cell.accessoryType = UITableViewCellAccessoryNone;
-        //    cell.accessoryView = nil;
-            
         }
     }
 }
