@@ -8,7 +8,7 @@
             <connections>
                 <outlet property="btnStatus" destination="hFG-9u-aBP" id="zDc-tn-ZQG"/>
                 <outlet property="idTitle" destination="dIQ-xD-Y9I" id="AYb-gh-OuP"/>
-                <outlet property="idtXT" destination="pWF-U1-z2T" id="s1z-y5-KMH"/>
+                <outlet property="idTxt" destination="pWF-U1-z2T" id="6fM-NX-Zye"/>
                 <outlet property="imgBroadcast" destination="7bF-Pe-JcI" id="2EL-3p-r9B"/>
                 <outlet property="majorTitle" destination="r5d-EC-ubI" id="2Dj-7B-wWf"/>
                 <outlet property="majorTxt" destination="Ul8-4c-UIS" id="Dqs-Qy-S1t"/>

@@ -26,21 +26,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-//    self.navigationItem.title = @"iBeacon";
-//    self.navigationItem.hidesBackButton = NO;
     [[self navigationController]setNavigationBarHidden:NO];
     _uuid = [[NSUUID alloc]initWithUUIDString:kFSoftUUID];
     [_btnStatus setHidden:YES];
-    
+    [_peripheralManager addObserver:self forKeyPath:@"isAdvertising" options:0 context:nil];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if ([keyPath isEqualToString:@"isAdvertising"]) {
+        {
+            NSLog(@"Change");
+        }
+    }
+    else
+    {
+        NSLog(@"Sure");
+    }
+}
 -(IBAction)segChanged:(id)sender
 {
     if(_segment.selectedSegmentIndex == 0)
@@ -65,11 +72,8 @@
     [_minorTxt setText:[NSString stringWithFormat:@"%@",_beaconRegion.minor]];
     [_minorTitle setHidden:NO];
     [_idTitle setHidden:NO];
-    [_idtXT setText:_beaconRegion.identifier];
+    [_idTxt setText:_beaconRegion.identifier];
     [self broadcastAnimation:YES];
-   // [_btnStatus.titleLabel setText:@"Stop"];
-
-    
 }
 
 #pragma mark - CBPeripheraManager Delegate
@@ -83,16 +87,8 @@
         _btnStatus.titleLabel.text = @"Off";
         [self broadcastAnimation:YES];
     }
-//    if(peripheral.state == CBPeripheralManagerStatePoweredOff)
-//    {
-//        NSLog(@"Off");
-//        [_status setText:@"Stopped"];
-//        [peripheral stopAdvertising];
-//    }
-    
 }
 - (IBAction)btnOff:(id)sender {
-    //_peripheralManager stopAdvertising: _beaconRegion];
     [_peripheralManager removeAllServices];
     [_peripheralManager stopAdvertising];
     NSLog(@"Stop");
@@ -105,7 +101,6 @@
 {
     if (status) {
         NSArray *imageNames=[NSArray arrayWithObjects:@"broadcast1.png",@"broadcast2.png",nil];
-        
         NSMutableArray *images = [[NSMutableArray alloc] init];
         for (int i = 0; i < imageNames.count; i++) {
             [images addObject:[UIImage imageNamed:[imageNames objectAtIndex:i]]];

@@ -24,14 +24,6 @@
     
     self.navController.navigationBarHidden = YES;
     
-    //Customize navigation bar
-    
-//    NSString *navTitleFont = @"EuphemiaUCAS-Bold";
-//    UIColor *color = [UIColor colorWithRed:255.0/255 green:97.0/255 blue:3.0/255 alpha:1.0];
-    
-   // [self.navController.navigationBar setBarTintColor:color];
-  //  [self.navController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor], NSFontAttributeName : [UIFont fontWithName:navTitleFont size:18.0f]}];
-    
     self.window.rootViewController = self.navController;
     
     [self.window makeKeyAndVisible];

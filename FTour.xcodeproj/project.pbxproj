@@ -210,6 +210,45 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		61BB94E6198B348D00B99261 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18A92B7F196B81B800F78849 /* iBeaconViewController.xib */,
+				18A92B86196B820E00F78849 /* WelcomeViewController.xib */,
+				18A92B8D196B822A00F78849 /* FSoftViewController.xib */,
+				61E1DD3E1973CCEF0037DFD2 /* FSU1DetailViewController.xib */,
+				18A92B94196B824B00F78849 /* FSU1ViewController.xib */,
+				18A92B9B196B825A00F78849 /* CafeViewController.xib */,
+				18DAF88C196CF08B0010CCFB /* MenuTableViewController.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		61BB94E7198B349800B99261 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18A92B7D196B81B800F78849 /* iBeaconViewController.h */,
+				18A92B7E196B81B800F78849 /* iBeaconViewController.m */,
+				18A92B84196B820E00F78849 /* WelcomeViewController.h */,
+				18A92B85196B820E00F78849 /* WelcomeViewController.m */,
+				18A92B8B196B822A00F78849 /* FSoftViewController.h */,
+				18A92B8C196B822A00F78849 /* FSoftViewController.m */,
+				18A92B92196B824B00F78849 /* FSU1ViewController.h */,
+				18A92B93196B824B00F78849 /* FSU1ViewController.m */,
+				61E1DD3C1973CCEE0037DFD2 /* FSU1DetailViewController.h */,
+				61E1DD3D1973CCEF0037DFD2 /* FSU1DetailViewController.m */,
+				18A92B99196B825A00F78849 /* CafeViewController.h */,
+				18A92B9A196B825A00F78849 /* CafeViewController.m */,
+				18DAF88A196CF08B0010CCFB /* MenuTableViewController.h */,
+				18DAF88B196CF08B0010CCFB /* MenuTableViewController.m */,
+				84A62ABA196A96F500D73A95 /* AppDelegate.h */,
+				84A62ABB196A96F500D73A95 /* AppDelegate.m */,
+				84A62AC0196A96F500D73A95 /* ViewController.h */,
+				84A62AC1196A96F500D73A95 /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		84A62A9F196A96F400D73A95 = {
 			isa = PBXGroup;
 			children = (
@@ -249,35 +288,12 @@
 		84A62AB1196A96F500D73A95 /* FTour */ = {
 			isa = PBXGroup;
 			children = (
+				61BB94E7198B349800B99261 /* Controller */,
+				61BB94E6198B348D00B99261 /* View */,
 				18A92B77196B80AB00F78849 /* Resources */,
-				84A62ABA196A96F500D73A95 /* AppDelegate.h */,
-				84A62ABB196A96F500D73A95 /* AppDelegate.m */,
-				84A62AC0196A96F500D73A95 /* ViewController.h */,
-				84A62AC1196A96F500D73A95 /* ViewController.m */,
 				84A62AC3196A96F500D73A95 /* Images.xcassets */,
 				84A62AB2196A96F500D73A95 /* Supporting Files */,
 				84A62AE0196A985000D73A95 /* ViewController.xib */,
-				18A92B7D196B81B800F78849 /* iBeaconViewController.h */,
-				18A92B7E196B81B800F78849 /* iBeaconViewController.m */,
-				18A92B7F196B81B800F78849 /* iBeaconViewController.xib */,
-				18A92B84196B820E00F78849 /* WelcomeViewController.h */,
-				18A92B85196B820E00F78849 /* WelcomeViewController.m */,
-				18A92B86196B820E00F78849 /* WelcomeViewController.xib */,
-				18A92B8B196B822A00F78849 /* FSoftViewController.h */,
-				18A92B8C196B822A00F78849 /* FSoftViewController.m */,
-				18A92B8D196B822A00F78849 /* FSoftViewController.xib */,
-				18A92B92196B824B00F78849 /* FSU1ViewController.h */,
-				18A92B93196B824B00F78849 /* FSU1ViewController.m */,
-				61E1DD3C1973CCEE0037DFD2 /* FSU1DetailViewController.h */,
-				61E1DD3D1973CCEF0037DFD2 /* FSU1DetailViewController.m */,
-				61E1DD3E1973CCEF0037DFD2 /* FSU1DetailViewController.xib */,
-				18A92B94196B824B00F78849 /* FSU1ViewController.xib */,
-				18A92B99196B825A00F78849 /* CafeViewController.h */,
-				18A92B9A196B825A00F78849 /* CafeViewController.m */,
-				18A92B9B196B825A00F78849 /* CafeViewController.xib */,
-				18DAF88A196CF08B0010CCFB /* MenuTableViewController.h */,
-				18DAF88B196CF08B0010CCFB /* MenuTableViewController.m */,
-				18DAF88C196CF08B0010CCFB /* MenuTableViewController.xib */,
 			);
 			path = FTour;
 			sourceTree = "<group>";

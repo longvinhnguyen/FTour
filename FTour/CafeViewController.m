@@ -52,7 +52,6 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     UIBarButtonItem *btn = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"check.png"] style:UIBarButtonItemStyleBordered target:self action:nil];
-//    UIBarButtonItem *menuBarButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"menu.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(toMenuView)];
     UIBarButtonItem *menuBarBtn = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(toMenuView)];
     if(orderItems.count != 0){
         

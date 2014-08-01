@@ -35,18 +35,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    CBCentralManager *cbCentralManager = [[CBCentralManager alloc]initWithDelegate:self queue:nil];
     self.locationManager = [[CLLocationManager alloc]init];
     self.locationManager.delegate = self;
     
     NSUUID *uuid = [[NSUUID alloc]initWithUUIDString:kFSoftUUID];
     self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:@"FSoft"];
     [self.locationManager startMonitoringForRegion:self.beaconRegion];
+    [self initAnimation];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showAlertBluetoothOff) name:@"reLaunchApp" object:nil];
+    ua = [[UIAlertView alloc]initWithTitle:@"Bluetooth are unavailable" message:@"Please turn on your bluetooth" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:@"Setting", nil];
+}
+-(void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral{
+    
+}
+-(void)initAnimation{
     NSArray *imageNames=[NSArray arrayWithObjects:@"circle copy3.png",@"circle copy4.png",nil];
     NSMutableArray *images = [[NSMutableArray alloc] init];
     for (int i = 0; i < imageNames.count; i++)
     {
-        [images addObject:[UIImage imageNamed:[imageNames objectAtIndex:i]]];        
+        [images addObject:[UIImage imageNamed:[imageNames objectAtIndex:i]]];
     }
     _imgFtour.animationImages = images;
     _imgFtour.animationDuration = 1.4;
@@ -58,8 +65,6 @@
                   initWithItems:@[_imgFtour]];
     _collision.translatesReferenceBoundsIntoBoundary = YES;
     [_animator addBehavior:_collision];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showAlertBluetoothOff) name:@"reLaunchApp" object:nil];
-    ua = [[UIAlertView alloc]initWithTitle:@"Bluetooth are unavailable" message:@"Please turn on your bluetooth" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:@"Setting", nil];
 }
 - (void)showAlertBluetoothOff
 {
@@ -72,24 +77,7 @@
     NSUUID *uuid = [[NSUUID alloc]initWithUUIDString:kFSoftUUID];
     self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:@"FSoft"];
     [self.locationManager startMonitoringForRegion:self.beaconRegion];
-    NSArray *imageNames=[NSArray arrayWithObjects:@"circle copy3.png",@"circle copy4.png",nil];
-
-    NSMutableArray *images = [[NSMutableArray alloc] init];
-    for (int i = 0; i < imageNames.count; i++) {
-        [images addObject:[UIImage imageNamed:[imageNames objectAtIndex:i]]];
-    }
-    _imgFtour.animationImages = images;
-    _imgFtour.animationDuration = 1.4;
-    [_imgFtour startAnimating];
-    
-    
-    _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
-    _gravity = [[UIGravityBehavior alloc] initWithItems:@[_imgFtour]];
-    [_animator addBehavior:_gravity];
-    _collision = [[UICollisionBehavior alloc]
-                  initWithItems:@[_imgFtour]];
-    _collision.translatesReferenceBoundsIntoBoundary = YES;
-    [_animator addBehavior:_collision];
+    [self initAnimation];
     UISwipeGestureRecognizer *swipeBackGesture = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(didSwipeBack)];
     [swipeBackGesture setDirection:UISwipeGestureRecognizerDirectionRight];
     [self.view addGestureRecognizer:swipeBackGesture];
@@ -103,10 +91,7 @@
 {
     [self.navigationController setNavigationBarHidden:YES];
 }
--(void) peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral
-{
-    
-}
+
 - (void)locationManager:(CLLocationManager*)manager didEnterRegion:(CLRegion*)region
 {
     NSLog(@"didEnter");
@@ -146,19 +131,19 @@
 
 -(void)loadFsoft
 {
-    FSoftViewController *vc = [[FSoftViewController alloc]initWithNibName:@"FSoftViewController" bundle:nil];
-    [[self navigationController]pushViewController:vc animated:YES];
+    FSoftViewController *fsoftView = [[FSoftViewController alloc]initWithNibName:@"FSoftViewController" bundle:nil];
+    [[self navigationController]pushViewController:fsoftView animated:YES];
    // [[[[[UIApplication sharedApplication]delegate]window]rootViewController]presentViewController:vc animated:YES completion:nil];
 }
 -(void)loadFSu1
 {
-     FSU1ViewController *vc = [[FSU1ViewController alloc]initWithNibName:@"FSU1ViewController" bundle:nil];
-    [[self navigationController]pushViewController:vc animated:YES];
+     FSU1ViewController *fsu1View = [[FSU1ViewController alloc]initWithNibName:@"FSU1ViewController" bundle:nil];
+    [[self navigationController]pushViewController:fsu1View animated:YES];
 }
 -(void)loadCafe
 {
-    CafeViewController *vc = [[CafeViewController alloc]initWithNibName:@"CafeViewController" bundle:nil];
-    [[self navigationController]pushViewController:vc animated:YES];
+    CafeViewController *cafeView = [[CafeViewController alloc]initWithNibName:@"CafeViewController" bundle:nil];
+    [[self navigationController]pushViewController:cafeView animated:YES];
 }
 -(void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region
 {
@@ -174,10 +159,10 @@
 {
      if (buttonIndex == 1)
         {
-//            [NSURL URLWithString:@"prefs:root=General&path=Bluetooth"]];
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=General&path=Bluetooth"]];
             NSLog(@"Showed");
         }
 }
+
 
 @end

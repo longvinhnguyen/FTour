@@ -17,12 +17,11 @@
 @property (nonatomic,strong) NSUUID *uuid;
 @property (strong, nonatomic) IBOutlet UILabel *uuidTitle;
 @property (strong, nonatomic) IBOutlet UILabel *majorTitle;
-
 @property (strong, nonatomic) IBOutlet UILabel *minorTitle;
 @property (strong, nonatomic) IBOutlet UILabel *idTitle;
 @property (strong, nonatomic) IBOutlet UILabel *majorTxt;
 @property (strong, nonatomic) IBOutlet UILabel *minorTxt;
-@property (strong, nonatomic) IBOutlet UILabel *idtXT;
+@property (strong, nonatomic) IBOutlet UILabel *idTxt;
 - (IBAction)btnOff:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *btnStatus;
 @property (weak, nonatomic) IBOutlet UIImageView *imgBroadcast;
