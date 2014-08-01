@@ -65,6 +65,13 @@
     }
 }
 
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - MenuTableView delegate
 -(void)addItemViewController:(MenuTableViewController *)viewController didFinishPickingItems:(NSMutableArray *)items
 {
     
@@ -72,6 +79,8 @@
     total = 0;
     [self.orderTbl reloadData];
 }
+
+#pragma mark - Navigation
 
 -(void)toMenuView
 {
@@ -82,11 +91,8 @@
     NSLog(@"selected items %@",vc.selectedItems);
     [self.navigationController pushViewController:vc animated:YES];
 }
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
+#pragma mark - Table view
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {

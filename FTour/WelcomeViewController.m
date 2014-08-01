@@ -45,9 +45,38 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showAlertBluetoothOff) name:@"reLaunchApp" object:nil];
     ua = [[UIAlertView alloc]initWithTitle:@"Bluetooth are unavailable" message:@"Please turn on your bluetooth" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:@"Setting", nil];
 }
+
+-(void)viewDidAppear:(BOOL)animated{
+    self.locationManager = [[CLLocationManager alloc]init];
+    self.locationManager.delegate = self;
+    
+    NSUUID *uuid = [[NSUUID alloc]initWithUUIDString:kFSoftUUID];
+    self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:@"FSoft"];
+    [self.locationManager startMonitoringForRegion:self.beaconRegion];
+    [self initAnimation];
+    UISwipeGestureRecognizer *swipeBackGesture = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(didSwipeBack)];
+    [swipeBackGesture setDirection:UISwipeGestureRecognizerDirectionRight];
+    [self.view addGestureRecognizer:swipeBackGesture];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 -(void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral{
     
 }
+
+
+#pragma mark - Animation
+
 -(void)initAnimation{
     NSArray *imageNames=[NSArray arrayWithObjects:@"circle copy3.png",@"circle copy4.png",nil];
     NSMutableArray *images = [[NSMutableArray alloc] init];
@@ -70,27 +99,10 @@
 {
     [ua show];
 }
--(void)viewDidAppear:(BOOL)animated{
-    self.locationManager = [[CLLocationManager alloc]init];
-    self.locationManager.delegate = self;
-    
-    NSUUID *uuid = [[NSUUID alloc]initWithUUIDString:kFSoftUUID];
-    self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:@"FSoft"];
-    [self.locationManager startMonitoringForRegion:self.beaconRegion];
-    [self initAnimation];
-    UISwipeGestureRecognizer *swipeBackGesture = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(didSwipeBack)];
-    [swipeBackGesture setDirection:UISwipeGestureRecognizerDirectionRight];
-    [self.view addGestureRecognizer:swipeBackGesture];
-}
 
--(void) didSwipeBack
-{
-    [self.navigationController popViewControllerAnimated:YES];
-}
--(void)viewWillAppear:(BOOL)animated
-{
-    [self.navigationController setNavigationBarHidden:YES];
-}
+
+
+
 
 - (void)locationManager:(CLLocationManager*)manager didEnterRegion:(CLRegion*)region
 {
@@ -128,6 +140,12 @@
     }
 }
 
+#pragma mark - Navigation
+
+-(void) didSwipeBack
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 -(void)loadFsoft
 {
@@ -150,11 +168,7 @@
     NSLog(@"%@", [region class].description);
     [_locationManager startRangingBeaconsInRegion:_beaconRegion];
 }
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
      if (buttonIndex == 1)

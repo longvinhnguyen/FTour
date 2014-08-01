@@ -31,7 +31,7 @@
     NSMutableDictionary *searchData;
     
     BOOL isFiltered;
- //   NSMutableArray *selectedItems;
+    //   NSMutableArray *selectedItems;
     
 }
 
@@ -104,7 +104,7 @@
             }
         }
     }
-
+    
     
     
 }
@@ -119,16 +119,16 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-        for(int section = 0; section < self.tableView.numberOfSections; section++){
-            for(int row = 0; row < [self.tableView numberOfRowsInSection:section];row++){
-                UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:row inSection:section]];
-                for(NSDictionary *item in selectedItems){
-                    if ([cell.textLabel.text isEqualToString:[item objectForKey:@"Name"]]) {
-                        cell.accessoryType = UITableViewCellAccessoryCheckmark;
-                    }
+    for(int section = 0; section < self.tableView.numberOfSections; section++){
+        for(int row = 0; row < [self.tableView numberOfRowsInSection:section];row++){
+            UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:row inSection:section]];
+            for(NSDictionary *item in selectedItems){
+                if ([cell.textLabel.text isEqualToString:[item objectForKey:@"Name"]]) {
+                    cell.accessoryType = UITableViewCellAccessoryCheckmark;
                 }
             }
         }
+    }
 }
 
 -(void)loadMenu
@@ -159,7 +159,7 @@
         
     }
     
-  //  selectedItems = [[NSMutableArray alloc]init];
+    //  selectedItems = [[NSMutableArray alloc]init];
     
 }
 
@@ -169,11 +169,11 @@
 -(void) didPressDoneButton
 
 {
-
     
     
     
-   [self.delegate addItemViewController:self didFinishPickingItems:selectedItems];
+    
+    [self.delegate addItemViewController:self didFinishPickingItems:selectedItems];
     
     [self.navigationController popViewControllerAnimated:YES];
     
@@ -201,7 +201,7 @@
 
 
 
-#pragma mark - Table view data source
+#pragma mark - Table view
 
 
 
@@ -220,13 +220,13 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 
 {
-
+    
     
     id key = [keys objectAtIndex:section];
     
     NSArray *arrayAtIndex = [allMenuItem objectForKey:key];
     
-
+    
     
     return isFiltered? [[searchData objectForKey:key] count] : [arrayAtIndex count];
     
@@ -273,16 +273,16 @@
     
     NSDictionary *itemDetail = [itemArray objectAtIndex:indexPath.row];
     
- 
+    
     
     cell.textLabel.text = isFiltered ? [[[searchData objectForKey:key] objectAtIndex:indexPath.row] objectForKey:@"name"] : [itemDetail objectForKey:@"name"];
-   
+    
     
     NSString *price = isFiltered ? [NSString stringWithFormat:@"%@",[[[searchData objectForKey:key]objectAtIndex:indexPath.row]objectForKey:@"price"]]:[NSString stringWithFormat:@"%@",[itemDetail objectForKey:@"price"]];
     
     cell.detailTextLabel.text = price;
     
-
+    
     return cell;
     
 }
@@ -297,12 +297,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 
 {
-
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     UITableViewCell *cell;
     NSMutableDictionary *selectedItemAtIndexpath = [[NSMutableDictionary alloc]init];
     
-
+    
     cell = [tableView cellForRowAtIndexPath:indexPath];
     if(cell.accessoryType == UITableViewCellAccessoryNone){
         [selectedItemAtIndexpath setValue:cell.textLabel.text forKey:@"Name"];
@@ -310,9 +310,9 @@
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
         [selectedItems insertObject:selectedItemAtIndexpath atIndex:0];
     }else{
-         NSMutableArray *toDelete = [NSMutableArray array];
+        NSMutableArray *toDelete = [NSMutableArray array];
         for(NSDictionary *item in selectedItems){
-           
+            
             if ([[item objectForKey:@"Name"] isEqualToString:cell.textLabel.text]) {
                 cell.accessoryType = UITableViewCellAccessoryNone;
                 [toDelete addObject:item];
@@ -388,12 +388,12 @@
             }
         }
     }
-
+    
     
 }
 -(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
 {
-
+    
     NSLog(@"entered cancel");
     [self viewWillAppear:YES];
 }
