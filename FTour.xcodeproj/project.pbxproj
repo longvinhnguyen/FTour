@@ -10,6 +10,7 @@
 		18129C51196B8FD50004AE71 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18129C50196B8FD50004AE71 /* CoreBluetooth.framework */; };
 		188E1910198F5C400031C770 /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = 188E190F198F5C400031C770 /* Food.m */; };
 		188E1913198F5CE20031C770 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 188E1912198F5CE20031C770 /* Contact.m */; };
+		188E1917198F6AA50031C770 /* DataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 188E1916198F6AA50031C770 /* DataStore.m */; };
 		18C54B64196E26B00056865D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C54B63196E26B00056865D /* MediaPlayer.framework */; };
 		18C54B66196E38A40056865D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C54B65196E38A40056865D /* MessageUI.framework */; };
 		18F2BFC3196B8978003A87EA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F2BFC2196B8978003A87EA /* CoreLocation.framework */; };
@@ -86,6 +87,8 @@
 		188E190F198F5C400031C770 /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Food.m; sourceTree = SOURCE_ROOT; };
 		188E1911198F5CE20031C770 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = SOURCE_ROOT; };
 		188E1912198F5CE20031C770 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = SOURCE_ROOT; };
+		188E1915198F6AA50031C770 /* DataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataStore.h; path = API/DataStore.h; sourceTree = "<group>"; };
+		188E1916198F6AA50031C770 /* DataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataStore.m; path = API/DataStore.m; sourceTree = "<group>"; };
 		18C54B63196E26B00056865D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		18C54B65196E38A40056865D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		18F2BFC2196B8978003A87EA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -186,6 +189,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		188E1914198F6A7E0031C770 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				188E1915198F6AA50031C770 /* DataStore.h */,
+				188E1916198F6AA50031C770 /* DataStore.m */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
 		84A62A9F196A96F400D73A95 = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +235,7 @@
 		84A62AB1196A96F500D73A95 /* FTour */ = {
 			isa = PBXGroup;
 			children = (
+				188E1914198F6A7E0031C770 /* API */,
 				F108CD81198F3C480020A273 /* AppDelegate */,
 				F108CD84198F3C480020A273 /* Controller */,
 				F108CD9D198F3C480020A273 /* Model */,
@@ -517,6 +530,7 @@
 				188E1913198F5CE20031C770 /* Contact.m in Sources */,
 				F108CDC6198F3C480020A273 /* FSU1ViewController.m in Sources */,
 				F108CDC0198F3C480020A273 /* CafeViewController.m in Sources */,
+				188E1917198F6AA50031C770 /* DataStore.m in Sources */,
 				F108CDCD198F3C480020A273 /* WelcomeViewController.m in Sources */,
 				F108CDBF198F3C480020A273 /* BaseViewController.m in Sources */,
 				F108CDCA198F3C480020A273 /* MenuTableVC.m in Sources */,
