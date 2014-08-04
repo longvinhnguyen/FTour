@@ -9,12 +9,13 @@
 #import "Contact.h"
 
 @implementation Contact
--(Contact*)init{
+-(id)initWithDetail:(NSString*)name email:(NSString*)email phoneNumber:(NSString*)phoneNumber{
     self = [super init];
-    if (self) {
-        self.name = _name;
-        self.email = _email;
-        self.phoneNumber = _phoneNumber;
+    if(self)
+    {
+        _name = name;
+        _phoneNumber = phoneNumber;
+        _email = email;
     }
     return self;
 }

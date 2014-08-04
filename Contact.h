@@ -14,6 +14,6 @@
 @property (strong,nonatomic) NSString *phoneNumber;
 
 #pragma Method
--(Contact*)init;
+-(id)initWithDetail:(NSString*)name email:(NSString*)email phoneNumber:(NSString*)phoneNumber;
 
 @end
