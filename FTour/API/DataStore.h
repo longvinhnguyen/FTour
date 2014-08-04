@@ -12,7 +12,6 @@
 
 +(DataStore *) sharedInstance;
 -(void)reset;
-
 @property (nonatomic,strong) NSArray *menuFoodItems;
 @property (nonatomic,strong) NSMutableArray *orderedItems;
 @property (nonatomic,strong) NSArray *contacts;
