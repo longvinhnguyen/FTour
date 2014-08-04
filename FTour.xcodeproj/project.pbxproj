@@ -14,6 +14,7 @@
 		18C54B64196E26B00056865D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C54B63196E26B00056865D /* MediaPlayer.framework */; };
 		18C54B66196E38A40056865D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C54B65196E38A40056865D /* MessageUI.framework */; };
 		18F2BFC3196B8978003A87EA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F2BFC2196B8978003A87EA /* CoreLocation.framework */; };
+		61BB9536198F646800B99261 /* PersistencyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BB9535198F646800B99261 /* PersistencyManager.m */; };
 		84A62AAC196A96F500D73A95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A62AAB196A96F500D73A95 /* Foundation.framework */; };
 		84A62AAE196A96F500D73A95 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A62AAD196A96F500D73A95 /* CoreGraphics.framework */; };
 		84A62AB0196A96F500D73A95 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A62AAF196A96F500D73A95 /* UIKit.framework */; };
@@ -92,6 +93,8 @@
 		18C54B63196E26B00056865D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		18C54B65196E38A40056865D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		18F2BFC2196B8978003A87EA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		61BB9534198F646800B99261 /* PersistencyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistencyManager.h; sourceTree = "<group>"; };
+		61BB9535198F646800B99261 /* PersistencyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistencyManager.m; sourceTree = "<group>"; };
 		84A62AA8196A96F500D73A95 /* FTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A62AAB196A96F500D73A95 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84A62AAD196A96F500D73A95 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -312,6 +315,8 @@
 				F108CD9A198F3C480020A273 /* WelcomeViewController.h */,
 				F108CD9B198F3C480020A273 /* WelcomeViewController.m */,
 				F108CD9C198F3C480020A273 /* WelcomeViewController.xib */,
+				61BB9534198F646800B99261 /* PersistencyManager.h */,
+				61BB9535198F646800B99261 /* PersistencyManager.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -528,6 +533,7 @@
 				188E1910198F5C400031C770 /* Food.m in Sources */,
 				F108CDC8198F3C480020A273 /* iBeaconViewController.m in Sources */,
 				188E1913198F5CE20031C770 /* Contact.m in Sources */,
+				61BB9536198F646800B99261 /* PersistencyManager.m in Sources */,
 				F108CDC6198F3C480020A273 /* FSU1ViewController.m in Sources */,
 				F108CDC0198F3C480020A273 /* CafeViewController.m in Sources */,
 				188E1917198F6AA50031C770 /* DataStore.m in Sources */,
