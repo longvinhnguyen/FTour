@@ -14,11 +14,11 @@
 
 
 
-#import "MenuTableViewController.h"
+#import "MenuTableVC.h"
 
 
 
-@interface MenuTableViewController ()<UISearchBarDelegate,UISearchDisplayDelegate>{
+@interface MenuTableVC ()<UISearchBarDelegate,UISearchDisplayDelegate>{
     
     NSMutableDictionary *allMenuItem;
     
@@ -41,7 +41,7 @@
 
 
 
-@implementation MenuTableViewController
+@implementation MenuTableVC
 
 @synthesize delegate;
 @synthesize selectedItems;
@@ -94,16 +94,16 @@
     
     self.tableView.tableHeaderView = searchBar;
     NSLog(@"%@",selectedItems);
-    for(int section = 0; section < self.tableView.numberOfSections; section++){
-        for(int row = 0; row < [self.tableView numberOfRowsInSection:section];row++){
-            UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:row inSection:section]];
-            for(NSDictionary *item in selectedItems){
-                if ([cell.textLabel.text isEqualToString:[item objectForKey:@"Name"]]) {
-                    cell.accessoryType = UITableViewCellAccessoryCheckmark;
-                }
-            }
-        }
-    }
+//    for(int section = 0; section < self.tableView.numberOfSections; section++){
+//        for(int row = 0; row < [self.tableView numberOfRowsInSection:section];row++){
+//            UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:row inSection:section]];
+//            for(NSDictionary *item in selectedItems){
+//                if ([cell.textLabel.text isEqualToString:[item objectForKey:@"Name"]]) {
+//                    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+//                }
+//            }
+//        }
+//    }
     
     
     
@@ -119,16 +119,17 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    for(int section = 0; section < self.tableView.numberOfSections; section++){
-        for(int row = 0; row < [self.tableView numberOfRowsInSection:section];row++){
-            UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:row inSection:section]];
-            for(NSDictionary *item in selectedItems){
-                if ([cell.textLabel.text isEqualToString:[item objectForKey:@"Name"]]) {
-                    cell.accessoryType = UITableViewCellAccessoryCheckmark;
-                }
-            }
-        }
-    }
+//    for(int section = 0; section < self.tableView.numberOfSections; section++){
+//        for(int row = 0; row < [self.tableView numberOfRowsInSection:section];row++){
+//            UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:row inSection:section]];
+//            for(NSDictionary *item in selectedItems){
+//                if ([cell.textLabel.text isEqualToString:[item objectForKey:@"Name"]]) {
+//                    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+//                }
+//            }
+//        }
+//    }
+    [self.tableView reloadData];
 }
 
 -(void)loadMenu
@@ -276,7 +277,11 @@
     
     
     cell.textLabel.text = isFiltered ? [[[searchData objectForKey:key] objectAtIndex:indexPath.row] objectForKey:@"name"] : [itemDetail objectForKey:@"name"];
-    
+    for (NSDictionary *item in selectedItems) {
+        if ([cell.textLabel.text isEqualToString:[item objectForKey:@"Name"]]) {
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        }
+    }
     
     NSString *price = isFiltered ? [NSString stringWithFormat:@"%@",[[[searchData objectForKey:key]objectAtIndex:indexPath.row]objectForKey:@"price"]]:[NSString stringWithFormat:@"%@",[itemDetail objectForKey:@"price"]];
     

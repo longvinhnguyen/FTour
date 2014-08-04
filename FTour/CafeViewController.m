@@ -7,7 +7,7 @@
 //
 
 #import "CafeViewController.h"
-#import "MenuTableViewController.h"
+#import "MenuTableVC.h"
 
 @interface CafeViewController () <MenuTableViewControllerDelegate,UITableViewDataSource,UITableViewDelegate>
 {
@@ -52,7 +52,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     UIBarButtonItem *btn = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"check.png"] style:UIBarButtonItemStyleBordered target:self action:nil];
-    UIBarButtonItem *menuBarBtn = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(toMenuView)];
+    UIBarButtonItem *menuBarBtn = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(navigateToMenuView)];
     if(orderItems.count != 0){
         
         self.navigationItem.rightBarButtonItems = @[btn,menuBarBtn];
@@ -72,7 +72,7 @@
 }
 
 #pragma mark - MenuTableView delegate
--(void)addItemViewController:(MenuTableViewController *)viewController didFinishPickingItems:(NSMutableArray *)items
+-(void)addItemViewController:(MenuTableVC *)viewController didFinishPickingItems:(NSMutableArray *)items
 {
     
     orderItems = [NSMutableArray arrayWithArray:items];
@@ -82,9 +82,9 @@
 
 #pragma mark - Navigation
 
--(void)toMenuView
+-(void)navigateToMenuView
 {
-    MenuTableViewController *vc = [[MenuTableViewController alloc] initWithNibName:@"MenuTableViewController" bundle:nil];
+    MenuTableVC *vc = [[MenuTableVC alloc] initWithNibName:@"MenuTableVC" bundle:nil];
     vc.delegate = self;
     vc.selectedItems = [NSMutableArray arrayWithArray:orderItems];
     NSLog(@"order items %@",orderItems);

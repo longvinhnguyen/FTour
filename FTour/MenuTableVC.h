@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-@class MenuTableViewController;
+@class MenuTableVC;
 @protocol MenuTableViewControllerDelegate <NSObject>
 
--(void)addItemViewController:(MenuTableViewController *)viewController didFinishPickingItems:(NSMutableArray *)items;
+-(void)addItemViewController:(MenuTableVC *)viewController didFinishPickingItems:(NSMutableArray *)items;
 
 @end
 
-@interface MenuTableViewController : UITableViewController
+@interface MenuTableVC : UITableViewController
 
 @property (nonatomic,weak) id<MenuTableViewControllerDelegate> delegate;
 @property (nonatomic,strong) NSMutableArray *selectedItems;

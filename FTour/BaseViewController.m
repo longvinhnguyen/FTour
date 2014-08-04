@@ -6,15 +6,15 @@
 //  Copyright (c) 2014 FSoft. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "BaseViewController.h"
 #import "iBeaconViewController.h"
 #import "WelcomeViewController.h"
 
-@interface ViewController ()
+@interface BaseViewController ()
 
 @end
 
-@implementation ViewController
+@implementation BaseViewController
 
 - (void)viewDidLoad
 {
@@ -35,7 +35,7 @@
 
 -(IBAction)iBeaconMe:(id)sender
 {
-   // [[[UIAlertView alloc]initWithTitle:@"ok" message:@"now what" delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles: nil] show];
+
     iBeaconViewController *viewController = [[iBeaconViewController alloc] initWithNibName:@"iBeaconViewController" bundle:nil];
     [self.navigationController pushViewController:viewController animated:YES];
 }

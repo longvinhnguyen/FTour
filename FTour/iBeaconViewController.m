@@ -65,14 +65,14 @@
     _beaconPeripheralData = [_beaconRegion peripheralDataWithMeasuredPower:[NSNumber numberWithInteger:-59]];
     _peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil options:nil];
 
-    [_uuidLbl setText:_beaconRegion.proximityUUID.UUIDString];
-    [_uuidTitle setHidden:NO];
-    [_majorTxt setText:[NSString stringWithFormat:@"%@",_beaconRegion.major]];
-    [_majorTitle setHidden:NO];
-    [_minorTxt setText:[NSString stringWithFormat:@"%@",_beaconRegion.minor]];
-    [_minorTitle setHidden:NO];
-    [_idTitle setHidden:NO];
-    [_idTxt setText:_beaconRegion.identifier];
+    [_uuidLabel setHidden:NO];
+    [_uuidValueLabel setText:_beaconRegion.proximityUUID.UUIDString];
+    [_majorLabel setHidden:NO];
+    [_majorValueLabel setText:[NSString stringWithFormat:@"%@",_beaconRegion.major]];
+    [_minorLabel setHidden:NO];
+    [_minorValueLabel setText:[NSString stringWithFormat:@"%@",_beaconRegion.minor]];
+    [_idLabel setHidden:NO];
+    [_idValueLabel setText:_beaconRegion.identifier];
     [self broadcastAnimation:YES];
 }
 
@@ -88,7 +88,7 @@
         [self broadcastAnimation:YES];
     }
 }
-- (IBAction)btnOff:(id)sender {
+- (IBAction)didPressStopButton:(id)sender {
     [_peripheralManager removeAllServices];
     [_peripheralManager stopAdvertising];
     NSLog(@"Stop");

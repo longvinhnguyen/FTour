@@ -10,20 +10,21 @@
 
 @interface iBeaconViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UISegmentedControl *segment;
-@property (strong, nonatomic) IBOutlet UILabel *uuidLbl;
+
 @property (nonatomic, strong) CLBeaconRegion *beaconRegion;
 @property (nonatomic, strong) NSDictionary *beaconPeripheralData;
 @property (nonatomic, strong) CBPeripheralManager *peripheralManager;
 @property (nonatomic,strong) NSUUID *uuid;
-@property (strong, nonatomic) IBOutlet UILabel *uuidTitle;
-@property (strong, nonatomic) IBOutlet UILabel *majorTitle;
-@property (strong, nonatomic) IBOutlet UILabel *minorTitle;
-@property (strong, nonatomic) IBOutlet UILabel *idTitle;
-@property (strong, nonatomic) IBOutlet UILabel *majorTxt;
-@property (strong, nonatomic) IBOutlet UILabel *minorTxt;
-@property (strong, nonatomic) IBOutlet UILabel *idTxt;
-- (IBAction)btnOff:(id)sender;
+
 @property (weak, nonatomic) IBOutlet UIButton *btnStatus;
 @property (weak, nonatomic) IBOutlet UIImageView *imgBroadcast;
+@property (strong, nonatomic) IBOutlet UILabel *uuidLabel;
+@property (strong, nonatomic) IBOutlet UILabel *uuidValueLabel;
+@property (strong, nonatomic) IBOutlet UILabel *majorLabel;
+@property (strong, nonatomic) IBOutlet UILabel *majorValueLabel;
+@property (strong, nonatomic) IBOutlet UILabel *minorLabel;
+@property (strong, nonatomic) IBOutlet UILabel *minorValueLabel;
+@property (strong, nonatomic) IBOutlet UILabel *idLabel;
+@property (strong, nonatomic) IBOutlet UILabel *idValueLabel;
 
 @end

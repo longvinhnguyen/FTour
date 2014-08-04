@@ -15,7 +15,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    self.mainController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    self.mainController = [[BaseViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     
     self.window.backgroundColor    = [UIColor whiteColor];
 
