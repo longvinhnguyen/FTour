@@ -15,7 +15,6 @@
 @property (nonatomic, strong) NSDictionary *beaconPeripheralData;
 @property (nonatomic, strong) CBPeripheralManager *peripheralManager;
 @property (nonatomic,strong) NSUUID *uuid;
-
 @property (weak, nonatomic) IBOutlet UIButton *btnStatus;
 @property (weak, nonatomic) IBOutlet UIImageView *imgBroadcast;
 @property (strong, nonatomic) IBOutlet UILabel *uuidLabel;

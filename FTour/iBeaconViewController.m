@@ -97,7 +97,6 @@
     [self broadcastAnimation:NO];
 
 }
-
 #pragma mark - Animation
 
 -(void)broadcastAnimation:(BOOL)status
