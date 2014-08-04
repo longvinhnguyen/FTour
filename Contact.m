@@ -9,5 +9,13 @@
 #import "Contact.h"
 
 @implementation Contact
-
+-(Contact*)init{
+    self = [super init];
+    if (self) {
+        self.name = _name;
+        self.email = _email;
+        self.phoneNumber = _phoneNumber;
+    }
+    return self;
+}
 @end

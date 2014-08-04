@@ -9,5 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface Contact : NSObject
+@property (strong,nonatomic) NSString *name;
+@property (strong,nonatomic) NSString *email;
+@property (strong,nonatomic) NSString *phoneNumber;
+
+#pragma Method
+-(Contact*)init;
 
 @end
