@@ -94,16 +94,7 @@
     
     self.tableView.tableHeaderView = searchBar;
     NSLog(@"%@",selectedItems);
-//    for(int section = 0; section < self.tableView.numberOfSections; section++){
-//        for(int row = 0; row < [self.tableView numberOfRowsInSection:section];row++){
-//            UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:row inSection:section]];
-//            for(NSDictionary *item in selectedItems){
-//                if ([cell.textLabel.text isEqualToString:[item objectForKey:@"Name"]]) {
-//                    cell.accessoryType = UITableViewCellAccessoryCheckmark;
-//                }
-//            }
-//        }
-//    }
+
     
     
     
@@ -119,16 +110,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-//    for(int section = 0; section < self.tableView.numberOfSections; section++){
-//        for(int row = 0; row < [self.tableView numberOfRowsInSection:section];row++){
-//            UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:row inSection:section]];
-//            for(NSDictionary *item in selectedItems){
-//                if ([cell.textLabel.text isEqualToString:[item objectForKey:@"Name"]]) {
-//                    cell.accessoryType = UITableViewCellAccessoryCheckmark;
-//                }
-//            }
-//        }
-//    }
+
     [self.tableView reloadData];
 }
 
@@ -155,12 +137,19 @@
     else{
         
         keys = [allMenuItem allKeys];
+        NSArray *results = [allMenuItem valueForKey:@"Food"];
+        for (NSDictionary *item in results) {
+            Food *food = [[Food alloc]init];
+            NSLog(@"%@",item);
+        }
         
         NSLog(@"Loaded menu items successfully");
         
     }
     
     //  selectedItems = [[NSMutableArray alloc]init];
+    
+    
     
 }
 

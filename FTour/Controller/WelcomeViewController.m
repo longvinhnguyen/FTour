@@ -22,6 +22,9 @@
 }
 @end
 @implementation WelcomeViewController
+- (IBAction)btnClicked:(id)sender {
+    [self loadCafe];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

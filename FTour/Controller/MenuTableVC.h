@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Food.h"
 @class MenuTableVC;
 @protocol MenuTableViewControllerDelegate <NSObject>
 
