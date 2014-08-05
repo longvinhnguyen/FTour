@@ -11,6 +11,7 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import "AVFoundation/AVFoundation.h"
 #import "FSU1DetailViewController.h"
+#import "Contact.h"
 
 @interface FSU1ViewController ()
 @end
@@ -39,14 +40,27 @@
         NSLog(@"%@", [error localizedDescription]);
     }
     else{
-        NSArray * buLead = [allFSU1 objectForKey:@"BU Lead"];
-        NSArray *GeAs = allFSU1[@"General Assistant"];
-        NSArray *iOS = allFSU1[@"Mobility iOS"];
-        NSArray *android = allFSU1[@"Mobility Android"];
-        [dataArray addObject:buLead];
-        [dataArray addObject:GeAs];
-        [dataArray addObject:iOS];
-        [dataArray addObject:android];
+        NSArray *allFSU1Key = [allFSU1 allKeys];
+        NSMutableArray *arrayOfContact = [[NSMutableArray alloc]init];
+        for (NSString *key in allFSU1Key)
+        {
+            NSArray *team = [allFSU1 objectForKey:key];
+            for (int i =0; i<team.count; i++) {
+                NSDictionary *personDic = [team objectAtIndex:i];
+                Contact *person = [[Contact alloc]initWithDetail:[personDic objectForKey:@"name"] email:[personDic objectForKey:@"email"] phoneNumber:[personDic objectForKey:@"tel"]];
+                [arrayOfContact addObject:person];
+            }
+//            Contact *person = [Contact alloc]initWithDetail:; email:i phoneNumber:<#(NSString *)#>
+        }
+//        NSArray * buLead = [allFSU1 objectForKey:@"BU Lead"];
+//        NSArray *GeAs = allFSU1[@"General Assistant"];
+//        NSArray *iOS = allFSU1[@"Mobility iOS"];
+//        NSArray *android = allFSU1[@"Mobility Android"];
+//        [dataArray addObject:buLead];
+//        [dataArray addObject:GeAs];
+//        [dataArray addObject:iOS];
+//        [dataArray addObject:android];
+        NSLog(@"a");
     }
     [self.navigationController setNavigationBarHidden:YES];
     NSURL *url =    [NSURL fileURLWithPath:[[NSBundle mainBundle]

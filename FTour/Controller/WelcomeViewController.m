@@ -182,4 +182,7 @@
 }
 
 
+- (IBAction)btnTest:(id)sender {
+    [self loadFSu1];
+}
 @end

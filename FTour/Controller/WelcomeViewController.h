@@ -17,5 +17,6 @@
 @property (strong,nonatomic)NSArray *myImages;
 @property (strong, nonatomic)NSTimer *updateBCK;
 @property (weak, nonatomic) IBOutlet UIImageView *imgFtour;
+- (IBAction)btnTest:(id)sender;
 
 @end

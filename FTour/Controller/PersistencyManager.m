@@ -19,7 +19,6 @@
     self = [super init];
     if(self)
     {
-        contacts = [[NSMutableArray alloc]init];
         NSString *filePath = [[NSBundle mainBundle] pathForResource:@"FSU1_Data" ofType:@"json"];
         NSData *allFSU1Data = [[NSData alloc] initWithContentsOfFile:filePath];
         NSError *error;
@@ -30,17 +29,20 @@
         }
         else
         {
-            NSArray * buLead = [allFSU1 objectForKey:@"BU Lead"];
-            NSArray *GeAs = allFSU1[@"General Assistant"];
-            NSArray *iOS = allFSU1[@"Mobility iOS"];
-            NSArray *android = allFSU1[@"Mobility Android"];
-            [contacts addObject:buLead];
-            [contacts addObject:GeAs];
-            [contacts addObject:iOS];
-            [contacts addObject:android];
+            NSArray *allFSU1Key = [allFSU1 allKeys];
+            for (NSString *key in allFSU1Key)
+            {
+                NSArray *team = [allFSU1 objectForKey:key];
+                for (int i =0; i<team.count; i++)
+                {
+                    NSDictionary *personDic = [team objectAtIndex:i];
+                    Contact *person = [[Contact alloc]initWithDetail:[personDic objectForKey:@"name"] email:[personDic objectForKey:@"email"] phoneNumber:[personDic objectForKey:@"tel"]];
+                    [contacts addObject:person];
+                }
+            }
         }
     }
-        return  self;
+    return  self;
 }
 - (NSMutableArray*)getContacts
     {
