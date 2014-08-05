@@ -23,7 +23,7 @@
 @end
 @implementation WelcomeViewController
 - (IBAction)btnClicked:(id)sender {
-    [self loadCafe];
+    [self loadFsoft];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -181,8 +181,4 @@
         }
 }
 
-
-- (IBAction)btnTest:(id)sender {
-    [self loadFSu1];
-}
 @end
