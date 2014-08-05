@@ -10,6 +10,8 @@
 @interface PersistencyManager()
 {
     NSMutableDictionary *contacts;
+    NSDictionary *allFSU1;
+    BOOL success;
 }
 @end
 
@@ -19,39 +21,38 @@
     self = [super init];
     if(self)
     {
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"FSU1_Data" ofType:@"json"];
+        NSString *filePath; filePath = [[NSBundle mainBundle] pathForResource:@"FSU1_Data" ofType:@"json"];
+        contacts = [[NSMutableDictionary alloc]init];
         NSData *allFSU1Data = [[NSData alloc] initWithContentsOfFile:filePath];
         NSError *error;
-        NSDictionary *allFSU1 = [NSJSONSerialization JSONObjectWithData:allFSU1Data options:NSJSONReadingMutableContainers error:&error];
-        if (error)
-        {
-            NSLog(@"%@", [error localizedDescription]);
-        }
-        else
-        {
-            contacts = [[NSMutableDictionary alloc]init];
-            NSArray *allFSU1Key = [allFSU1 allKeys];
-            for (NSString *key in allFSU1Key)
-            {
-                NSArray *team = [allFSU1 objectForKey:key];
-                NSMutableArray *arrTeamContacs = [[NSMutableArray alloc]init];;
-                for (int i =0; i<team.count; i++)
-                {
-                    NSDictionary *personDic = [team objectAtIndex:i];
-                    Contact *person = [[Contact alloc]initWithDetail:[personDic objectForKey:@"name"] email:[personDic objectForKey:@"email"] phoneNumber:[personDic objectForKey:@"tel"]];
-                    
-                    [arrTeamContacs addObject:person];
-                }
-                [contacts setObject:arrTeamContacs forKey:key];
-            }
-        }
+        allFSU1 = [NSJSONSerialization JSONObjectWithData:allFSU1Data options:NSJSONReadingMutableContainers error:&error];
+        NSLog(@"data: %@", allFSU1);
+        success = (!error)?YES:NO;
+        
     }
     return  self;
 }
-- (NSMutableDictionary*)getContacts
-    {
-        return contacts;
+
+- (NSDictionary *)getContacts {
+    if (success) {
+        NSArray *allFSU1Key = [allFSU1 allKeys];
+        for (NSString *key in allFSU1Key)
+        {
+            NSArray *team = [allFSU1 objectForKey:key];
+            NSMutableArray *arrTeamContacs = [[NSMutableArray alloc]init];;
+            for (int i =0; i<team.count; i++)
+            {
+                NSDictionary *personDic = [team objectAtIndex:i];
+                Contact *person = [[Contact alloc]initWithDetail:[personDic objectForKey:@"name"] email:[personDic objectForKey:@"email"] phoneNumber:[personDic objectForKey:@"tel"]];
+                
+                [arrTeamContacs addObject:person];
+            }
+            [contacts setObject:arrTeamContacs forKey:key];
+        }
     }
+    return contacts;
+}
+
 //- (NSMutableArray*)getBuLeadContacts
 //{
 //    return [contacts objectAtIndex:1];
