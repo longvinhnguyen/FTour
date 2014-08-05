@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
+#import "Contact.h"
 
 @interface FSU1DetailViewController : UIViewController <MFMailComposeViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *lbName;
@@ -17,5 +18,5 @@
 - (IBAction)btnCall:(id)sender;
 - (IBAction)btnSendEmail:(id)sender;
 
-@property (strong, nonatomic) NSDictionary * detailDict;
+@property (strong, nonatomic) Contact * detailContact;
 @end

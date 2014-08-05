@@ -9,7 +9,7 @@
 #import "PersistencyManager.h"
 @interface PersistencyManager()
 {
-    NSMutableArray *contacts;
+    NSMutableDictionary *contacts;
 }
 @end
 
@@ -29,42 +29,46 @@
         }
         else
         {
+            contacts = [[NSMutableDictionary alloc]init];
             NSArray *allFSU1Key = [allFSU1 allKeys];
             for (NSString *key in allFSU1Key)
             {
                 NSArray *team = [allFSU1 objectForKey:key];
+                NSMutableArray *arrTeamContacs = [[NSMutableArray alloc]init];;
                 for (int i =0; i<team.count; i++)
                 {
                     NSDictionary *personDic = [team objectAtIndex:i];
                     Contact *person = [[Contact alloc]initWithDetail:[personDic objectForKey:@"name"] email:[personDic objectForKey:@"email"] phoneNumber:[personDic objectForKey:@"tel"]];
-                    [contacts addObject:person];
+                    
+                    [arrTeamContacs addObject:person];
                 }
+                [contacts setObject:arrTeamContacs forKey:key];
             }
         }
     }
     return  self;
 }
-- (NSMutableArray*)getContacts
+- (NSMutableDictionary*)getContacts
     {
         return contacts;
     }
-- (NSMutableArray*)getBuLeadContacts
-{
-    return [contacts objectAtIndex:1];
-}
-- (NSMutableArray*)getGeneralAssitantContact
-{
-    return [contacts objectAtIndex:2];
-
-}
-- (NSMutableArray*)getiOSContact
-{
-    return [contacts objectAtIndex:1];
-
-}
-- (NSMutableArray*)getAndroidContact
-{
-    return [contacts objectAtIndex:1];
-
-}
+//- (NSMutableArray*)getBuLeadContacts
+//{
+//    return [contacts objectAtIndex:1];
+//}chaunln
+//- (NSMutableArray*)getGeneralAssitantContact
+//{
+//    return [contacts objectAtIndex:2];
+//
+//}
+//- (NSMutableArray*)getiOSContact
+//{
+//    return [contacts objectAtIndex:1];
+//
+//}
+//- (NSMutableArray*)getAndroidContact
+//{
+//    return [contacts objectAtIndex:1];
+//
+//}
 @end

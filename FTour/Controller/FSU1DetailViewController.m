@@ -7,10 +7,12 @@
 //
 
 #import "FSU1DetailViewController.h"
+#import "Contact.h"
 
 
 @interface FSU1DetailViewController ()
-
+{
+}
 @end
 
 @implementation FSU1DetailViewController
@@ -28,10 +30,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-        [self.lbEmail setText:[NSString stringWithFormat:@"%@",[self.detailDict objectForKey:@"email"]]];
-        [self.lbName setText:[NSString stringWithFormat:@"%@",[self.detailDict objectForKey:@"name"]]];
-    if ([self.detailDict objectForKey:@"tel"] !=nil) {
-            [self.lbTel setText:[NSString stringWithFormat:@"%@",[self.detailDict objectForKey:@"tel"]]];
+        [self.lbEmail setText:[NSString stringWithFormat:@"%@",self.detailContact.email]];
+        [self.lbName setText:[NSString stringWithFormat:@"%@",self.detailContact.name]];
+    if (![self.detailContact.phoneNumber isEqualToString:@""]) {
+            [self.lbTel setText:[NSString stringWithFormat:@"%@",self.detailContact.phoneNumber]];
     }
     [self.navigationController setNavigationBarHidden:NO];
 }
@@ -51,7 +53,8 @@
 }
 
 - (IBAction)btnCall:(id)sender {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel:%@",[self.detailDict objectForKey:@"tel"]]]];
+    NSString *str = [NSString stringWithFormat:@"tel:%@",self.detailContact.phoneNumber];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
 }
 
 - (IBAction)btnSendEmail:(id)sender
