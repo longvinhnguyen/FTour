@@ -59,17 +59,31 @@
 
 - (IBAction)btnSendEmail:(id)sender
 {
-    if ([MFMailComposeViewController canSendMail]){
+    if ([MFMailComposeViewController canSendMail])
+    {
                 MFMailComposeViewController *mc = [[MFMailComposeViewController alloc]init];
                 mc.mailComposeDelegate = self;
                 [mc setSubject:@"FTour guess"];
                 NSString *a =  self.lbEmail.text;
                 [mc setToRecipients:[NSArray arrayWithObject:a]];
-                [self presentViewController:mc animated:YES completion:NULL];    }
+                [self presentViewController:mc animated:YES completion:NULL];
+//        [[self navigationController]pushViewController:mc animated:YES];
+
+    }
             else
             {
                 UIAlertView *aView = [[UIAlertView alloc]initWithTitle:@"Email Setup" message:@"Please set-up your email account before using this function" delegate:nil cancelButtonTitle:@"Got it" otherButtonTitles:nil, nil];
                 [aView show];
             }
+}
+- (void) mailComposeController: (MFMailComposeViewController *) controller
+           didFinishWithResult: (MFMailComposeResult) result
+                         error: (NSError *) error {
+    
+    if(result == MFMailComposeResultSent){
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    } else if (result == MFMailComposeResultCancelled) {
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    }
 }
 @end

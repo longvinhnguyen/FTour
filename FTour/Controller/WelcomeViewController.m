@@ -154,7 +154,6 @@
 {
     FSoftViewController *fsoftView = [[FSoftViewController alloc]initWithNibName:@"FSoftViewController" bundle:nil];
     [[self navigationController]pushViewController:fsoftView animated:YES];
-   // [[[[[UIApplication sharedApplication]delegate]window]rootViewController]presentViewController:vc animated:YES completion:nil];
 }
 -(void)loadFSu1
 {

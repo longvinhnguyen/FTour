@@ -11,8 +11,4 @@
 
 @interface PersistencyManager : NSObject
 - (NSMutableDictionary*)getContacts;
-//- (NSMutableArray*)getBuLeadContacts;
-//- (NSMutableArray*)getGeneralAssitantContact;
-//- (NSMutableArray*)getiOSContact;
-//- (NSMutableArray*)getAndroidContact;
 @end
