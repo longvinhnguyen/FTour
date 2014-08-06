@@ -7,11 +7,11 @@
 //
 
 #import "PersistencyManager.h"
+#import "DataService.h"
 @interface PersistencyManager()
 {
     NSMutableDictionary *contacts;
     NSDictionary *allFSU1;
-    BOOL success;
 }
 @end
 
@@ -21,20 +21,14 @@
     self = [super init];
     if(self)
     {
-        NSString *filePath; filePath = [[NSBundle mainBundle] pathForResource:@"FSU1_Data" ofType:@"json"];
         contacts = [[NSMutableDictionary alloc]init];
-        NSData *allFSU1Data = [[NSData alloc] initWithContentsOfFile:filePath];
-        NSError *error;
-        allFSU1 = [NSJSONSerialization JSONObjectWithData:allFSU1Data options:NSJSONReadingMutableContainers error:&error];
-        NSLog(@"data: %@", allFSU1);
-        success = (!error)?YES:NO;
-        
+        allFSU1 = [[DataService sharedInstance] loadFSU1Data];
     }
     return  self;
 }
 
 - (NSDictionary *)getContacts {
-    if (success) {
+    if (allFSU1) {
         NSArray *allFSU1Key = [allFSU1 allKeys];
         for (NSString *key in allFSU1Key)
         {
@@ -53,23 +47,4 @@
     return contacts;
 }
 
-//- (NSMutableArray*)getBuLeadContacts
-//{
-//    return [contacts objectAtIndex:1];
-//}chaunln
-//- (NSMutableArray*)getGeneralAssitantContact
-//{
-//    return [contacts objectAtIndex:2];
-//
-//}
-//- (NSMutableArray*)getiOSContact
-//{
-//    return [contacts objectAtIndex:1];
-//
-//}
-//- (NSMutableArray*)getAndroidContact
-//{
-//    return [contacts objectAtIndex:1];
-//
-//}
 @end

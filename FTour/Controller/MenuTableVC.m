@@ -15,12 +15,12 @@
 
 
 #import "MenuTableVC.h"
-
+#import "DataService.h"
 
 
 @interface MenuTableVC ()<UISearchBarDelegate,UISearchDisplayDelegate>{
     
-    NSMutableDictionary *allMenuItem;
+    NSDictionary *allMenuItem;
     
     NSArray *keys;
     
@@ -114,43 +114,15 @@
     [self.tableView reloadData];
 }
 
--(void)loadMenu
-
-{
-    
-    NSString *filePath = [[NSBundle mainBundle]pathForResource:@"MCafe" ofType:@"json"];
-    
-    NSData *allMenuItemData = [[NSData alloc]initWithContentsOfFile:filePath];
-    
-    NSError *error;
-    
-    allMenuItem = [NSJSONSerialization JSONObjectWithData:allMenuItemData options:NSJSONReadingMutableContainers error:&error];
-    
-    if(error)
-        
-    {
-        
-        NSLog(@"%@", [error description]);
-        
-    }
-    
-    else{
-        
+-(void)loadMenu {
+    allMenuItem = [[DataService sharedInstance] loadFSU1Data];
+    if (allMenuItem) {
         keys = [allMenuItem allKeys];
         NSArray *results = [allMenuItem valueForKey:@"Food"];
         for (NSDictionary *item in results) {
-//            Food *food = [[Food alloc]init];
             NSLog(@"%@",item);
         }
-        
-        NSLog(@"Loaded menu items successfully");
-        
     }
-    
-    //  selectedItems = [[NSMutableArray alloc]init];
-    
-    
-    
 }
 
 
@@ -159,10 +131,7 @@
 -(void) didPressDoneButton
 
 {
-    
-    
-    
-    
+
     [self.delegate addItemViewController:self didFinishPickingItems:selectedItems];
     
     [self.navigationController popViewControllerAnimated:YES];
