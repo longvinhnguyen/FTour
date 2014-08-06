@@ -139,7 +139,7 @@
         keys = [allMenuItem allKeys];
         NSArray *results = [allMenuItem valueForKey:@"Food"];
         for (NSDictionary *item in results) {
-            Food *food = [[Food alloc]init];
+//            Food *food = [[Food alloc]init];
             NSLog(@"%@",item);
         }
         
@@ -275,6 +275,7 @@
     NSString *price = isFiltered ? [NSString stringWithFormat:@"%@",[[[searchData objectForKey:key]objectAtIndex:indexPath.row]objectForKey:@"price"]]:[NSString stringWithFormat:@"%@",[itemDetail objectForKey:@"price"]];
     
     cell.detailTextLabel.text = price;
+
     
     
     return cell;
@@ -338,6 +339,7 @@
         }
     }
 }
+
 
 #pragma mark - UISearchBar
 

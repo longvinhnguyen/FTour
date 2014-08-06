@@ -30,6 +30,7 @@
     _uuid = [[NSUUID alloc]initWithUUIDString:kFSoftUUID];
     [_btnStatus setHidden:YES];
     [_peripheralManager addObserver:self forKeyPath:@"isAdvertising" options:0 context:nil];
+
 }
 
 - (void)didReceiveMemoryWarning

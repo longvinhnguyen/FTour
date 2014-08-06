@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		18129C51196B8FD50004AE71 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18129C50196B8FD50004AE71 /* CoreBluetooth.framework */; };
+		187507FA1990AA5200152DE9 /* uisegmentbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 187507F91990AA5200152DE9 /* uisegmentbg.png */; };
+		187507FE1990BE4D00152DE9 /* ibeaconButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 187507FD1990BE4D00152DE9 /* ibeaconButton.png */; };
+		18832D381990C15100A175DB /* stopButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 18832D371990C15100A175DB /* stopButton.png */; };
 		188E1910198F5C400031C770 /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = 188E190F198F5C400031C770 /* Food.m */; };
 		188E1913198F5CE20031C770 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 188E1912198F5CE20031C770 /* Contact.m */; };
 		188E1917198F6AA50031C770 /* DataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 188E1916198F6AA50031C770 /* DataStore.m */; };
@@ -84,6 +87,9 @@
 
 /* Begin PBXFileReference section */
 		18129C50196B8FD50004AE71 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		187507F91990AA5200152DE9 /* uisegmentbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = uisegmentbg.png; path = ../../../../Documents/uisegmentbg.png; sourceTree = "<group>"; };
+		187507FD1990BE4D00152DE9 /* ibeaconButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ibeaconButton.png; sourceTree = "<group>"; };
+		18832D371990C15100A175DB /* stopButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stopButton.png; sourceTree = "<group>"; };
 		188E190E198F5C400031C770 /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Food.h; sourceTree = SOURCE_ROOT; };
 		188E190F198F5C400031C770 /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Food.m; sourceTree = SOURCE_ROOT; };
 		188E1911198F5CE20031C770 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = SOURCE_ROOT; };
@@ -354,6 +360,9 @@
 		F108CDA2198F3C480020A273 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				18832D371990C15100A175DB /* stopButton.png */,
+				187507FD1990BE4D00152DE9 /* ibeaconButton.png */,
+				187507F91990AA5200152DE9 /* uisegmentbg.png */,
 				F108CDA3198F3C480020A273 /* 2circle.png */,
 				F108CDA4198F3C480020A273 /* avatar.jpg */,
 				F108CDA5198F3C480020A273 /* background.jpg */,
@@ -477,6 +486,7 @@
 				F108CDE6198F3C480020A273 /* menu@2x.png in Resources */,
 				F108CDE8198F3C480020A273 /* FSoft720R.mov in Resources */,
 				F108CDD8198F3C480020A273 /* button.png in Resources */,
+				187507FE1990BE4D00152DE9 /* ibeaconButton.png in Resources */,
 				F108CDCC198F3C480020A273 /* ViewController.xib in Resources */,
 				F108CDDC198F3C480020A273 /* circle copy3.png in Resources */,
 				F108CDC5198F3C480020A273 /* FSU1DetailViewController.xib in Resources */,
@@ -491,12 +501,14 @@
 				F108CDD7198F3C480020A273 /* button-2.png in Resources */,
 				F108CDD6198F3C480020A273 /* broadcast2.png in Resources */,
 				F108CDD9198F3C480020A273 /* cafe_bg.png in Resources */,
+				18832D381990C15100A175DB /* stopButton.png in Resources */,
 				F108CDDB198F3C480020A273 /* circle copy.png in Resources */,
 				F108CDC3198F3C480020A273 /* FSoftViewController.xib in Resources */,
 				F108CDC9198F3C480020A273 /* iBeaconViewController.xib in Resources */,
 				F108CDE0198F3C480020A273 /* FTourlogoV2.png in Resources */,
 				F108CDD3198F3C480020A273 /* background.jpg in Resources */,
 				F108CDDF198F3C480020A273 /* FTourLogo.png in Resources */,
+				187507FA1990AA5200152DE9 /* uisegmentbg.png in Resources */,
 				F108CDCE198F3C480020A273 /* WelcomeViewController.xib in Resources */,
 				F108CDE2198F3C480020A273 /* human.png in Resources */,
 				F108CDC7198F3C480020A273 /* FSU1ViewController.xib in Resources */,

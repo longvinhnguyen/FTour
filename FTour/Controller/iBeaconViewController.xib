@@ -26,7 +26,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" id="wG4-Kn-ZC7">
-                    <rect key="frame" x="33" y="91" width="255" height="29"/>
+                    <rect key="frame" x="-9" y="64" width="338" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                     <segments>
                         <segment title="FSoft"/>
@@ -86,11 +86,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hFG-9u-aBP">
-                    <rect key="frame" x="108" y="497" width="105" height="51"/>
+                    <rect key="frame" x="10" y="498" width="300" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                    <color key="backgroundColor" red="1" green="0.20000000000000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="Stop">
+                    <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="19"/>
+                    <state key="normal" title="stop" backgroundImage="stopButton.png">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
@@ -110,5 +109,6 @@
     </objects>
     <resources>
         <image name="broadcast0.png" width="640" height="504"/>
+        <image name="stopButton.png" width="280" height="50"/>
     </resources>
 </document>

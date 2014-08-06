@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -15,19 +15,19 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5bv-nc-A6J">
-                    <rect key="frame" x="81" y="437" width="158" height="40"/>
+                    <rect key="frame" x="30" y="444" width="260" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <state key="normal" image="button.png">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
+                    <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="19"/>
+                    <state key="normal" title="iBeacon me" backgroundImage="ibeaconButton.png"/>
                     <connections>
                         <action selector="iBeaconMe:" destination="-1" eventType="touchUpInside" id="KGC-c5-wE2"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rVP-j0-VTp">
-                    <rect key="frame" x="81" y="496" width="158" height="40"/>
+                    <rect key="frame" x="30" y="496" width="260" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <state key="normal" backgroundImage="button-2.png">
+                    <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="19"/>
+                    <state key="normal" title="proximity" backgroundImage="ibeaconButton.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -35,7 +35,7 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoFSO(2).png" id="2dQ-fg-7xi">
-                    <rect key="frame" x="40" y="113" width="240" height="205"/>
+                    <rect key="frame" x="40" y="110" width="240" height="205"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
@@ -44,7 +44,6 @@
     </objects>
     <resources>
         <image name="LogoFSO(2).png" width="294" height="261"/>
-        <image name="button-2.png" width="139" height="40"/>
-        <image name="button.png" width="158" height="40"/>
+        <image name="ibeaconButton.png" width="567" height="91"/>
     </resources>
 </document>

@@ -23,8 +23,10 @@
     self.navController = [[UINavigationController alloc] initWithRootViewController:self.mainController];
     
     self.navController.navigationBarHidden = YES;
+  
     
     self.window.rootViewController = self.navController;
+    [self setupAppearance];
     
     [self.window makeKeyAndVisible];
     
@@ -56,4 +58,21 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+-(void)setupAppearance
+{
+
+    UIColor *myBlue = [UIColor colorWithRed:30.0f/255.0f green:144.0f/255.0f blue:255.0f/255.0f alpha:1];
+
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance]setBarTintColor:myBlue];
+    [[UINavigationBar appearance]setShadowImage:[[UIImage alloc]init]];
+    [[UINavigationBar appearance].layer setBorderWidth:0.0];
+    
+    
+
+    [[UISegmentedControl appearance] setTintColor:myBlue];
+
+    
+}
 @end
