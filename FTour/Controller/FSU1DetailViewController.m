@@ -67,8 +67,6 @@
                 NSString *a =  self.lbEmail.text;
                 [mc setToRecipients:[NSArray arrayWithObject:a]];
                 [self presentViewController:mc animated:YES completion:NULL];
-//        [[self navigationController]pushViewController:mc animated:YES];
-
     }
             else
             {
