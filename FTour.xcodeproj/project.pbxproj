@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		18129C51196B8FD50004AE71 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18129C50196B8FD50004AE71 /* CoreBluetooth.framework */; };
-		187507FA1990AA5200152DE9 /* uisegmentbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 187507F91990AA5200152DE9 /* uisegmentbg.png */; };
 		187507FE1990BE4D00152DE9 /* ibeaconButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 187507FD1990BE4D00152DE9 /* ibeaconButton.png */; };
 		18832D381990C15100A175DB /* stopButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 18832D371990C15100A175DB /* stopButton.png */; };
 		188E1910198F5C400031C770 /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = 188E190F198F5C400031C770 /* Food.m */; };
@@ -17,6 +16,9 @@
 		18C54B64196E26B00056865D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C54B63196E26B00056865D /* MediaPlayer.framework */; };
 		18C54B66196E38A40056865D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C54B65196E38A40056865D /* MessageUI.framework */; };
 		18F2BFC3196B8978003A87EA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F2BFC2196B8978003A87EA /* CoreLocation.framework */; };
+		619996021991D1E400848F94 /* 1407308422_user.png in Resources */ = {isa = PBXBuildFile; fileRef = 619995FF1991D1E400848F94 /* 1407308422_user.png */; };
+		619996031991D1E400848F94 /* 1407307486_telephone.png in Resources */ = {isa = PBXBuildFile; fileRef = 619996001991D1E400848F94 /* 1407307486_telephone.png */; };
+		619996041991D1E400848F94 /* 1407307477_email.png in Resources */ = {isa = PBXBuildFile; fileRef = 619996011991D1E400848F94 /* 1407307477_email.png */; };
 		61BB9536198F646800B99261 /* PersistencyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BB9535198F646800B99261 /* PersistencyManager.m */; };
 		84A62AAC196A96F500D73A95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A62AAB196A96F500D73A95 /* Foundation.framework */; };
 		84A62AAE196A96F500D73A95 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A62AAD196A96F500D73A95 /* CoreGraphics.framework */; };
@@ -87,7 +89,6 @@
 
 /* Begin PBXFileReference section */
 		18129C50196B8FD50004AE71 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
-		187507F91990AA5200152DE9 /* uisegmentbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = uisegmentbg.png; path = ../../../../Documents/uisegmentbg.png; sourceTree = "<group>"; };
 		187507FD1990BE4D00152DE9 /* ibeaconButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ibeaconButton.png; sourceTree = "<group>"; };
 		18832D371990C15100A175DB /* stopButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stopButton.png; sourceTree = "<group>"; };
 		188E190E198F5C400031C770 /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Food.h; sourceTree = SOURCE_ROOT; };
@@ -99,6 +100,9 @@
 		18C54B63196E26B00056865D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		18C54B65196E38A40056865D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		18F2BFC2196B8978003A87EA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		619995FF1991D1E400848F94 /* 1407308422_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1407308422_user.png; sourceTree = "<group>"; };
+		619996001991D1E400848F94 /* 1407307486_telephone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1407307486_telephone.png; sourceTree = "<group>"; };
+		619996011991D1E400848F94 /* 1407307477_email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1407307477_email.png; sourceTree = "<group>"; };
 		61BB9534198F646800B99261 /* PersistencyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistencyManager.h; sourceTree = "<group>"; };
 		61BB9535198F646800B99261 /* PersistencyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistencyManager.m; sourceTree = "<group>"; };
 		84A62AA8196A96F500D73A95 /* FTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -360,9 +364,11 @@
 		F108CDA2198F3C480020A273 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				619995FF1991D1E400848F94 /* 1407308422_user.png */,
+				619996001991D1E400848F94 /* 1407307486_telephone.png */,
+				619996011991D1E400848F94 /* 1407307477_email.png */,
 				18832D371990C15100A175DB /* stopButton.png */,
 				187507FD1990BE4D00152DE9 /* ibeaconButton.png */,
-				187507F91990AA5200152DE9 /* uisegmentbg.png */,
 				F108CDA3198F3C480020A273 /* 2circle.png */,
 				F108CDA4198F3C480020A273 /* avatar.jpg */,
 				F108CDA5198F3C480020A273 /* background.jpg */,
@@ -504,13 +510,15 @@
 				18832D381990C15100A175DB /* stopButton.png in Resources */,
 				F108CDDB198F3C480020A273 /* circle copy.png in Resources */,
 				F108CDC3198F3C480020A273 /* FSoftViewController.xib in Resources */,
+				619996031991D1E400848F94 /* 1407307486_telephone.png in Resources */,
 				F108CDC9198F3C480020A273 /* iBeaconViewController.xib in Resources */,
 				F108CDE0198F3C480020A273 /* FTourlogoV2.png in Resources */,
 				F108CDD3198F3C480020A273 /* background.jpg in Resources */,
 				F108CDDF198F3C480020A273 /* FTourLogo.png in Resources */,
-				187507FA1990AA5200152DE9 /* uisegmentbg.png in Resources */,
 				F108CDCE198F3C480020A273 /* WelcomeViewController.xib in Resources */,
+				619996021991D1E400848F94 /* 1407308422_user.png in Resources */,
 				F108CDE2198F3C480020A273 /* human.png in Resources */,
+				619996041991D1E400848F94 /* 1407307477_email.png in Resources */,
 				F108CDC7198F3C480020A273 /* FSU1ViewController.xib in Resources */,
 				F108CDD2198F3C480020A273 /* avatar.jpg in Resources */,
 				F108CDC1198F3C480020A273 /* CafeViewController.xib in Resources */,

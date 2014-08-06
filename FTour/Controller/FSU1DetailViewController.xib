@@ -39,20 +39,20 @@
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJS-eh-JAN">
-                    <rect key="frame" x="50" y="376" width="69" height="71"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJS-eh-JAN">
+                    <rect key="frame" x="217" y="128" width="63" height="65"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Call">
+                    <state key="normal" image="1407307486_telephone.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="btnCall:" destination="-1" eventType="touchUpInside" id="4aD-Ue-Ujt"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83i-gp-uO9">
-                    <rect key="frame" x="170" y="383" width="100" height="56"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83i-gp-uO9">
+                    <rect key="frame" x="203" y="229" width="91" height="57"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Send Email">
+                    <state key="normal" image="1407307477_email.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -80,6 +80,8 @@
         </view>
     </objects>
     <resources>
+        <image name="1407307477_email.png" width="128" height="80"/>
+        <image name="1407307486_telephone.png" width="124" height="128"/>
         <image name="avatar.jpg" width="220" height="220"/>
     </resources>
 </document>
