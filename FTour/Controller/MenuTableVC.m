@@ -115,7 +115,7 @@
 }
 
 -(void)loadMenu {
-    allMenuItem = [[DataService sharedInstance] loadFSU1Data];
+    allMenuItem = [[DataService sharedInstance] loadCafeData];
     if (allMenuItem) {
         keys = [allMenuItem allKeys];
         NSArray *results = [allMenuItem valueForKey:@"Food"];
