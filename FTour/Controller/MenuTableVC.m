@@ -341,9 +341,7 @@
                     [searchedItem addObject:item];
                     
                 }
-                
-                
-                
+                                
             }
             
             if(searchedItem){

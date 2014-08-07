@@ -12,5 +12,7 @@
 
 @property (nonatomic,strong) NSString *fName;
 @property (nonatomic,strong) NSString *fPrice;
+@property (nonatomic,strong) NSString *imgURL;
+-(id)initWithDetail:(NSString*)fName price:(NSString*)fPrice imgURL:(NSString*)imgURL;
 
 @end

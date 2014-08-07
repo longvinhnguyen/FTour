@@ -9,5 +9,14 @@
 #import "Food.h"
 
 @implementation Food
-
+-(id)initWithDetail:(NSString *)fName price:(NSString *)fPrice imgURL:(NSString *)imgURL
+{
+    self = [super init];
+    if (self) {
+        _fName = fName;
+        _fPrice = fPrice;
+        _imgURL = imgURL;
+    }
+    return self;
+}
 @end

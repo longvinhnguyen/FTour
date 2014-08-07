@@ -2,54 +2,66 @@
 	"Food" : [
 		{
 			"name": "Chicken Rice",
-			"price": 45000
+			"price": 45000,
+            "image": "a.png"
 		},
 
 		{
 			"name": "Fried Egg Noodles",
-			"price": 29000
+			"price": 29000,
+            "image": "a.png"
 		},
 
 		{
 			"name": "Russian Salad",
-			"price": 20000
+            "price": 20000,
+            "image": "a.png"
+
 		},
 
 		{
 			"name": "Phở Bò",
-			"price": 38000
+            "price": 38000,
+            "image": "a.png"
 		},
 
 		{
 			"name": "Broken Rice",
-			"price": 42000
+			"price": 42000,
+            "image": "a.png"
 		}
 	],
 
 	"Drink" : [
 		{
 			"name": "Iced Coffee",
-			"price": 35000
+            "price": 35000,
+            "image": "a.png"
 		},
-
+               
 		{
 			"name": "Iced Coffee with Milk",
-			"price": 39000
+            "price": 39000,
+            "image": "a.png"
 		},
-
+               
 		{
 			"name": "Cold Apple Juice",
-			"price":25000
-		},
+            "price":25000,
+            "image": "a.png"
 
+		},
+               
 		{
 			"name": "White Hot Chocolate",
-			"price": 45000
+            "price": 45000,
+            "image": "a.png"
 		},
-
+               
 		{
 			"name": "Green Tea Latte",
-			"price": 28000
+            "price": 28000,
+            "image": "a.png"
 		}
 	]
 }
