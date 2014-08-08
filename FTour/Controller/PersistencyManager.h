@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "Contact.h"
+#import "Food.h"
 
 @interface PersistencyManager : NSObject
 - (NSMutableDictionary*)getContacts;
+- (NSMutableDictionary*)getDishes;
 @end

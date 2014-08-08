@@ -214,6 +214,77 @@
 			name = API;
 			sourceTree = "<group>";
 		};
+		6199960519946B8300848F94 /* 01 HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F108CD85198F3C480020A273 /* BaseViewController.h */,
+				F108CD86198F3C480020A273 /* BaseViewController.m */,
+				F108CD99198F3C480020A273 /* ViewController.xib */,
+				6199960619946B8F00848F94 /* 01 iBeacon Me */,
+				6199960719946BCC00848F94 /* 02 Proximity */,
+			);
+			name = "01 HomeScreen";
+			sourceTree = "<group>";
+		};
+		6199960619946B8F00848F94 /* 01 iBeacon Me */ = {
+			isa = PBXGroup;
+			children = (
+				F108CD93198F3C480020A273 /* iBeaconViewController.h */,
+				F108CD94198F3C480020A273 /* iBeaconViewController.m */,
+				F108CD95198F3C480020A273 /* iBeaconViewController.xib */,
+			);
+			name = "01 iBeacon Me";
+			sourceTree = "<group>";
+		};
+		6199960719946BCC00848F94 /* 02 Proximity */ = {
+			isa = PBXGroup;
+			children = (
+				F108CD9A198F3C480020A273 /* WelcomeViewController.h */,
+				F108CD9B198F3C480020A273 /* WelcomeViewController.m */,
+				F108CD9C198F3C480020A273 /* WelcomeViewController.xib */,
+				6199960819946D1A00848F94 /* 01 FSoft */,
+				6199960919946D3500848F94 /* 02 FSu1 */,
+				6199960A19946D4900848F94 /* 03 Cafe */,
+			);
+			name = "02 Proximity";
+			sourceTree = "<group>";
+		};
+		6199960819946D1A00848F94 /* 01 FSoft */ = {
+			isa = PBXGroup;
+			children = (
+				F108CD8A198F3C480020A273 /* FSoftViewController.h */,
+				F108CD8B198F3C480020A273 /* FSoftViewController.m */,
+				F108CD8C198F3C480020A273 /* FSoftViewController.xib */,
+			);
+			name = "01 FSoft";
+			sourceTree = "<group>";
+		};
+		6199960919946D3500848F94 /* 02 FSu1 */ = {
+			isa = PBXGroup;
+			children = (
+				F108CD90198F3C480020A273 /* FSU1ViewController.h */,
+				F108CD91198F3C480020A273 /* FSU1ViewController.m */,
+				F108CD92198F3C480020A273 /* FSU1ViewController.xib */,
+				F108CD8D198F3C480020A273 /* FSU1DetailViewController.h */,
+				F108CD8E198F3C480020A273 /* FSU1DetailViewController.m */,
+				F108CD8F198F3C480020A273 /* FSU1DetailViewController.xib */,
+			);
+			name = "02 FSu1";
+			sourceTree = "<group>";
+		};
+		6199960A19946D4900848F94 /* 03 Cafe */ = {
+			isa = PBXGroup;
+			children = (
+				F108CD96198F3C480020A273 /* MenuTableVC.h */,
+				F108CD97198F3C480020A273 /* MenuTableVC.m */,
+				F108CD98198F3C480020A273 /* MenuTableVC.xib */,
+				F108CD87198F3C480020A273 /* CafeViewController.h */,
+				F108CD88198F3C480020A273 /* CafeViewController.m */,
+				F108CD89198F3C480020A273 /* CafeViewController.xib */,
+			);
+			name = "03 Cafe";
+			sourceTree = "<group>";
+		};
 		84A62A9F196A96F400D73A95 = {
 			isa = PBXGroup;
 			children = (
@@ -305,30 +376,7 @@
 		F108CD84198F3C480020A273 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F108CD85198F3C480020A273 /* BaseViewController.h */,
-				F108CD86198F3C480020A273 /* BaseViewController.m */,
-				F108CD87198F3C480020A273 /* CafeViewController.h */,
-				F108CD88198F3C480020A273 /* CafeViewController.m */,
-				F108CD89198F3C480020A273 /* CafeViewController.xib */,
-				F108CD8A198F3C480020A273 /* FSoftViewController.h */,
-				F108CD8B198F3C480020A273 /* FSoftViewController.m */,
-				F108CD8C198F3C480020A273 /* FSoftViewController.xib */,
-				F108CD8D198F3C480020A273 /* FSU1DetailViewController.h */,
-				F108CD8E198F3C480020A273 /* FSU1DetailViewController.m */,
-				F108CD8F198F3C480020A273 /* FSU1DetailViewController.xib */,
-				F108CD90198F3C480020A273 /* FSU1ViewController.h */,
-				F108CD91198F3C480020A273 /* FSU1ViewController.m */,
-				F108CD92198F3C480020A273 /* FSU1ViewController.xib */,
-				F108CD93198F3C480020A273 /* iBeaconViewController.h */,
-				F108CD94198F3C480020A273 /* iBeaconViewController.m */,
-				F108CD95198F3C480020A273 /* iBeaconViewController.xib */,
-				F108CD96198F3C480020A273 /* MenuTableVC.h */,
-				F108CD97198F3C480020A273 /* MenuTableVC.m */,
-				F108CD98198F3C480020A273 /* MenuTableVC.xib */,
-				F108CD99198F3C480020A273 /* ViewController.xib */,
-				F108CD9A198F3C480020A273 /* WelcomeViewController.h */,
-				F108CD9B198F3C480020A273 /* WelcomeViewController.m */,
-				F108CD9C198F3C480020A273 /* WelcomeViewController.xib */,
+				6199960519946B8300848F94 /* 01 HomeScreen */,
 				61BB9534198F646800B99261 /* PersistencyManager.h */,
 				61BB9535198F646800B99261 /* PersistencyManager.m */,
 			);

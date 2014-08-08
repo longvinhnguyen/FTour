@@ -11,7 +11,9 @@
 @interface PersistencyManager()
 {
     NSMutableDictionary *contacts;
+    NSMutableDictionary *dishes;
     NSDictionary *allFSU1;
+    NSDictionary *allDishes;
 }
 @end
 
@@ -22,7 +24,9 @@
     if(self)
     {
         contacts = [[NSMutableDictionary alloc]init];
+        dishes = [[NSMutableDictionary alloc]init];
         allFSU1 = [[DataService sharedInstance] loadFSU1Data];
+        allDishes = [[DataService sharedInstance] loadCafeData];
     }
     return  self;
 }
@@ -45,6 +49,25 @@
         }
     }
     return contacts;
+}
+- (NSDictionary *)getDishes {
+    if (allDishes) {
+        NSArray *allDishesKey = [allDishes allKeys];
+        for (NSString *key in allDishesKey)
+        {
+            NSArray *section = [allDishes objectForKey:key];
+            NSMutableArray *arrDishesSection = [[NSMutableArray alloc]init];;
+            for (int i =0; i<section.count; i++)
+            {
+                NSDictionary *dishDic = [section objectAtIndex:i];
+                Food *dish = [[Food alloc]initWithDetail:[dishDic objectForKey:@"name"] price:[dishDic objectForKey:@"price"]  imgURL:[dishDic objectForKey:@"image"]];
+                
+                [arrDishesSection addObject:dish];
+            }
+            [dishes setObject:arrDishesSection forKey:key];
+        }
+    }
+    return dishes;
 }
 
 @end
