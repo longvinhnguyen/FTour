@@ -37,7 +37,6 @@ PersistencyManager *pM;
     [super viewDidLoad];
     NSLog(@"Loaded FSU1");
     pM = [[PersistencyManager alloc]init];
-    dicContacts = [[NSMutableDictionary alloc]init];
     dicContacts = [pM getContacts];
     [self.navigationController setNavigationBarHidden:YES];
     NSURL *url =    [NSURL fileURLWithPath:[[NSBundle mainBundle]

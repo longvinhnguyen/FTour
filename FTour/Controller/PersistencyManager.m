@@ -10,8 +10,6 @@
 #import "DataService.h"
 @interface PersistencyManager()
 {
-    NSMutableDictionary *contacts;
-    NSMutableDictionary *dishes;
     NSDictionary *allFSU1;
     NSDictionary *allDishes;
 }
@@ -23,8 +21,6 @@
     self = [super init];
     if(self)
     {
-        contacts = [[NSMutableDictionary alloc]init];
-        dishes = [[NSMutableDictionary alloc]init];
         allFSU1 = [[DataService sharedInstance] loadFSU1Data];
         allDishes = [[DataService sharedInstance] loadCafeData];
     }
@@ -33,6 +29,7 @@
 
 - (NSDictionary *)getContacts {
     if (allFSU1) {
+        NSMutableDictionary *contacts = [[NSMutableDictionary alloc]init];
         NSArray *allFSU1Key = [allFSU1 allKeys];
         for (NSString *key in allFSU1Key)
         {
@@ -47,11 +44,14 @@
             }
             [contacts setObject:arrTeamContacs forKey:key];
         }
+        return contacts;
     }
-    return contacts;
+    else
+        return nil;
 }
 - (NSDictionary *)getDishes {
     if (allDishes) {
+        NSMutableDictionary *dishes = [[NSMutableDictionary alloc]init];
         NSArray *allDishesKey = [allDishes allKeys];
         for (NSString *key in allDishesKey)
         {
@@ -66,8 +66,10 @@
             }
             [dishes setObject:arrDishesSection forKey:key];
         }
+        return dishes;
+
     }
-    return dishes;
+    return nil;
 }
 
 @end
