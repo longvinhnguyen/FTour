@@ -15,5 +15,8 @@
     #import <Foundation/Foundation.h>
     #import <CoreLocation/CoreLocation.h>
 #import<CoreBluetooth/CoreBluetooth.h>
-#define kFSoftUUID @"77F353D0-285C-4606-B012-8A078FB96622"
+//#define kFSoftUUID @"77F353D0-285C-4606-B012-8A078FB96622"
+//#define kFSoftUUID @"B9407F30-F5F8-466E-AFF9-25556B57FE6D"
+  #define kFSoftUUID @"467BF0CC-48C2-4D72-B04E-B369E5438821"
+
 #endif

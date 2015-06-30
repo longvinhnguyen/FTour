@@ -38,15 +38,43 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.locationManager = [[CLLocationManager alloc]init];
-    self.locationManager.delegate = self;
-    
-    NSUUID *uuid = [[NSUUID alloc]initWithUUIDString:kFSoftUUID];
-    self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:@"FSoft"];
-    [self.locationManager startMonitoringForRegion:self.beaconRegion];
-    [self initAnimation];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showAlertBluetoothOff) name:@"reLaunchApp" object:nil];
-    ua = [[UIAlertView alloc]initWithTitle:@"Bluetooth are unavailable" message:@"Please turn on your bluetooth" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:@"Setting", nil];
+//    self.locationManager = [[CLLocationManager alloc]init];
+//    self.locationManager.delegate = self;
+//    
+//    NSUUID *uuid = [[NSUUID alloc]initWithUUIDString:kFSoftUUID];
+//    self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:@"FSoft"];
+//    switch ([CLLocationManager authorizationStatus]) {
+//        case kCLAuthorizationStatusAuthorizedAlways:
+//            NSLog(@"Authorized Always");
+//            break;
+//        case kCLAuthorizationStatusAuthorizedWhenInUse:
+//            NSLog(@"Authorized when in use");
+//            break;
+//        case kCLAuthorizationStatusDenied:
+//            NSLog(@"Denied");
+//            break;
+//        case kCLAuthorizationStatusNotDetermined:
+//            NSLog(@"Not determined");
+//            break;
+//        case kCLAuthorizationStatusRestricted:
+//            NSLog(@"Restricted");
+//            break;
+//            
+//        default:
+//            break;
+//    }
+//    self.locationManager = [[CLLocationManager alloc] init];
+//    if([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
+//        [self.locationManager requestAlwaysAuthorization];
+//    }
+//    self.locationManager.delegate = self;
+//    self.locationManager.pausesLocationUpdatesAutomatically = NO;
+//    [self.locationManager startMonitoringForRegion:self.beaconRegion];
+//    [self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
+//    [self.locationManager startUpdatingLocation];
+//    [self initAnimation];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showAlertBluetoothOff) name:@"reLaunchApp" object:nil];
+//    ua = [[UIAlertView alloc]initWithTitle:@"Bluetooth are unavailable" message:@"Please turn on your bluetooth" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:@"Setting", nil];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -55,8 +83,38 @@
     
     NSUUID *uuid = [[NSUUID alloc]initWithUUIDString:kFSoftUUID];
     self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:@"FSoft"];
+    switch ([CLLocationManager authorizationStatus]) {
+        case kCLAuthorizationStatusAuthorizedAlways:
+            NSLog(@"Authorized Always");
+            break;
+        case kCLAuthorizationStatusAuthorizedWhenInUse:
+            NSLog(@"Authorized when in use");
+            break;
+        case kCLAuthorizationStatusDenied:
+            NSLog(@"Denied");
+            break;
+        case kCLAuthorizationStatusNotDetermined:
+            NSLog(@"Not determined");
+            break;
+        case kCLAuthorizationStatusRestricted:
+            NSLog(@"Restricted");
+            break;
+            
+        default:
+            break;
+    }
+    self.locationManager = [[CLLocationManager alloc] init];
+    if([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
+        [self.locationManager requestAlwaysAuthorization];
+    }
+    self.locationManager.delegate = self;
+    self.locationManager.pausesLocationUpdatesAutomatically = NO;
     [self.locationManager startMonitoringForRegion:self.beaconRegion];
+    [self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
+    [self.locationManager startUpdatingLocation];
     [self initAnimation];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showAlertBluetoothOff) name:@"reLaunchApp" object:nil];
+    ua = [[UIAlertView alloc]initWithTitle:@"Bluetooth are unavailable" message:@"Please turn on your bluetooth" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:@"Setting", nil];
     UISwipeGestureRecognizer *swipeBackGesture = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(didSwipeBack)];
     [swipeBackGesture setDirection:UISwipeGestureRecognizerDirectionRight];
     [self.view addGestureRecognizer:swipeBackGesture];
@@ -102,10 +160,6 @@
 {
     [ua show];
 }
-
-
-
-
 
 - (void)locationManager:(CLLocationManager*)manager didEnterRegion:(CLRegion*)region
 {
@@ -168,7 +222,7 @@
 -(void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region
 {
     NSLog(@"%@", [region class].description);
-    [_locationManager startRangingBeaconsInRegion:_beaconRegion];
+    [self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
 }
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
